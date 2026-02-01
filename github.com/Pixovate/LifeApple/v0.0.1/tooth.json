@@ -1,0 +1,51 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/Pixovate/LifeApple",
+    "version": "0.0.1",
+    "info": {
+        "name": "LifeApple",
+        "description": "A mod that makes the apple can boost your health.",
+        "tags": [
+            "attributeModifier",
+            "lifeapple",
+            "type:mod",
+            "platform:levilamina"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {},
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://github.com/Pixovate/LifeApple/releases/download/v0.0.1/LifeApple-levilamina-windows.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LifeApple/",
+                            "dest": "plugins/LifeApple/"
+                        }
+                    ]
+                }
+            ],
+            "preserve_files": [],
+            "remove_files": [],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
+            }
+        }
+    ]
+}
