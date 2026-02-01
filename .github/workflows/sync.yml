@@ -1,0 +1,38 @@
+on:
+  schedule:
+    - cron: '0 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/checkout@v6
+        with:
+          path: workspace/lipr
+          ref: pages
+
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash ./run.sh
+
+      - working-directory: workspace/lipr
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - working-directory: workspace/lipr
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes detected, skipping commit."
+          fi
+
+          git add .
+          git commit -m "chore: auto update"
+          git push
