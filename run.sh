@@ -61,3 +61,30 @@ for repo in $repositories; do
     echo "    Success"
   done
 done
+
+echo "Generating index.json..."
+
+find ./workspace/lipr -type f -name "tooth.json" | while read -r file; do
+  # Get relative path: github.com/owner/repo/tag/tooth.json
+  rel="${file#./workspace/lipr/}"
+  
+  # Parse path components
+  IFS='/' read -r domain owner repo tag filename <<< "$rel"
+  
+  if [ "$filename" == "tooth.json" ]; then
+    repo_key="$domain/$owner/$repo"
+    
+    # Generate partial JSON
+    jq -c --arg r "$repo_key" --arg t "$tag" '
+      {
+        ($r): {
+          ($t): {
+            info: .info
+          }
+        }
+      }
+    ' "$file"
+  fi
+done | jq -s 'reduce .[] as $item ({}; . * $item)' > ./workspace/lipr/index.json
+
+echo "Generated"
