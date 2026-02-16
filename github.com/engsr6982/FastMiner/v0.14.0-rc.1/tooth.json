@@ -1,0 +1,61 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/engsr6982/FastMiner",
+    "version": "0.14.0-rc.1",
+    "info": {
+        "name": "FastMiner",
+        "description": "高性能连锁采集, 支持 Server 和 Client",
+        "author": "engsr6982",
+        "tags": [
+            "type:mod",
+            "platform:levilamina"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.8.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/FastMiner-server-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "FastMiner/",
+                            "dest": "plugins/FastMiner"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "client",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.8.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/FastMiner-client-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "FastMiner/",
+                            "dest": "mods/FastMiner/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

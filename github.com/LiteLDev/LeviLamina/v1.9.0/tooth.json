@@ -1,0 +1,85 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/LeviLamina",
+    "version": "1.9.0",
+    "info": {
+        "name": "LeviLamina",
+        "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
+        "tags": [],
+        "avatar_url": "https://lamina.levimc.org/logo.svg"
+    },
+    "variants": [
+        {
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/bds": "1.21.132-patch.3",
+                "github.com/LiteLDev/CrashLogger": "1.3.*",
+                "github.com/LiteLDev/levilamina-loc": "1.6.*",
+                "github.com/LiteLDev/PeEditor": "3.9.*",
+                "github.com/LiteLDev/PreLoader": "1.15.7",
+                "github.com/LiteLDev/bedrock-runtime-data": "1.21.132-server.2"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/levilamina-v{{version}}-server-release-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LeviLamina/",
+                            "dest": "plugins/LeviLamina/"
+                        }
+                    ]
+                }
+            ],
+            "remove_files": [
+                "bedrock_server_mod.exe"
+            ],
+            "scripts": {
+                "post_install": [
+                    ".\\PeEditor.exe -mb"
+                ],
+                "post_uninstall": [
+                    "IF EXIST bedrock_server.exe (DEL bedrock_server.exe.bak) ELSE (REN bedrock_server.exe.bak bedrock_server.exe)"
+                ]
+            }
+        },
+        {
+            "label": "client",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/CrashLogger#client": "1.3.*",
+                "github.com/LiteLDev/levilamina-loc#client": "1.6.*",
+                "github.com/LiteLDev/PeEditor": "3.9.*",
+                "github.com/LiteLDev/PreLoader": "1.15.7",
+                "github.com/LiteLDev/bedrock-runtime-data": "1.21.132-client.3"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/levilamina-v{{version}}-client-release-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LeviLamina/",
+                            "dest": "mods/LeviLamina/"
+                        }
+                    ]
+                }
+            ],
+            "scripts": {
+                "post_install": [
+                    ".\\PeEditor.exe -mb --exe Minecraft.Windows.exe --inplace"
+                ],
+                "post_uninstall": [
+                    "IF EXIST Minecraft.Windows.exe.bak (DEL Minecraft.Windows.exe && REN Minecraft.Windows.exe.bak Minecraft.Windows.exe)"
+                ]
+            }
+        }
+    ]
+}

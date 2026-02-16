@@ -1,0 +1,89 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/bds",
+    "version": "1.21.132",
+    "info": {
+        "name": "Minecraft Bedrock Dedicated Server",
+        "description": "Bedrock Dedicated Servers allow Minecraft players on Windows and Linux computers to set up their own server at home, or host their server using a cloud-based service.",
+        "tags": [],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "linux-x64",
+            "dependencies": {
+                "github.com/LiteLDev/bdsdown": "1.*"
+            },
+            "assets": [],
+            "preserve_files": [],
+            "remove_files": [
+                "bedrock_server",
+                "bedrock_server_how_to.html",
+                "behavior_packs",
+                "config",
+                "definitions",
+                "development_behavior_packs",
+                "development_resource_packs",
+                "development_skin_packs",
+                "packet-statistics.txt",
+                "release-notes.txt",
+                "resource_packs",
+                "world_templates",
+                "valid_known_packs.json"
+            ],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [
+                    "chmod +x ./bdsdown",
+                    "./bdsdown --yes --source version://linux/1.21.132.1"
+                ],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
+            }
+        },
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/bdsdown": "1.*"
+            },
+            "assets": [],
+            "preserve_files": [],
+            "remove_files": [
+                "bedrock_server.exe",
+                "bedrock_server.exe.bak",
+                "bedrock_server.pdb",
+                "bedrock_server_how_to.html",
+                "behavior_packs",
+                "config",
+                "definitions",
+                "development_behavior_packs",
+                "development_resource_packs",
+                "development_skin_packs",
+                "packet-statistics.txt",
+                "release-notes.txt",
+                "resource_packs",
+                "world_templates",
+                "valid_known_packs.json"
+            ],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [
+                    ".\\bdsdown.exe -y --source version://windows/1.21.132.1"
+                ],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
+            }
+        }
+    ]
+}
