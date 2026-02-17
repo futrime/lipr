@@ -138,13 +138,13 @@ async def generate_index_file(
 
 async def save_manifest(
     repository: str, version: VersionInfo, *, client: AsyncClient, semaphore: Semaphore
-) -> None:
+) -> bool:
     manifest = await fetch_manifest(
         repository, f"v{version}", client=client, semaphore=semaphore
     )
 
     if manifest is None:
-        return
+        return False
 
     content = manifest.model_dump_json(ensure_ascii=False, indent=2)
 
@@ -154,6 +154,8 @@ async def save_manifest(
         await f.write(content)
 
     logging.info(f"Saved manifest for {repository}@{version}")
+
+    return True
 
 
 async def search_repositories(
@@ -215,27 +217,31 @@ async def main() -> None:
             ]
         versions = [t.result() for t in tasks]
 
+        version_tasks = []
+        async with asyncio.TaskGroup() as tg:
+            for repo, vers in zip(repositories, versions):
+                repo_tasks = []
+                for v in vers:
+                    task = tg.create_task(
+                        save_manifest(
+                            repo,
+                            v,
+                            client=client,
+                            semaphore=semaphore,
+                        )
+                    )
+                    repo_tasks.append((v, task))
+                version_tasks.append(repo_tasks)
+
+        versions = [
+            [v for v, t in repo_tasks if t.result()] for repo_tasks in version_tasks
+        ]
+
         await generate_index_file(
             repositories,
             versions,
             client=client,
             semaphore=semaphore,
-        )
-
-        await asyncio.gather(
-            *[
-                save_manifest(
-                    repo,
-                    v,
-                    client=client,
-                    semaphore=semaphore,
-                )
-                for repo, vers in zip(
-                    repositories,
-                    versions,
-                )
-                for v in vers
-            ]
         )
 
 
