@@ -1,0 +1,15 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/GroupMountain/GMDebugStick",
+  "version": "1.2.0",
+  "info": {
+    "name": "GMDebugStick",
+    "description": "Register for a debug stick item",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
+  }
+}

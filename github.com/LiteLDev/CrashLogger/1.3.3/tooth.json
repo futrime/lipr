@@ -1,0 +1,15 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/CrashLogger",
+  "version": "1.3.3",
+  "info": {
+    "name": "CrashLogger",
+    "description": "Show crash log of LeviLamina",
+    "tags": [
+      "levilamina",
+      "utility"
+    ],
+    "avatar_url": ""
+  }
+}
