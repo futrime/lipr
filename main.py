@@ -91,7 +91,7 @@ async def fetch_versions(repository: str, *, semaphore: Semaphore) -> list[Versi
 
         sorted_versions = sorted(versions)
 
-        logging.info(f"Fetched versions for {repository}")
+        logging.info(f"Fetched {len(sorted_versions)} versions for {repository}")
 
         return sorted_versions
 

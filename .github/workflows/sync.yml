@@ -12,6 +12,9 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    concurrency:
+      cancel-in-progress: true
+      group: sync
     steps:
       - uses: actions/checkout@v6
 
