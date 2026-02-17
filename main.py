@@ -1,10 +1,10 @@
 import asyncio
-from datetime import datetime
 import json
 import logging
 import os
 import shutil
 from asyncio import Semaphore
+from datetime import datetime
 from pathlib import Path
 from typing import Final
 
@@ -18,6 +18,7 @@ from pydantic import BaseModel, Field
 from semver import VersionInfo
 
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
+INDEX_FILE_PATH: Final = Path("./workspace/lipr/index.json")
 MAX_CONCURRENCY: Final = 16
 UUID: Final = "289f771f-2c9a-4d73-9f3f-8492495a924d"
 
@@ -128,9 +129,8 @@ async def generate_index_file(
 
     content = json.dumps(index, ensure_ascii=False, indent=2, sort_keys=True)
 
-    index_path = BASE_DIR / "index.json"
-    await aiofiles.os.makedirs(index_path.parent, exist_ok=True)
-    async with aiofiles.open(index_path, "w", encoding="utf-8") as f:
+    await aiofiles.os.makedirs(INDEX_FILE_PATH.parent, exist_ok=True)
+    async with aiofiles.open(INDEX_FILE_PATH, "w", encoding="utf-8") as f:
         await f.write(content)
 
     logging.info("Generated index file")
