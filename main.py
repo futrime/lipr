@@ -27,7 +27,7 @@ class PackageInfo(BaseModel):
 
 class PackageIndexEntry(BaseModel):
     info: PackageInfo
-    versions: list[Version] = Field(default_factory=list)
+    versions: list[str] = Field(default_factory=list)
 
 
 class PackageIndex(RootModel):
@@ -38,7 +38,7 @@ class PackageManifest(BaseModel):
     format_version: int
     format_uuid: str
     tooth: str
-    version: Version
+    version: str
     info: PackageInfo = Field(default_factory=PackageInfo)
 
 
@@ -190,7 +190,7 @@ def main() -> None:
 
     index = PackageIndex(
         {
-            repo: PackageIndexEntry(info=infos[repo], versions=vers)
+            repo: PackageIndexEntry(info=infos[repo], versions=[str(v) for v in vers])
             for repo, vers in versions.items()
         }
     )
