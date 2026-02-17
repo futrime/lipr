@@ -20,10 +20,15 @@ jobs:
           path: workspace/lipr
           ref: pages
 
+      - uses: astral-sh/setup-uv@v7
+
+      - run: |
+          uv sync
+
       - env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          bash ./run.sh
+          uv run python main.py
 
       - working-directory: workspace/lipr
         run: |
