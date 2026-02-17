@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime
 import json
 import logging
 import os
@@ -10,7 +11,7 @@ from typing import Final
 import aiofiles
 import aiofiles.os
 from git.cmd import Git
-from github import Github
+from github import Github, RateLimitExceededException
 from github.Auth import Token
 from httpx import URL, AsyncClient
 from pydantic import BaseModel, Field
@@ -162,15 +163,31 @@ async def search_repositories(
     if (token := os.getenv("GITHUB_TOKEN")) is None:
         raise RuntimeError("GITHUB_TOKEN environment variable is not set")
 
-    github = Github(auth=Token(token))
+    github = Github(auth=Token(token), per_page=100)
+    pagination = github.search_code(UUID, filename="tooth.json", path="/")
 
-    async with semaphore:
-        results = await asyncio.to_thread(
-            lambda: [
-                r.repository.full_name
-                for r in github.search_code(UUID, filename="tooth.json")
-            ]
-        )
+    page_idx = 0
+    results = []
+    while True:
+        try:
+            async with semaphore:
+                page = await asyncio.to_thread(pagination.get_page, page_idx)
+
+            if not page:
+                break
+
+            results.extend(item.repository.full_name for item in page)
+
+            page_idx += 1
+
+            await asyncio.sleep(3)
+
+        except RateLimitExceededException:
+            logging.warning("Exceeded GitHub API rate limit. Waiting for reset...")
+
+            reset_time = github.get_rate_limit().resources.search.reset
+            sleep_time = (reset_time - datetime.now()).total_seconds() + 1
+            await asyncio.sleep(sleep_time)
 
     return results
 
