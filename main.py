@@ -189,6 +189,8 @@ async def search_repositories(
             sleep_time = (reset_time - datetime.now()).total_seconds() + 1
             await asyncio.sleep(sleep_time)
 
+    logging.info(f"Found {len(results)} repositories")
+
     return results
 
 
