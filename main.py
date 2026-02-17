@@ -11,8 +11,9 @@ from typing import Final
 import aiofiles
 import aiofiles.os
 from git.cmd import Git
-from github import Github, RateLimitExceededException
+from github import Github
 from github.Auth import Token
+from github.GithubException import GithubException
 from httpx import URL, AsyncClient
 from pydantic import BaseModel, Field
 from semver import VersionInfo
@@ -184,12 +185,15 @@ async def search_repositories(
 
             await asyncio.sleep(3)
 
-        except RateLimitExceededException:
-            logging.warning("Exceeded GitHub API rate limit. Waiting for reset...")
+        except GithubException as ex:
+            if ex.status == 429:
+                logging.warning("Exceeded GitHub API rate limit. Waiting for reset...")
 
-            reset_time = github.get_rate_limit().resources.search.reset
-            sleep_time = (reset_time - datetime.now()).total_seconds() + 1
-            await asyncio.sleep(sleep_time)
+                reset_time = github.get_rate_limit().resources.search.reset
+                sleep_time = (reset_time - datetime.now()).total_seconds() + 1
+                await asyncio.sleep(sleep_time)
+            else:
+                raise
 
     logging.info(f"Found {len(results)} repositories")
 
