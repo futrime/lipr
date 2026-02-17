@@ -4,7 +4,7 @@ import logging
 import os
 import shutil
 from asyncio import Semaphore
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Final
 
@@ -190,7 +190,9 @@ async def search_repositories(
                 logging.warning("Exceeded GitHub API rate limit. Waiting for reset...")
 
                 reset_time = github.get_rate_limit().resources.search.reset
-                sleep_time = (reset_time - datetime.now()).total_seconds() + 1
+                sleep_time = (
+                    reset_time - datetime.now(timezone.utc)
+                ).total_seconds() + 1
                 await asyncio.sleep(sleep_time)
             else:
                 raise
