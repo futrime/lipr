@@ -1,1305 +1,1309 @@
 {
-  "LiteLDev/LeviLamina": {
-    "info": {
-      "name": "LeviLamina",
-      "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
-      "tags": [],
-      "avatar_url": "https://lamina.levimc.org/logo.svg"
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "packages": [
+    {
+      "info": {
+        "name": "LeviLamina",
+        "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
+        "tags": [],
+        "avatar_url": "https://lamina.levimc.org/logo.svg"
+      },
+      "versions": [
+        "1.1.1",
+        "1.1.2",
+        "1.2.0-rc.1",
+        "1.2.0-rc.2",
+        "1.2.0",
+        "1.2.1",
+        "1.3.0",
+        "1.3.1",
+        "1.3.2",
+        "1.3.3",
+        "1.3.4",
+        "1.4.1",
+        "1.4.2",
+        "1.4.3",
+        "1.4.4",
+        "1.5.0",
+        "1.5.1",
+        "1.5.2",
+        "1.6.0",
+        "1.6.1",
+        "1.6.2",
+        "1.7.0",
+        "1.7.1",
+        "1.7.3",
+        "1.7.4",
+        "1.7.5",
+        "1.7.6",
+        "1.7.7",
+        "1.8.0-rc.1",
+        "1.8.0-rc.2",
+        "1.9.0",
+        "1.9.1",
+        "1.9.2",
+        "1.9.3",
+        "1.9.4",
+        "1.9.5"
+      ]
     },
-    "versions": [
-      "1.1.1",
-      "1.1.2",
-      "1.2.0-rc.1",
-      "1.2.0-rc.2",
-      "1.2.0",
-      "1.2.1",
-      "1.3.0",
-      "1.3.1",
-      "1.3.2",
-      "1.3.3",
-      "1.3.4",
-      "1.4.1",
-      "1.4.2",
-      "1.4.3",
-      "1.4.4",
-      "1.5.0",
-      "1.5.1",
-      "1.5.2",
-      "1.6.0",
-      "1.6.1",
-      "1.6.2",
-      "1.7.0",
-      "1.7.1",
-      "1.7.3",
-      "1.7.4",
-      "1.7.5",
-      "1.7.6",
-      "1.7.7",
-      "1.8.0-rc.1",
-      "1.8.0-rc.2",
-      "1.9.0",
-      "1.9.1",
-      "1.9.2",
-      "1.9.3",
-      "1.9.4",
-      "1.9.5"
-    ]
-  },
-  "superx101/CALL": {
-    "info": {
-      "name": "CALL",
-      "description": "A simple building tool",
-      "tags": [
-        "building",
-        "lse",
-        "plugin"
-      ],
-      "avatar_url": "https://github.com/superx101/CALL/blob/main/docs/image/CALL_dark.png"
+    {
+      "info": {
+        "name": "CALL",
+        "description": "A simple building tool",
+        "tags": [
+          "building",
+          "lse",
+          "plugin"
+        ],
+        "avatar_url": "https://github.com/superx101/CALL/blob/main/docs/image/CALL_dark.png"
+      },
+      "versions": [
+        "1.6.0",
+        "1.6.1"
+      ]
     },
-    "versions": [
-      "1.6.0",
-      "1.6.1"
-    ]
-  },
-  "GroupMountain/Cleaner": {
-    "info": {
-      "name": "Cleaner",
-      "description": "A Powerful Entities Cleaning up Mod for BDS",
-      "tags": [
-        "levilamina",
-        "cleaner",
-        "gmlib"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "Cleaner",
+        "description": "A Powerful Entities Cleaning up Mod for BDS",
+        "tags": [
+          "levilamina",
+          "cleaner",
+          "gmlib"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.13.4",
+        "0.13.5",
+        "0.13.6",
+        "0.13.7",
+        "0.13.8",
+        "0.14.0",
+        "0.15.0",
+        "0.15.1",
+        "0.16.0"
+      ]
     },
-    "versions": [
-      "0.13.4",
-      "0.13.5",
-      "0.13.6",
-      "0.13.7",
-      "0.13.8",
-      "0.14.0",
-      "0.15.0",
-      "0.15.1",
-      "0.16.0"
-    ]
-  },
-  "LiteLDev/LegacyScriptEngine": {
-    "info": {
-      "name": "LegacyScriptEngine",
-      "description": "A plugin engine for running LLSE plugins on LeviLamina",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "plugin-engine"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LegacyScriptEngine",
+        "description": "A plugin engine for running LLSE plugins on LeviLamina",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "plugin-engine"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.10.0",
+        "0.10.2",
+        "0.10.3",
+        "0.10.4",
+        "0.10.5",
+        "0.10.6",
+        "0.10.7",
+        "0.10.8",
+        "0.10.9",
+        "0.11.0",
+        "0.11.1",
+        "0.11.2",
+        "0.11.3",
+        "0.12.0",
+        "0.12.1",
+        "0.13.0",
+        "0.13.1",
+        "0.13.2",
+        "0.14.0",
+        "0.15.0",
+        "0.16.0",
+        "0.16.1",
+        "0.16.2",
+        "0.16.3",
+        "0.16.4",
+        "0.16.5",
+        "0.16.6",
+        "0.16.7",
+        "0.16.8",
+        "0.17.0-rc.2",
+        "0.17.0",
+        "0.17.1",
+        "0.17.2"
+      ]
     },
-    "versions": [
-      "0.10.0",
-      "0.10.2",
-      "0.10.3",
-      "0.10.4",
-      "0.10.5",
-      "0.10.6",
-      "0.10.7",
-      "0.10.8",
-      "0.10.9",
-      "0.11.0",
-      "0.11.1",
-      "0.11.2",
-      "0.11.3",
-      "0.12.0",
-      "0.12.1",
-      "0.13.0",
-      "0.13.1",
-      "0.13.2",
-      "0.14.0",
-      "0.15.0",
-      "0.16.0",
-      "0.16.1",
-      "0.16.2",
-      "0.16.3",
-      "0.16.4",
-      "0.16.5",
-      "0.16.6",
-      "0.16.7",
-      "0.16.8",
-      "0.17.0-rc.2",
-      "0.17.0",
-      "0.17.1",
-      "0.17.2"
-    ]
-  },
-  "GeneralUniversal/EnchantX": {
-    "info": {
-      "name": "EnchantX",
-      "description": "A Lse Pluyin which enchanced enchantment function",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40&v=4"
+    {
+      "info": {
+        "name": "EnchantX",
+        "description": "A Lse Pluyin which enchanced enchantment function",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40&v=4"
+      },
+      "versions": [
+        "0.1.0"
+      ]
     },
-    "versions": [
-      "0.1.0"
-    ]
-  },
-  "IceBlcokMC/PLand": {
-    "info": {
-      "name": "PLand",
-      "description": "基于 LeviLamina 的领地系统 / A land system based on LeviLamina",
-      "tags": [
-        "type:mod",
-        "platform:levilamina",
-        "land",
-        "pland"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PLand",
+        "description": "基于 LeviLamina 的领地系统 / A land system based on LeviLamina",
+        "tags": [
+          "type:mod",
+          "platform:levilamina",
+          "land",
+          "pland"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.11.0-rc.1",
+        "0.11.0-rc.2",
+        "0.11.0",
+        "0.12.0-rc.1",
+        "0.12.0-rc.2",
+        "0.12.0",
+        "0.13.0",
+        "0.14.0",
+        "0.14.1",
+        "0.15.0",
+        "0.16.0",
+        "0.17.0",
+        "0.17.1",
+        "0.17.2",
+        "0.18.0",
+        "0.18.1"
+      ]
     },
-    "versions": [
-      "0.11.0-rc.1",
-      "0.11.0-rc.2",
-      "0.11.0",
-      "0.12.0-rc.1",
-      "0.12.0-rc.2",
-      "0.12.0",
-      "0.13.0",
-      "0.14.0",
-      "0.14.1",
-      "0.15.0",
-      "0.16.0",
-      "0.17.0",
-      "0.17.1",
-      "0.17.2",
-      "0.18.0",
-      "0.18.1"
-    ]
-  },
-  "LeafKnife/FixBundleBug": {
-    "info": {
-      "name": "FixBundleBug",
-      "description": "修复利用漏斗和收纳袋刷物品",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://example.com/my-mod/avatar.png"
+    {
+      "info": {
+        "name": "FixBundleBug",
+        "description": "修复利用漏斗和收纳袋刷物品",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "versions": [
+        "0.1.0",
+        "0.1.2",
+        "0.1.3",
+        "0.2.0",
+        "0.2.1"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.1.2",
-      "0.1.3",
-      "0.2.0",
-      "0.2.1"
-    ]
-  },
-  "GlacieTeam/Glacie": {
-    "info": {
-      "name": "Glacie",
-      "description": "BDS Multi-version",
-      "tags": [
-        "glacie",
-        "protocol",
-        "multiversion",
-        "type:mod",
-        "platform:levilamina",
-        "platform:endstone"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "Glacie",
+        "description": "BDS Multi-version",
+        "tags": [
+          "glacie",
+          "protocol",
+          "multiversion",
+          "type:mod",
+          "platform:levilamina",
+          "platform:endstone"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0-rc.2",
+        "2.0.1",
+        "2.0.2",
+        "2.0.3",
+        "2.0.4",
+        "2.1.2",
+        "2.1.3",
+        "2.1.4",
+        "2.1.5",
+        "2.1.6-rc.1",
+        "2.1.6-rc.2",
+        "2.1.6",
+        "2.2.0-rc.1",
+        "2.2.0-rc.2",
+        "2.2.0",
+        "3.0.0",
+        "3.0.1",
+        "3.0.2",
+        "3.0.3",
+        "3.0.4",
+        "3.0.5",
+        "3.0.6",
+        "3.1.0",
+        "3.1.1",
+        "3.1.2",
+        "3.1.3",
+        "3.1.4",
+        "3.1.5",
+        "3.1.6",
+        "3.2.0",
+        "3.2.1",
+        "3.2.2",
+        "3.2.3",
+        "3.2.4",
+        "3.2.5",
+        "3.2.6",
+        "3.3.0",
+        "3.3.1",
+        "3.3.2",
+        "3.3.3",
+        "3.3.4",
+        "3.3.5",
+        "3.3.6",
+        "3.4.0-rc.1",
+        "3.4.0-rc.2",
+        "3.4.0-rc.3",
+        "3.4.0",
+        "3.4.1",
+        "3.4.2",
+        "3.4.3",
+        "3.4.4",
+        "3.5.0-rc.1",
+        "3.5.0-rc.2",
+        "3.5.0",
+        "3.5.1",
+        "3.5.2",
+        "3.5.3",
+        "3.6.0-rc.1",
+        "3.6.0",
+        "3.6.1",
+        "3.7.0",
+        "3.8.0-rc.1",
+        "3.8.0"
+      ]
     },
-    "versions": [
-      "1.0.0-rc.2",
-      "2.0.1",
-      "2.0.2",
-      "2.0.3",
-      "2.0.4",
-      "2.1.2",
-      "2.1.3",
-      "2.1.4",
-      "2.1.5",
-      "2.1.6-rc.1",
-      "2.1.6-rc.2",
-      "2.1.6",
-      "2.2.0-rc.1",
-      "2.2.0-rc.2",
-      "2.2.0",
-      "3.0.0",
-      "3.0.1",
-      "3.0.2",
-      "3.0.3",
-      "3.0.4",
-      "3.0.5",
-      "3.0.6",
-      "3.1.0",
-      "3.1.1",
-      "3.1.2",
-      "3.1.3",
-      "3.1.4",
-      "3.1.5",
-      "3.1.6",
-      "3.2.0",
-      "3.2.1",
-      "3.2.2",
-      "3.2.3",
-      "3.2.4",
-      "3.2.5",
-      "3.2.6",
-      "3.3.0",
-      "3.3.1",
-      "3.3.2",
-      "3.3.3",
-      "3.3.4",
-      "3.3.5",
-      "3.3.6",
-      "3.4.0-rc.1",
-      "3.4.0-rc.2",
-      "3.4.0-rc.3",
-      "3.4.0",
-      "3.4.1",
-      "3.4.2",
-      "3.4.3",
-      "3.4.4",
-      "3.5.0-rc.1",
-      "3.5.0-rc.2",
-      "3.5.0",
-      "3.5.1",
-      "3.5.2",
-      "3.5.3",
-      "3.6.0-rc.1",
-      "3.6.0",
-      "3.6.1",
-      "3.7.0",
-      "3.8.0-rc.1",
-      "3.8.0"
-    ]
-  },
-  "LiteLDev/PeEditor": {
-    "info": {
-      "name": "PeEditor",
-      "description": "A tool to inject PreLoader to Minecraft Bedrock Edition",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PeEditor",
+        "description": "A tool to inject PreLoader to Minecraft Bedrock Edition",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "3.9.0"
+      ]
     },
-    "versions": [
-      "3.9.0"
-    ]
-  },
-  "Nico6719/YEssential": {
-    "info": {
-      "name": "YEssential",
-      "description": "一款基础功能插件",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "YEssential",
+        "description": "一款基础功能插件",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "2.8.8"
+      ]
     },
-    "versions": [
-      "2.8.8"
-    ]
-  },
-  "PuceLi/NameTagPlus": {
-    "info": {
-      "name": "NameTagPlus",
-      "description": "解除命名牌的使用限制",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "NameTagPlus",
+        "description": "解除命名牌的使用限制",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1"
-    ]
-  },
-  "ZMBlocks/LL-ScalePersistenceFix": {
-    "info": {
-      "name": "ScalePersistenceFix",
-      "description": "",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "ScalePersistenceFix",
+        "description": "",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0"
+      ]
     },
-    "versions": [
-      "1.0.0"
-    ]
-  },
-  "leoweyr/LeviInterface": {
-    "info": {
-      "name": "LeviInterfaceMaster",
-      "description": "The master plugin that provides cross-plugin UI queues in Minecraft Legacy Script Engine.",
-      "tags": [
-        "platform:levilamina",
-        "lse",
-        "ui",
-        "ui-queue",
-        "logic-tree",
-        "ux",
-        "socket",
-        "ipc"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LeviInterfaceMaster",
+        "description": "The master plugin that provides cross-plugin UI queues in Minecraft Legacy Script Engine.",
+        "tags": [
+          "platform:levilamina",
+          "lse",
+          "ui",
+          "ui-queue",
+          "logic-tree",
+          "ux",
+          "socket",
+          "ipc"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.1.0"
+      ]
     },
-    "versions": [
-      "0.1.0"
-    ]
-  },
-  "MiracleForest/iAutomaticFishing": {
-    "info": {
-      "name": "iAutomaticFishing",
-      "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
+    {
+      "info": {
+        "name": "iAutomaticFishing",
+        "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
+      },
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.1.0"
-    ]
-  },
-  "ShrBox/BackupHelper": {
-    "info": {
-      "name": "BackupHelper",
-      "description": "A LeviLamina plugin which is port from LiteLoaderBDS to help you backup more easily",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "BackupHelper",
+        "description": "A LeviLamina plugin which is port from LiteLoaderBDS to help you backup more easily",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.7.1",
+        "0.8.0",
+        "0.8.1",
+        "0.8.2",
+        "0.9.0",
+        "0.9.1",
+        "0.10.0",
+        "0.10.1",
+        "0.11.0",
+        "0.12.0",
+        "0.12.1",
+        "0.13.0",
+        "0.13.1",
+        "0.14.0",
+        "0.14.1",
+        "0.14.2"
+      ]
     },
-    "versions": [
-      "0.7.1",
-      "0.8.0",
-      "0.8.1",
-      "0.8.2",
-      "0.9.0",
-      "0.9.1",
-      "0.10.0",
-      "0.10.1",
-      "0.11.0",
-      "0.12.0",
-      "0.12.1",
-      "0.13.0",
-      "0.13.1",
-      "0.14.0",
-      "0.14.1",
-      "0.14.2"
-    ]
-  },
-  "GroupMountain/ModAPI-Release": {
-    "info": {
-      "name": "ModAPI",
-      "description": "Group Mountain Mod Api",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "modapi",
-        "library"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/GroupMountain/ModAPI-Release/refs/heads/main/icon.png"
+    {
+      "info": {
+        "name": "ModAPI",
+        "description": "Group Mountain Mod Api",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "modapi",
+          "library"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/GroupMountain/ModAPI-Release/refs/heads/main/icon.png"
+      },
+      "versions": [
+        "0.1.0",
+        "0.1.1",
+        "0.2.0",
+        "0.2.1",
+        "0.3.0",
+        "0.3.1",
+        "0.4.0"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.1.1",
-      "0.2.0",
-      "0.2.1",
-      "0.3.0",
-      "0.3.1",
-      "0.4.0"
-    ]
-  },
-  "LiteLDev/LegacyRemoteCall": {
-    "info": {
-      "name": "LegacyRemoteCall",
-      "description": "A part of LegacyScriptEngine",
-      "tags": [
-        "type:mod",
-        "platform:levilamina",
-        "library",
-        "lse"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LegacyRemoteCall",
+        "description": "A part of LegacyScriptEngine",
+        "tags": [
+          "type:mod",
+          "platform:levilamina",
+          "library",
+          "lse"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.10.1",
+        "0.10.2",
+        "0.11.0",
+        "0.11.1",
+        "0.11.2",
+        "0.12.0",
+        "0.13.0",
+        "0.14.0",
+        "0.15.0",
+        "0.16.0",
+        "0.17.0-rc.1",
+        "0.17.0"
+      ]
     },
-    "versions": [
-      "0.10.1",
-      "0.10.2",
-      "0.11.0",
-      "0.11.1",
-      "0.11.2",
-      "0.12.0",
-      "0.13.0",
-      "0.14.0",
-      "0.15.0",
-      "0.16.0",
-      "0.17.0-rc.1",
-      "0.17.0"
-    ]
-  },
-  "GroupMountain/GMLIB-LegacyRemoteCallApi": {
-    "info": {
-      "name": "GMLIB-LegacyRemoteCallApi",
-      "description": "Legacy RemoteCall API for GMLIB",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "gmlib",
-        "lse",
-        "library"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-LegacyRemoteCallApi/refs/heads/main/icon.jpg"
+    {
+      "info": {
+        "name": "GMLIB-LegacyRemoteCallApi",
+        "description": "Legacy RemoteCall API for GMLIB",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "gmlib",
+          "lse",
+          "library"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-LegacyRemoteCallApi/refs/heads/main/icon.jpg"
+      },
+      "versions": [
+        "1.0.0-rc.1",
+        "1.0.0",
+        "1.0.1",
+        "1.1.1",
+        "1.1.2",
+        "1.2.0",
+        "1.4.0",
+        "1.4.1",
+        "1.5.0",
+        "1.5.1",
+        "1.6.0",
+        "1.7.0",
+        "1.7.1",
+        "1.9.0"
+      ]
     },
-    "versions": [
-      "1.0.0-rc.1",
-      "1.0.0",
-      "1.0.1",
-      "1.1.1",
-      "1.1.2",
-      "1.2.0",
-      "1.4.0",
-      "1.4.1",
-      "1.5.0",
-      "1.5.1",
-      "1.6.0",
-      "1.7.0",
-      "1.7.1",
-      "1.9.0"
-    ]
-  },
-  "GroupMountain/GMEssentials-Release": {
-    "info": {
-      "name": "GMEssentials",
-      "description": "a simple mod",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMEssentials-Release/refs/heads/main/icon.jpg"
+    {
+      "info": {
+        "name": "GMEssentials",
+        "description": "a simple mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMEssentials-Release/refs/heads/main/icon.jpg"
+      },
+      "versions": [
+        "0.1.0",
+        "0.1.1",
+        "0.1.2",
+        "0.2.0",
+        "0.2.1",
+        "0.3.0",
+        "0.3.1",
+        "0.4.0",
+        "0.5.0",
+        "0.6.0",
+        "0.6.1",
+        "0.6.2",
+        "0.7.0",
+        "0.8.0",
+        "0.8.1"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.1.1",
-      "0.1.2",
-      "0.2.0",
-      "0.2.1",
-      "0.3.0",
-      "0.3.1",
-      "0.4.0",
-      "0.5.0",
-      "0.6.0",
-      "0.6.1",
-      "0.6.2",
-      "0.7.0",
-      "0.8.0",
-      "0.8.1"
-    ]
-  },
-  "LordBombardir/LLPlaceholderApi": {
-    "info": {
-      "name": "PlaceholderApi",
-      "description": "This mod is intended for developers who want to support multilingualism.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PlaceholderApi",
+        "description": "This mod is intended for developers who want to support multilingualism.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1"
-    ]
-  },
-  "leaftail1880/LLTranslatorApi": {
-    "info": {
-      "name": "TranslatorApi",
-      "description": "This mod is intended for developers who want to support multilingualism.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "TranslatorApi",
+        "description": "This mod is intended for developers who want to support multilingualism.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.0.1",
+        "0.0.2",
+        "0.0.3",
+        "0.0.4",
+        "0.0.5",
+        "0.0.6"
+      ]
     },
-    "versions": [
-      "0.0.1",
-      "0.0.2",
-      "0.0.3",
-      "0.0.4",
-      "0.0.5",
-      "0.0.6"
-    ]
-  },
-  "ZMBlocks/LL-UniteBan": {
-    "info": {
-      "name": "UniteBan",
-      "description": "跨服联合封禁黑名单",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "UniteBan",
+        "description": "跨服联合封禁黑名单",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.0.2",
+        "1.0.3",
+        "1.1.0",
+        "1.1.1",
+        "1.1.2",
+        "1.1.3"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.0.3",
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3"
-    ]
-  },
-  "LiteLDev/LegacyMoney": {
-    "info": {
-      "name": "LegacyMoney",
-      "description": "LLMoney, but adapted to LeviLamina",
-      "tags": [
-        "type:mod",
-        "platform:levilamina",
-        "library",
-        "economy"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LegacyMoney",
+        "description": "LLMoney, but adapted to LeviLamina",
+        "tags": [
+          "type:mod",
+          "platform:levilamina",
+          "library",
+          "economy"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.10.1",
+        "0.11.0",
+        "0.11.1",
+        "0.11.2",
+        "0.12.0",
+        "0.13.0",
+        "0.14.0",
+        "0.15.0",
+        "0.16.0",
+        "0.17.0-rc.1",
+        "0.17.0"
+      ]
     },
-    "versions": [
-      "0.10.1",
-      "0.11.0",
-      "0.11.1",
-      "0.11.2",
-      "0.12.0",
-      "0.13.0",
-      "0.14.0",
-      "0.15.0",
-      "0.16.0",
-      "0.17.0-rc.1",
-      "0.17.0"
-    ]
-  },
-  "GroupMountain/GMDebugStick": {
-    "info": {
-      "name": "GMDebugStick",
-      "description": "Register for a debug stick item",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
+    {
+      "info": {
+        "name": "GMDebugStick",
+        "description": "Register for a debug stick item",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.1.0",
+        "1.2.0",
+        "1.3.0",
+        "1.4.0"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0",
-      "1.2.0",
-      "1.3.0",
-      "1.4.0"
-    ]
-  },
-  "IceBlcokMC/PlotX": {
-    "info": {
-      "name": "PlotX",
-      "description": "PlotX — Next-gen plot management for Bedrock servers.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PlotX",
+        "description": "PlotX — Next-gen plot management for Bedrock servers.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.1.0-alpha.1",
+        "0.1.0-beta.1",
+        "0.1.0-beta.2",
+        "0.1.0"
+      ]
     },
-    "versions": [
-      "0.1.0-alpha.1",
-      "0.1.0-beta.1",
-      "0.1.0-beta.2",
-      "0.1.0"
-    ]
-  },
-  "lwenk/PlandProjectileFix": {
-    "info": {
-      "name": "PlandProjectileFix",
-      "description": "Description of my mod",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://example.com/my-mod/avatar.png"
+    {
+      "info": {
+        "name": "PlandProjectileFix",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "versions": [
+        "0.1.0",
+        "0.1.2"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.1.2"
-    ]
-  },
-  "GroupMountain/ThrowableFireball": {
-    "info": {
-      "name": "ThrowableFireball",
-      "description": "Make vanilla fire charge throwable",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "ThrowableFireball",
+        "description": "Make vanilla fire charge throwable",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1"
-    ]
-  },
-  "GroupMountain/FreeCamera": {
-    "info": {
-      "name": "FreeCamera",
-      "description": "Free Camera Mod on Bedrock Dedicated Server",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "FreeCamera",
+        "description": "Free Camera Mod on Bedrock Dedicated Server",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.13.3",
+        "0.13.4",
+        "0.13.5",
+        "0.13.6",
+        "0.13.8"
+      ]
     },
-    "versions": [
-      "0.13.3",
-      "0.13.4",
-      "0.13.5",
-      "0.13.6",
-      "0.13.8"
-    ]
-  },
-  "loitietu/LOICollectionA": {
-    "info": {
-      "name": "LOICollectionA",
-      "description": "Multifunctional plug-in set",
-      "tags": [
-        "collection",
-        "tietu",
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LOICollectionA",
+        "description": "Multifunctional plug-in set",
+        "tags": [
+          "collection",
+          "tietu",
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.7.0",
+        "1.7.1",
+        "1.7.2",
+        "1.8.0",
+        "1.8.1",
+        "1.8.2",
+        "1.9.0",
+        "1.9.1",
+        "1.9.2",
+        "1.10.0",
+        "1.10.1",
+        "1.11.0",
+        "1.11.1"
+      ]
     },
-    "versions": [
-      "1.7.0",
-      "1.7.1",
-      "1.7.2",
-      "1.8.0",
-      "1.8.1",
-      "1.8.2",
-      "1.9.0",
-      "1.9.1",
-      "1.9.2",
-      "1.10.0",
-      "1.10.1",
-      "1.11.0",
-      "1.11.1"
-    ]
-  },
-  "IceBlcokMC/DebugShape": {
-    "info": {
-      "name": "DebugShape",
-      "description": "minecraft bedrock debug shape packet wrapper",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "type:library"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "DebugShape",
+        "description": "minecraft bedrock debug shape packet wrapper",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "type:library"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.1.0",
+        "0.2.0",
+        "0.3.0",
+        "0.4.0",
+        "0.4.1",
+        "0.5.0",
+        "0.6.0"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.2.0",
-      "0.3.0",
-      "0.4.0",
-      "0.4.1",
-      "0.5.0",
-      "0.6.0"
-    ]
-  },
-  "LordBombardir/LLStructureLoader": {
-    "info": {
-      "name": "StructureLoader",
-      "description": "A mod that can help load MCBE structures",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "StructureLoader",
+        "description": "A mod that can help load MCBE structures",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.0.2",
+        "1.1.0",
+        "1.1.1"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.1.0",
-      "1.1.1"
-    ]
-  },
-  "GlacieTeam/AntiXray": {
-    "info": {
-      "name": "AntiXray",
-      "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
-      "tags": [
-        "anticheat",
-        "antixray",
-        "type:mod",
-        "platform:levilamina",
-        "platform:endstone"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "AntiXray",
+        "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
+        "tags": [
+          "anticheat",
+          "antixray",
+          "type:mod",
+          "platform:levilamina",
+          "platform:endstone"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.1.0-rc.1",
+        "1.1.0",
+        "1.2.0",
+        "1.3.0-rc.1",
+        "1.3.0",
+        "1.4.0-rc.1"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.1.0-rc.1",
-      "1.1.0",
-      "1.2.0",
-      "1.3.0-rc.1",
-      "1.3.0",
-      "1.4.0-rc.1"
-    ]
-  },
-  "kuangby/InfiniteBlockFixer": {
-    "info": {
-      "name": "My Mod",
-      "description": "Description of my mod",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://example.com/my-mod/avatar.png"
+    {
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "versions": [
+        "0.1.0",
+        "0.1.1",
+        "0.2.0",
+        "0.3.0"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.1.1",
-      "0.2.0",
-      "0.3.0"
-    ]
-  },
-  "LiteLDev/LeviOptimize": {
-    "info": {
-      "name": "LeviOptimize",
-      "description": "A performance optimization mod for Minecraft Bedrock Server",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LeviOptimize",
+        "description": "A performance optimization mod for Minecraft Bedrock Server",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.5.2",
+        "0.5.3",
+        "0.6.0",
+        "0.6.1",
+        "0.7.0",
+        "0.8.0",
+        "0.9.0",
+        "0.10.0",
+        "0.11.0",
+        "0.12.0",
+        "0.12.1"
+      ]
     },
-    "versions": [
-      "0.5.2",
-      "0.5.3",
-      "0.6.0",
-      "0.6.1",
-      "0.7.0",
-      "0.8.0",
-      "0.9.0",
-      "0.10.0",
-      "0.11.0",
-      "0.12.0",
-      "0.12.1"
-    ]
-  },
-  "carefly/RLXMoney": {
-    "info": {
-      "name": "RLXMoney",
-      "description": "A comprehensive money management plugin for Minecraft servers based on LeviLamina framework",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "economy",
-        "money"
-      ],
-      "avatar_url": "https://github.com/carefly/RLXMoney/raw/main/avatar.png"
+    {
+      "info": {
+        "name": "RLXMoney",
+        "description": "A comprehensive money management plugin for Minecraft servers based on LeviLamina framework",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "economy",
+          "money"
+        ],
+        "avatar_url": "https://github.com/carefly/RLXMoney/raw/main/avatar.png"
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.9.2",
+        "1.9.5"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.9.2",
-      "1.9.5"
-    ]
-  },
-  "LeafKnife/ChestMenu": {
-    "info": {
-      "name": "ChestMenu",
-      "description": "Minecraft 基岩版服务器(BDS) 箱子菜单插件",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "#"
+    {
+      "info": {
+        "name": "ChestMenu",
+        "description": "Minecraft 基岩版服务器(BDS) 箱子菜单插件",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "#"
+      },
+      "versions": [
+        "0.1.1",
+        "0.1.2",
+        "0.1.3"
+      ]
     },
-    "versions": [
-      "0.1.1",
-      "0.1.2",
-      "0.1.3"
-    ]
-  },
-  "Pixovate/LifeApple": {
-    "info": {
-      "name": "LifeApple",
-      "description": "A mod that makes the apple can boost your health.",
-      "tags": [
-        "attributeModifier",
-        "lifeapple",
-        "type:mod",
-        "platform:levilamina"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LifeApple",
+        "description": "A mod that makes the apple can boost your health.",
+        "tags": [
+          "attributeModifier",
+          "lifeapple",
+          "type:mod",
+          "platform:levilamina"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.0.1"
+      ]
     },
-    "versions": [
-      "0.0.1"
-    ]
-  },
-  "engsr6982/FastMiner": {
-    "info": {
-      "name": "FastMiner",
-      "description": "高性能连锁采集, 支持 Server 和 Client",
-      "tags": [
-        "type:mod",
-        "platform:levilamina"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "FastMiner",
+        "description": "高性能连锁采集, 支持 Server 和 Client",
+        "tags": [
+          "type:mod",
+          "platform:levilamina"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.10.0",
+        "0.11.0",
+        "0.12.0",
+        "0.13.0-rc.1",
+        "0.13.0-rc.2",
+        "0.13.0-rc.3",
+        "0.14.0-rc.1",
+        "0.15.0"
+      ]
     },
-    "versions": [
-      "0.10.0",
-      "0.11.0",
-      "0.12.0",
-      "0.13.0-rc.1",
-      "0.13.0-rc.2",
-      "0.13.0-rc.3",
-      "0.14.0-rc.1",
-      "0.15.0"
-    ]
-  },
-  "GroupMountain/UpdateNotice": {
-    "info": {
-      "name": "UpdateNotice",
-      "description": "Remind players of earlier versions to update the client",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "UpdateNotice",
+        "description": "Remind players of earlier versions to update the client",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0"
+      ]
     },
-    "versions": [
-      "1.0.0"
-    ]
-  },
-  "GroupMountain/AccessHiddenItem": {
-    "info": {
-      "name": "AccessHiddenItem",
-      "description": "Get hidden items in creative inventory",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "AccessHiddenItem",
+        "description": "Get hidden items in creative inventory",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.0.2"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2"
-    ]
-  },
-  "LiteLDev/bdsdown": {
-    "info": {
-      "name": "bdsdown",
-      "description": "Downloader for Minecraft BDS",
-      "tags": [
-        "utility"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "bdsdown",
+        "description": "Downloader for Minecraft BDS",
+        "tags": [
+          "utility"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.1.0",
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.1.4"
+      ]
     },
-    "versions": [
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3",
-      "1.1.4"
-    ]
-  },
-  "LiteLDev/bds": {
-    "info": {
-      "name": "Minecraft Bedrock Dedicated Server",
-      "description": "Bedrock Dedicated Servers allow Minecraft players on Windows and Linux computers to set up their own server at home, or host their server using a cloud-based service.",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "Minecraft Bedrock Dedicated Server",
+        "description": "Bedrock Dedicated Servers allow Minecraft players on Windows and Linux computers to set up their own server at home, or host their server using a cloud-based service.",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.21.70",
+        "1.21.71",
+        "1.21.72",
+        "1.21.73",
+        "1.21.80",
+        "1.21.81",
+        "1.21.82",
+        "1.21.83",
+        "1.21.84",
+        "1.21.90",
+        "1.21.91",
+        "1.21.92",
+        "1.21.93",
+        "1.21.94",
+        "1.21.95",
+        "1.21.100",
+        "1.21.101",
+        "1.21.102",
+        "1.21.111",
+        "1.21.112",
+        "1.21.113",
+        "1.21.114",
+        "1.21.120",
+        "1.21.121",
+        "1.21.122",
+        "1.21.123",
+        "1.21.124",
+        "1.21.130",
+        "1.21.131",
+        "1.21.132-patch.3",
+        "1.21.132",
+        "1.26.0"
+      ]
     },
-    "versions": [
-      "1.21.70",
-      "1.21.71",
-      "1.21.72",
-      "1.21.73",
-      "1.21.80",
-      "1.21.81",
-      "1.21.82",
-      "1.21.83",
-      "1.21.84",
-      "1.21.90",
-      "1.21.91",
-      "1.21.92",
-      "1.21.93",
-      "1.21.94",
-      "1.21.95",
-      "1.21.100",
-      "1.21.101",
-      "1.21.102",
-      "1.21.111",
-      "1.21.112",
-      "1.21.113",
-      "1.21.114",
-      "1.21.120",
-      "1.21.121",
-      "1.21.122",
-      "1.21.123",
-      "1.21.124",
-      "1.21.130",
-      "1.21.131",
-      "1.21.132-patch.3",
-      "1.21.132",
-      "1.26.0"
-    ]
-  },
-  "GroupMountain/GMBlacklist": {
-    "info": {
-      "name": "GMBlacklist",
-      "description": "Blacklist Mod on Bedrock Dedicated Server",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "GMBlacklist",
+        "description": "Blacklist Mod on Bedrock Dedicated Server",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.12.3"
+      ]
     },
-    "versions": [
-      "0.12.3"
-    ]
-  },
-  "ShrBox/ResourcePackEncryption": {
-    "info": {
-      "name": "ResourcePackEncryption",
-      "description": "Provide BDS support for resource pack encryption",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "ResourcePackEncryption",
+        "description": "Provide BDS support for resource pack encryption",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.7.0",
+        "0.8.0",
+        "0.9.0",
+        "0.9.1",
+        "0.10.0",
+        "0.11.0",
+        "0.12.0",
+        "0.13.0",
+        "0.14.0"
+      ]
     },
-    "versions": [
-      "0.7.0",
-      "0.8.0",
-      "0.9.0",
-      "0.9.1",
-      "0.10.0",
-      "0.11.0",
-      "0.12.0",
-      "0.13.0",
-      "0.14.0"
-    ]
-  },
-  "GroupMountain/GMLIB-Release": {
-    "info": {
-      "name": "GMLIB",
-      "description": "Group Mountain Library",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "gmlib",
-        "library"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-Release/refs/heads/release/icon.jpg"
+    {
+      "info": {
+        "name": "GMLIB",
+        "description": "Group Mountain Library",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "gmlib",
+          "library"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-Release/refs/heads/release/icon.jpg"
+      },
+      "versions": [
+        "1.0.0-rc.1",
+        "1.0.0-rc.2",
+        "1.0.0-rc.3",
+        "1.0.0",
+        "1.0.1",
+        "1.0.2",
+        "1.2.0-rc.1",
+        "1.2.0",
+        "1.2.1",
+        "1.3.0-rc.1",
+        "1.3.0",
+        "1.3.1",
+        "1.4.0",
+        "1.4.1",
+        "1.4.2",
+        "1.4.3",
+        "1.5.0",
+        "1.5.1",
+        "1.5.2",
+        "1.6.0",
+        "1.7.0",
+        "1.9.0"
+      ]
     },
-    "versions": [
-      "1.0.0-rc.1",
-      "1.0.0-rc.2",
-      "1.0.0-rc.3",
-      "1.0.0",
-      "1.0.1",
-      "1.0.2",
-      "1.2.0-rc.1",
-      "1.2.0",
-      "1.2.1",
-      "1.3.0-rc.1",
-      "1.3.0",
-      "1.3.1",
-      "1.4.0",
-      "1.4.1",
-      "1.4.2",
-      "1.4.3",
-      "1.5.0",
-      "1.5.1",
-      "1.5.2",
-      "1.6.0",
-      "1.7.0",
-      "1.9.0"
-    ]
-  },
-  "GroupMountain/FuckNetherHeight": {
-    "info": {
-      "name": "FuckNetherHeight",
-      "description": "Fuck Vanilla Bedrock Edition Nether Height Limit",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "NetherHeight"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "FuckNetherHeight",
+        "description": "Fuck Vanilla Bedrock Edition Nether Height Limit",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "NetherHeight"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.17.1",
+        "0.18.0",
+        "0.18.1",
+        "0.18.2",
+        "0.18.3",
+        "0.18.4",
+        "0.19.0"
+      ]
     },
-    "versions": [
-      "0.17.1",
-      "0.18.0",
-      "0.18.1",
-      "0.18.2",
-      "0.18.3",
-      "0.18.4",
-      "0.19.0"
-    ]
-  },
-  "LiteLDev/levilamina-loc": {
-    "info": {
-      "name": "levilamina-loc",
-      "description": "Language packs of LeviLamina",
-      "tags": [
-        "levilamina"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "levilamina-loc",
+        "description": "Language packs of LeviLamina",
+        "tags": [
+          "levilamina"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.5.2",
+        "1.5.3",
+        "1.5.4",
+        "1.6.0",
+        "1.6.1",
+        "1.6.2"
+      ]
     },
-    "versions": [
-      "1.5.2",
-      "1.5.3",
-      "1.5.4",
-      "1.6.0",
-      "1.6.1",
-      "1.6.2"
-    ]
-  },
-  "ZMBlocks/LL-BetterStop": {
-    "info": {
-      "name": "BetterStop",
-      "description": "When the server is shut down, the player shows the reason for the shutdown.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod",
-        "stop",
-        "server",
-        "tools"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "BetterStop",
+        "description": "When the server is shut down, the player shows the reason for the shutdown.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod",
+          "stop",
+          "server",
+          "tools"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0"
+      ]
     },
-    "versions": [
-      "1.0.0"
-    ]
-  },
-  "SkyEye-FAST/offer-flowers-faster-bedrock": {
-    "info": {
-      "name": "offer-flowers-faster",
-      "description": "Increases the probability of the Iron Golem delivering flowers.",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
+    {
+      "info": {
+        "name": "offer-flowers-faster",
+        "description": "Increases the probability of the Iron Golem delivering flowers.",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
+      },
+      "versions": [
+        "0.1.0",
+        "0.2.0"
+      ]
     },
-    "versions": [
-      "0.1.0",
-      "0.2.0"
-    ]
-  },
-  "LordBombardir/LLPowerRanks": {
-    "info": {
-      "name": "PowerRanks",
-      "description": "A mod that adds a rank (privilege) system to the game",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PowerRanks",
+        "description": "A mod that adds a rank (privilege) system to the game",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.7",
+        "1.0.8",
+        "1.0.9",
+        "1.1.0",
+        "1.1.1",
+        "1.1.2",
+        "1.1.3",
+        "1.1.4"
+      ]
     },
-    "versions": [
-      "1.0.7",
-      "1.0.8",
-      "1.0.9",
-      "1.1.0",
-      "1.1.1",
-      "1.1.2",
-      "1.1.3",
-      "1.1.4"
-    ]
-  },
-  "LiteLDev/LeviAntiCheat": {
-    "info": {
-      "name": "LeviAntiCheat",
-      "description": "Powerful anti-cheating for LeviLamina",
-      "tags": [
-        "platform:levilamina",
-        "anticheat"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "LeviAntiCheat",
+        "description": "Powerful anti-cheating for LeviLamina",
+        "tags": [
+          "platform:levilamina",
+          "anticheat"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.5.1",
+        "0.5.2",
+        "0.6.0",
+        "0.6.1",
+        "0.6.2",
+        "0.7.0",
+        "0.7.1",
+        "0.7.2",
+        "0.8.0",
+        "0.8.1",
+        "0.8.2",
+        "0.9.0",
+        "0.10.0",
+        "0.11.0",
+        "0.12.0",
+        "0.12.1",
+        "0.12.2"
+      ]
     },
-    "versions": [
-      "0.5.1",
-      "0.5.2",
-      "0.6.0",
-      "0.6.1",
-      "0.6.2",
-      "0.7.0",
-      "0.7.1",
-      "0.7.2",
-      "0.8.0",
-      "0.8.1",
-      "0.8.2",
-      "0.9.0",
-      "0.10.0",
-      "0.11.0",
-      "0.12.0",
-      "0.12.1",
-      "0.12.2"
-    ]
-  },
-  "LiteLDev/MoreDimensions": {
-    "info": {
-      "name": "MoreDimensions",
-      "description": "More than three dimensions on BDS!",
-      "tags": [
-        "platform:levilamina",
-        "library",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "MoreDimensions",
+        "description": "More than three dimensions on BDS!",
+        "tags": [
+          "platform:levilamina",
+          "library",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "0.8.0",
+        "0.9.0",
+        "0.10.0",
+        "0.10.1",
+        "0.11.0",
+        "0.11.2",
+        "0.12.0",
+        "0.12.1",
+        "0.12.2",
+        "0.13.0"
+      ]
     },
-    "versions": [
-      "0.8.0",
-      "0.9.0",
-      "0.10.0",
-      "0.10.1",
-      "0.11.0",
-      "0.11.2",
-      "0.12.0",
-      "0.12.1",
-      "0.12.2",
-      "0.13.0"
-    ]
-  },
-  "LiteLDev/CrashLogger": {
-    "info": {
-      "name": "CrashLogger",
-      "description": "Show crash log of LeviLamina",
-      "tags": [
-        "levilamina",
-        "utility"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "CrashLogger",
+        "description": "Show crash log of LeviLamina",
+        "tags": [
+          "levilamina",
+          "utility"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.3.1",
+        "1.3.2",
+        "1.3.3"
+      ]
     },
-    "versions": [
-      "1.3.1",
-      "1.3.2",
-      "1.3.3"
-    ]
-  },
-  "LiteLDev/PreLoader": {
-    "info": {
-      "name": "PreLoader",
-      "description": "A library preloader for loading LeviLamina",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "PreLoader",
+        "description": "A library preloader for loading LeviLamina",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.13.0",
+        "1.14.1",
+        "1.15.2",
+        "1.15.3",
+        "1.15.4",
+        "1.15.5",
+        "1.15.6",
+        "1.15.7"
+      ]
     },
-    "versions": [
-      "1.13.0",
-      "1.14.1",
-      "1.15.2",
-      "1.15.3",
-      "1.15.4",
-      "1.15.5",
-      "1.15.6",
-      "1.15.7"
-    ]
-  },
-  "LordBombardir/LLRconServer": {
-    "info": {
-      "name": "RconServer",
-      "description": "Implementation RCON for LeviLamina",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "RconServer",
+        "description": "Implementation RCON for LeviLamina",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1",
+        "1.0.2"
+      ]
     },
-    "versions": [
-      "1.0.0",
-      "1.0.1",
-      "1.0.2"
-    ]
-  },
-  "LiteLDev/bedrock-runtime-data": {
-    "info": {
-      "name": "bedrock-runtime-data",
-      "description": "",
-      "tags": [],
-      "avatar_url": ""
+    {
+      "info": {
+        "name": "bedrock-runtime-data",
+        "description": "",
+        "tags": [],
+        "avatar_url": ""
+      },
+      "versions": [
+        "1.21.80-server.2",
+        "1.21.80-server.3",
+        "1.21.80-server.4",
+        "1.21.80-server.5",
+        "1.21.80-server.6",
+        "1.21.80-server.7",
+        "1.21.80-server.8",
+        "1.21.93-server.1",
+        "1.21.93-server.2",
+        "1.21.93-server.3",
+        "1.21.93-server.4",
+        "1.21.93-server.5",
+        "1.21.93-server.6",
+        "1.21.102-server.1",
+        "1.21.102-server.2",
+        "1.21.111-server.1",
+        "1.21.111-server.2",
+        "1.21.111-server.3",
+        "1.21.120-server.1",
+        "1.21.120-server.2",
+        "1.21.120-server.3",
+        "1.21.120-server.4",
+        "1.21.120-server.5",
+        "1.21.120-server.6",
+        "1.21.120-server.7",
+        "1.21.124-client.1",
+        "1.21.124-client.2",
+        "1.21.124-client.3",
+        "1.21.124-server.1",
+        "1.21.124-server.2",
+        "1.21.124-server.3",
+        "1.21.124-server.4",
+        "1.21.124-server.5",
+        "1.21.132-client.1",
+        "1.21.132-client.2",
+        "1.21.132-client.3",
+        "1.21.132-client.4",
+        "1.21.132-client.5",
+        "1.21.132-client.6",
+        "1.21.132-client.7",
+        "1.21.132-client.8",
+        "1.21.132-server.1",
+        "1.21.132-server.2",
+        "1.21.132-server.3",
+        "1.21.132-server.4",
+        "1.21.132-server.5",
+        "1.21.132-server.6",
+        "1.21.132-server.7",
+        "1.21.803-server.1",
+        "1.21.7004-server.1",
+        "1.21.7004-server.2",
+        "1.21.7004-server.3",
+        "1.21.7004-server.4",
+        "1.21.7004-server.5",
+        "1.21.7004-server.6",
+        "1.21.7004-server.7",
+        "1.21.7004-server.9"
+      ]
     },
-    "versions": [
-      "1.21.80-server.2",
-      "1.21.80-server.3",
-      "1.21.80-server.4",
-      "1.21.80-server.5",
-      "1.21.80-server.6",
-      "1.21.80-server.7",
-      "1.21.80-server.8",
-      "1.21.93-server.1",
-      "1.21.93-server.2",
-      "1.21.93-server.3",
-      "1.21.93-server.4",
-      "1.21.93-server.5",
-      "1.21.93-server.6",
-      "1.21.102-server.1",
-      "1.21.102-server.2",
-      "1.21.111-server.1",
-      "1.21.111-server.2",
-      "1.21.111-server.3",
-      "1.21.120-server.1",
-      "1.21.120-server.2",
-      "1.21.120-server.3",
-      "1.21.120-server.4",
-      "1.21.120-server.5",
-      "1.21.120-server.6",
-      "1.21.120-server.7",
-      "1.21.124-client.1",
-      "1.21.124-client.2",
-      "1.21.124-client.3",
-      "1.21.124-server.1",
-      "1.21.124-server.2",
-      "1.21.124-server.3",
-      "1.21.124-server.4",
-      "1.21.124-server.5",
-      "1.21.132-client.1",
-      "1.21.132-client.2",
-      "1.21.132-client.3",
-      "1.21.132-client.4",
-      "1.21.132-client.5",
-      "1.21.132-client.6",
-      "1.21.132-client.7",
-      "1.21.132-client.8",
-      "1.21.132-server.1",
-      "1.21.132-server.2",
-      "1.21.132-server.3",
-      "1.21.132-server.4",
-      "1.21.132-server.5",
-      "1.21.132-server.6",
-      "1.21.132-server.7",
-      "1.21.803-server.1",
-      "1.21.7004-server.1",
-      "1.21.7004-server.2",
-      "1.21.7004-server.3",
-      "1.21.7004-server.4",
-      "1.21.7004-server.5",
-      "1.21.7004-server.6",
-      "1.21.7004-server.7",
-      "1.21.7004-server.9"
-    ]
-  },
-  "PuceLi/GunDamagePlus": {
-    "info": {
-      "name": "My Mod",
-      "description": "Description of my mod",
-      "tags": [
-        "platform:levilamina",
-        "type:mod"
-      ],
-      "avatar_url": "https://example.com/my-mod/avatar.png"
-    },
-    "versions": [
-      "1.0.0",
-      "1.0.1"
-    ]
-  }
+    {
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "versions": [
+        "1.0.0",
+        "1.0.1"
+      ]
+    }
+  ]
 }
