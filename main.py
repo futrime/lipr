@@ -27,6 +27,7 @@ class PackageInfo(BaseModel):
 
 
 class PackageIndexEntry(BaseModel):
+    tooth: str
     info: PackageInfo
     versions: list[str] = Field(default_factory=list)
 
@@ -193,7 +194,11 @@ def main() -> None:
         format_version=3,
         format_uuid=UUID,
         packages=[
-            PackageIndexEntry(info=infos[repo], versions=[str(ver) for ver in vers])
+            PackageIndexEntry(
+                tooth=f"github.com/{repo}",
+                info=infos[repo],
+                versions=[str(ver) for ver in vers],
+            )
             for repo, vers in versions.items()
         ],
     )
