@@ -12,10 +12,11 @@ from github import Github
 from github.Auth import Token
 from github.GithubException import GithubException
 from httpx import URL, Client
-from pydantic import BaseModel, Field, RootModel
+from pydantic import BaseModel, Field
 from semver import Version
 
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
+UUID: Final = "289f771f-2c9a-4d73-9f3f-8492495a924d"
 
 
 class PackageInfo(BaseModel):
@@ -30,8 +31,10 @@ class PackageIndexEntry(BaseModel):
     versions: list[str] = Field(default_factory=list)
 
 
-class PackageIndex(RootModel):
-    root: dict[str, PackageIndexEntry] = Field(default_factory=dict)
+class PackageIndex(BaseModel):
+    format_version: int
+    format_uuid: str
+    packages: list[PackageIndexEntry] = Field(default_factory=list)
 
 
 class PackageManifest(BaseModel):
@@ -118,9 +121,7 @@ def search_repositories() -> Iterator[str]:
         raise RuntimeError("GITHUB_TOKEN environment variable is not set")
 
     with Github(auth=Token(token), per_page=100) as github:
-        pagination = github.search_code(
-            "289f771f-2c9a-4d73-9f3f-8492495a924d", filename="tooth.json", path="/"
-        )
+        pagination = github.search_code(UUID, filename="tooth.json", path="/")
 
         page_idx = 0
         while True:
@@ -189,10 +190,12 @@ def main() -> None:
                 versions.setdefault(repo, []).append(ver)
 
     index = PackageIndex(
-        {
-            repo: PackageIndexEntry(info=infos[repo], versions=[str(v) for v in vers])
+        format_version=3,
+        format_uuid=UUID,
+        packages=[
+            PackageIndexEntry(info=infos[repo], versions=[str(ver) for ver in vers])
             for repo, vers in versions.items()
-        }
+        ],
     )
 
     save_index_file(index)
