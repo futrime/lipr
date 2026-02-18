@@ -3,13 +3,15 @@
   "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "packages": [
     {
-      "tooth": "github.com/LiteLDev/LeviLamina",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LeviLamina\")",
       "info": {
         "name": "LeviLamina",
         "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
         "tags": [],
         "avatar_url": "https://lamina.levimc.org/logo.svg"
       },
+      "stars": 1498,
+      "updated": "2026-02-07T06:15:16Z",
       "versions": [
         "1.1.1",
         "1.1.2",
@@ -50,7 +52,7 @@
       ]
     },
     {
-      "tooth": "github.com/superx101/CALL",
+      "tooth": "github.com/Repository(full_name=\"superx101/CALL\")",
       "info": {
         "name": "CALL",
         "description": "A simple building tool",
@@ -61,13 +63,15 @@
         ],
         "avatar_url": "https://github.com/superx101/CALL/blob/main/docs/image/CALL_dark.png"
       },
+      "stars": 14,
+      "updated": "2025-07-11T06:01:19Z",
       "versions": [
         "1.6.0",
         "1.6.1"
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/Cleaner",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/Cleaner\")",
       "info": {
         "name": "Cleaner",
         "description": "A Powerful Entities Cleaning up Mod for BDS",
@@ -78,6 +82,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 14,
+      "updated": "2026-02-12T04:29:56Z",
       "versions": [
         "0.13.4",
         "0.13.5",
@@ -91,7 +97,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/LegacyScriptEngine",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LegacyScriptEngine\")",
       "info": {
         "name": "LegacyScriptEngine",
         "description": "A plugin engine for running LLSE plugins on LeviLamina",
@@ -102,6 +108,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 93,
+      "updated": "2026-02-04T05:24:10Z",
       "versions": [
         "0.10.0",
         "0.10.2",
@@ -139,7 +147,7 @@
       ]
     },
     {
-      "tooth": "github.com/GeneralUniversal/EnchantX",
+      "tooth": "github.com/Repository(full_name=\"GeneralUniversal/EnchantX\")",
       "info": {
         "name": "EnchantX",
         "description": "A Lse Pluyin which enchanced enchantment function",
@@ -149,12 +157,14 @@
         ],
         "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40&v=4"
       },
+      "stars": 0,
+      "updated": "2025-10-02T23:15:45Z",
       "versions": [
         "0.1.0"
       ]
     },
     {
-      "tooth": "github.com/IceBlcokMC/PLand",
+      "tooth": "github.com/Repository(full_name=\"IceBlcokMC/PLand\")",
       "info": {
         "name": "PLand",
         "description": "基于 LeviLamina 的领地系统 / A land system based on LeviLamina",
@@ -166,6 +176,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 30,
+      "updated": "2026-02-15T07:56:33Z",
       "versions": [
         "0.11.0-rc.1",
         "0.11.0-rc.2",
@@ -186,26 +198,7 @@
       ]
     },
     {
-      "tooth": "github.com/LeafKnife/FixBundleBug",
-      "info": {
-        "name": "FixBundleBug",
-        "description": "修复利用漏斗和收纳袋刷物品",
-        "tags": [
-          "platform:levilamina",
-          "type:mod"
-        ],
-        "avatar_url": "https://example.com/my-mod/avatar.png"
-      },
-      "versions": [
-        "0.1.0",
-        "0.1.2",
-        "0.1.3",
-        "0.2.0",
-        "0.2.1"
-      ]
-    },
-    {
-      "tooth": "github.com/GlacieTeam/Glacie",
+      "tooth": "github.com/Repository(full_name=\"GlacieTeam/Glacie\")",
       "info": {
         "name": "Glacie",
         "description": "BDS Multi-version",
@@ -219,6 +212,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 94,
+      "updated": "2026-01-29T19:24:17Z",
       "versions": [
         "1.0.0-rc.2",
         "2.0.1",
@@ -286,31 +281,50 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/PeEditor",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/PeEditor\")",
       "info": {
         "name": "PeEditor",
         "description": "A tool to inject PreLoader to Minecraft Bedrock Edition",
         "tags": [],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2025-04-10T04:22:26Z",
       "versions": [
         "3.9.0"
       ]
     },
     {
-      "tooth": "github.com/Nico6719/YEssential",
+      "tooth": "github.com/Repository(full_name=\"ye111566/browser\")",
+      "info": {
+        "name": "browser",
+        "description": "browser for bedrock edition",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://www.minebbs.com/data/resource_icons/10/10936.jpg?1742231017"
+      },
+      "stars": 1,
+      "updated": "2025-04-01T15:02:29Z",
+      "versions": []
+    },
+    {
+      "tooth": "github.com/Repository(full_name=\"Nico6719/YEssential\")",
       "info": {
         "name": "YEssential",
         "description": "一款基础功能插件",
         "tags": [],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2026-02-15T12:48:00Z",
       "versions": [
         "2.8.8"
       ]
     },
     {
-      "tooth": "github.com/PuceLi/NameTagPlus",
+      "tooth": "github.com/Repository(full_name=\"PuceLi/NameTagPlus\")",
       "info": {
         "name": "NameTagPlus",
         "description": "解除命名牌的使用限制",
@@ -320,13 +334,15 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2026-02-01T03:26:56Z",
       "versions": [
         "1.0.0",
         "1.0.1"
       ]
     },
     {
-      "tooth": "github.com/ZMBlocks/LL-ScalePersistenceFix",
+      "tooth": "github.com/Repository(full_name=\"ZMBlocks/LL-ScalePersistenceFix\")",
       "info": {
         "name": "ScalePersistenceFix",
         "description": "",
@@ -336,12 +352,14 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2025-11-26T13:23:20Z",
       "versions": [
         "1.0.0"
       ]
     },
     {
-      "tooth": "github.com/leoweyr/LeviInterface",
+      "tooth": "github.com/Repository(full_name=\"leoweyr/LeviInterface\")",
       "info": {
         "name": "LeviInterfaceMaster",
         "description": "The master plugin that provides cross-plugin UI queues in Minecraft Legacy Script Engine.",
@@ -357,12 +375,14 @@
         ],
         "avatar_url": ""
       },
+      "stars": 1,
+      "updated": "2025-06-17T09:52:33Z",
       "versions": [
         "0.1.0"
       ]
     },
     {
-      "tooth": "github.com/MiracleForest/iAutomaticFishing",
+      "tooth": "github.com/Repository(full_name=\"MiracleForest/iAutomaticFishing\")",
       "info": {
         "name": "iAutomaticFishing",
         "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
@@ -372,13 +392,15 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
       },
+      "stars": 5,
+      "updated": "2026-01-27T13:18:23Z",
       "versions": [
         "1.0.0",
         "1.1.0"
       ]
     },
     {
-      "tooth": "github.com/ShrBox/BackupHelper",
+      "tooth": "github.com/Repository(full_name=\"ShrBox/BackupHelper\")",
       "info": {
         "name": "BackupHelper",
         "description": "A LeviLamina plugin which is port from LiteLoaderBDS to help you backup more easily",
@@ -388,6 +410,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 18,
+      "updated": "2026-01-26T05:04:45Z",
       "versions": [
         "0.7.1",
         "0.8.0",
@@ -408,7 +432,7 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/ModAPI-Release",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/ModAPI-Release\")",
       "info": {
         "name": "ModAPI",
         "description": "Group Mountain Mod Api",
@@ -420,6 +444,8 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/ModAPI-Release/refs/heads/main/icon.png"
       },
+      "stars": 4,
+      "updated": "2026-01-31T15:20:47Z",
       "versions": [
         "0.1.0",
         "0.1.1",
@@ -431,7 +457,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/LegacyRemoteCall",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LegacyRemoteCall\")",
       "info": {
         "name": "LegacyRemoteCall",
         "description": "A part of LegacyScriptEngine",
@@ -443,6 +469,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2026-01-25T12:36:06Z",
       "versions": [
         "0.10.1",
         "0.10.2",
@@ -459,7 +487,22 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
+      "tooth": "github.com/Repository(full_name=\"yangyangzhong82/Placeholder\")",
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "stars": 0,
+      "updated": "2026-01-26T19:14:53Z",
+      "versions": []
+    },
+    {
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/GMLIB-LegacyRemoteCallApi\")",
       "info": {
         "name": "GMLIB-LegacyRemoteCallApi",
         "description": "Legacy RemoteCall API for GMLIB",
@@ -472,6 +515,8 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-LegacyRemoteCallApi/refs/heads/main/icon.jpg"
       },
+      "stars": 24,
+      "updated": "2026-02-10T14:43:14Z",
       "versions": [
         "1.0.0-rc.1",
         "1.0.0",
@@ -490,36 +535,7 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/GMEssentials-Release",
-      "info": {
-        "name": "GMEssentials",
-        "description": "a simple mod",
-        "tags": [
-          "platform:levilamina",
-          "type:mod"
-        ],
-        "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMEssentials-Release/refs/heads/main/icon.jpg"
-      },
-      "versions": [
-        "0.1.0",
-        "0.1.1",
-        "0.1.2",
-        "0.2.0",
-        "0.2.1",
-        "0.3.0",
-        "0.3.1",
-        "0.4.0",
-        "0.5.0",
-        "0.6.0",
-        "0.6.1",
-        "0.6.2",
-        "0.7.0",
-        "0.8.0",
-        "0.8.1"
-      ]
-    },
-    {
-      "tooth": "github.com/LordBombardir/LLPlaceholderApi",
+      "tooth": "github.com/Repository(full_name=\"LordBombardir/LLPlaceholderApi\")",
       "info": {
         "name": "PlaceholderApi",
         "description": "This mod is intended for developers who want to support multilingualism.",
@@ -529,13 +545,15 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2026-02-04T09:44:23Z",
       "versions": [
         "1.0.0",
         "1.0.1"
       ]
     },
     {
-      "tooth": "github.com/leaftail1880/LLTranslatorApi",
+      "tooth": "github.com/Repository(full_name=\"leaftail1880/LLTranslatorApi\")",
       "info": {
         "name": "TranslatorApi",
         "description": "This mod is intended for developers who want to support multilingualism.",
@@ -545,6 +563,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2025-08-27T11:56:26Z",
       "versions": [
         "0.0.1",
         "0.0.2",
@@ -555,7 +575,7 @@
       ]
     },
     {
-      "tooth": "github.com/ZMBlocks/LL-UniteBan",
+      "tooth": "github.com/Repository(full_name=\"ZMBlocks/LL-UniteBan\")",
       "info": {
         "name": "UniteBan",
         "description": "跨服联合封禁黑名单",
@@ -565,6 +585,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 1,
+      "updated": "2025-08-10T06:38:20Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -577,7 +599,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/LegacyMoney",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LegacyMoney\")",
       "info": {
         "name": "LegacyMoney",
         "description": "LLMoney, but adapted to LeviLamina",
@@ -589,6 +611,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2026-01-25T12:36:01Z",
       "versions": [
         "0.10.1",
         "0.11.0",
@@ -604,7 +628,7 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/GMDebugStick",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/GMDebugStick\")",
       "info": {
         "name": "GMDebugStick",
         "description": "Register for a debug stick item",
@@ -614,6 +638,8 @@
         ],
         "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
       },
+      "stars": 2,
+      "updated": "2025-10-23T12:28:30Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -624,7 +650,7 @@
       ]
     },
     {
-      "tooth": "github.com/IceBlcokMC/PlotX",
+      "tooth": "github.com/Repository(full_name=\"IceBlcokMC/PlotX\")",
       "info": {
         "name": "PlotX",
         "description": "PlotX — Next-gen plot management for Bedrock servers.",
@@ -634,6 +660,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2026-01-23T16:06:25Z",
       "versions": [
         "0.1.0-alpha.1",
         "0.1.0-beta.1",
@@ -642,7 +670,7 @@
       ]
     },
     {
-      "tooth": "github.com/lwenk/PlandProjectileFix",
+      "tooth": "github.com/Repository(full_name=\"lwenk/PlandProjectileFix\")",
       "info": {
         "name": "PlandProjectileFix",
         "description": "Description of my mod",
@@ -652,13 +680,15 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "stars": 0,
+      "updated": "2025-10-11T08:05:10Z",
       "versions": [
         "0.1.0",
         "0.1.2"
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/ThrowableFireball",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/ThrowableFireball\")",
       "info": {
         "name": "ThrowableFireball",
         "description": "Make vanilla fire charge throwable",
@@ -668,13 +698,15 @@
         ],
         "avatar_url": ""
       },
+      "stars": 2,
+      "updated": "2025-06-02T15:43:00Z",
       "versions": [
         "1.0.0",
         "1.0.1"
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/FreeCamera",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/FreeCamera\")",
       "info": {
         "name": "FreeCamera",
         "description": "Free Camera Mod on Bedrock Dedicated Server",
@@ -684,6 +716,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 20,
+      "updated": "2025-06-15T08:26:21Z",
       "versions": [
         "0.13.3",
         "0.13.4",
@@ -693,7 +727,7 @@
       ]
     },
     {
-      "tooth": "github.com/loitietu/LOICollectionA",
+      "tooth": "github.com/Repository(full_name=\"loitietu/LOICollectionA\")",
       "info": {
         "name": "LOICollectionA",
         "description": "Multifunctional plug-in set",
@@ -705,6 +739,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 11,
+      "updated": "2026-02-12T12:41:50Z",
       "versions": [
         "1.7.0",
         "1.7.1",
@@ -722,7 +758,7 @@
       ]
     },
     {
-      "tooth": "github.com/IceBlcokMC/DebugShape",
+      "tooth": "github.com/Repository(full_name=\"IceBlcokMC/DebugShape\")",
       "info": {
         "name": "DebugShape",
         "description": "minecraft bedrock debug shape packet wrapper",
@@ -733,6 +769,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 4,
+      "updated": "2026-01-25T15:30:59Z",
       "versions": [
         "0.1.0",
         "0.2.0",
@@ -744,7 +782,7 @@
       ]
     },
     {
-      "tooth": "github.com/LordBombardir/LLStructureLoader",
+      "tooth": "github.com/Repository(full_name=\"LordBombardir/LLStructureLoader\")",
       "info": {
         "name": "StructureLoader",
         "description": "A mod that can help load MCBE structures",
@@ -754,6 +792,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 3,
+      "updated": "2025-10-13T18:31:53Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -763,7 +803,7 @@
       ]
     },
     {
-      "tooth": "github.com/GlacieTeam/AntiXray",
+      "tooth": "github.com/Repository(full_name=\"GlacieTeam/AntiXray\")",
       "info": {
         "name": "AntiXray",
         "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
@@ -776,6 +816,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2025-07-23T14:21:24Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -788,7 +830,7 @@
       ]
     },
     {
-      "tooth": "github.com/kuangby/InfiniteBlockFixer",
+      "tooth": "github.com/Repository(full_name=\"kuangby/InfiniteBlockFixer\")",
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -798,6 +840,8 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "stars": 2,
+      "updated": "2025-07-21T11:45:49Z",
       "versions": [
         "0.1.0",
         "0.1.1",
@@ -806,7 +850,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/LeviOptimize",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LeviOptimize\")",
       "info": {
         "name": "LeviOptimize",
         "description": "A performance optimization mod for Minecraft Bedrock Server",
@@ -816,6 +860,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 59,
+      "updated": "2026-01-26T04:04:53Z",
       "versions": [
         "0.5.2",
         "0.5.3",
@@ -831,7 +877,7 @@
       ]
     },
     {
-      "tooth": "github.com/carefly/RLXMoney",
+      "tooth": "github.com/Repository(full_name=\"carefly/RLXMoney\")",
       "info": {
         "name": "RLXMoney",
         "description": "A comprehensive money management plugin for Minecraft servers based on LeviLamina framework",
@@ -843,6 +889,8 @@
         ],
         "avatar_url": "https://github.com/carefly/RLXMoney/raw/main/avatar.png"
       },
+      "stars": 0,
+      "updated": "2026-02-08T02:37:18Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -851,24 +899,22 @@
       ]
     },
     {
-      "tooth": "github.com/LeafKnife/ChestMenu",
+      "tooth": "github.com/Repository(full_name=\"PuceLi/PlayerCounter\")",
       "info": {
-        "name": "ChestMenu",
-        "description": "Minecraft 基岩版服务器(BDS) 箱子菜单插件",
+        "name": "PlayerCounter",
+        "description": "Get the number of players in the world.",
         "tags": [
           "platform:levilamina",
           "type:mod"
         ],
-        "avatar_url": "#"
+        "avatar_url": ""
       },
-      "versions": [
-        "0.1.1",
-        "0.1.2",
-        "0.1.3"
-      ]
+      "stars": 0,
+      "updated": "2025-08-10T12:36:44Z",
+      "versions": []
     },
     {
-      "tooth": "github.com/Pixovate/LifeApple",
+      "tooth": "github.com/Repository(full_name=\"Pixovate/LifeApple\")",
       "info": {
         "name": "LifeApple",
         "description": "A mod that makes the apple can boost your health.",
@@ -880,34 +926,14 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2025-05-12T04:28:39Z",
       "versions": [
         "0.0.1"
       ]
     },
     {
-      "tooth": "github.com/engsr6982/FastMiner",
-      "info": {
-        "name": "FastMiner",
-        "description": "高性能连锁采集, 支持 Server 和 Client",
-        "tags": [
-          "type:mod",
-          "platform:levilamina"
-        ],
-        "avatar_url": ""
-      },
-      "versions": [
-        "0.10.0",
-        "0.11.0",
-        "0.12.0",
-        "0.13.0-rc.1",
-        "0.13.0-rc.2",
-        "0.13.0-rc.3",
-        "0.14.0-rc.1",
-        "0.15.0"
-      ]
-    },
-    {
-      "tooth": "github.com/GroupMountain/UpdateNotice",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/UpdateNotice\")",
       "info": {
         "name": "UpdateNotice",
         "description": "Remind players of earlier versions to update the client",
@@ -917,12 +943,14 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2025-07-08T03:39:54Z",
       "versions": [
         "1.0.0"
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/AccessHiddenItem",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/AccessHiddenItem\")",
       "info": {
         "name": "AccessHiddenItem",
         "description": "Get hidden items in creative inventory",
@@ -932,6 +960,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 1,
+      "updated": "2025-04-19T10:52:03Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -939,7 +969,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/bdsdown",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/bdsdown\")",
       "info": {
         "name": "bdsdown",
         "description": "Downloader for Minecraft BDS",
@@ -948,6 +978,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 3,
+      "updated": "2025-05-06T18:01:21Z",
       "versions": [
         "1.1.0",
         "1.1.1",
@@ -957,62 +989,21 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/bds",
-      "info": {
-        "name": "Minecraft Bedrock Dedicated Server",
-        "description": "Bedrock Dedicated Servers allow Minecraft players on Windows and Linux computers to set up their own server at home, or host their server using a cloud-based service.",
-        "tags": [],
-        "avatar_url": ""
-      },
-      "versions": [
-        "1.21.70",
-        "1.21.71",
-        "1.21.72",
-        "1.21.73",
-        "1.21.80",
-        "1.21.81",
-        "1.21.82",
-        "1.21.83",
-        "1.21.84",
-        "1.21.90",
-        "1.21.91",
-        "1.21.92",
-        "1.21.93",
-        "1.21.94",
-        "1.21.95",
-        "1.21.100",
-        "1.21.101",
-        "1.21.102",
-        "1.21.111",
-        "1.21.112",
-        "1.21.113",
-        "1.21.114",
-        "1.21.120",
-        "1.21.121",
-        "1.21.122",
-        "1.21.123",
-        "1.21.124",
-        "1.21.130",
-        "1.21.131",
-        "1.21.132-patch.3",
-        "1.21.132",
-        "1.26.0"
-      ]
-    },
-    {
-      "tooth": "github.com/GroupMountain/GMBlacklist",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/GMBlacklist\")",
       "info": {
         "name": "GMBlacklist",
         "description": "Blacklist Mod on Bedrock Dedicated Server",
         "tags": [],
         "avatar_url": ""
       },
+      "stars": 2,
+      "updated": "2025-04-13T12:59:58Z",
       "versions": [
         "0.12.3"
       ]
     },
     {
-      "tooth": "github.com/ShrBox/ResourcePackEncryption",
+      "tooth": "github.com/Repository(full_name=\"ShrBox/ResourcePackEncryption\")",
       "info": {
         "name": "ResourcePackEncryption",
         "description": "Provide BDS support for resource pack encryption",
@@ -1022,6 +1013,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 8,
+      "updated": "2026-01-25T13:56:12Z",
       "versions": [
         "0.7.0",
         "0.8.0",
@@ -1035,7 +1028,7 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/GMLIB-Release",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/GMLIB-Release\")",
       "info": {
         "name": "GMLIB",
         "description": "Group Mountain Library",
@@ -1047,6 +1040,8 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-Release/refs/heads/release/icon.jpg"
       },
+      "stars": 93,
+      "updated": "2026-01-31T12:49:25Z",
       "versions": [
         "1.0.0-rc.1",
         "1.0.0-rc.2",
@@ -1073,7 +1068,7 @@
       ]
     },
     {
-      "tooth": "github.com/GroupMountain/FuckNetherHeight",
+      "tooth": "github.com/Repository(full_name=\"GroupMountain/FuckNetherHeight\")",
       "info": {
         "name": "FuckNetherHeight",
         "description": "Fuck Vanilla Bedrock Edition Nether Height Limit",
@@ -1084,6 +1079,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 10,
+      "updated": "2026-02-12T05:46:20Z",
       "versions": [
         "0.17.1",
         "0.18.0",
@@ -1095,7 +1092,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/levilamina-loc",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/levilamina-loc\")",
       "info": {
         "name": "levilamina-loc",
         "description": "Language packs of LeviLamina",
@@ -1104,6 +1101,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 1,
+      "updated": "2026-01-25T16:53:41Z",
       "versions": [
         "1.5.2",
         "1.5.3",
@@ -1114,7 +1113,7 @@
       ]
     },
     {
-      "tooth": "github.com/ZMBlocks/LL-BetterStop",
+      "tooth": "github.com/Repository(full_name=\"ZMBlocks/LL-BetterStop\")",
       "info": {
         "name": "BetterStop",
         "description": "When the server is shut down, the player shows the reason for the shutdown.",
@@ -1127,12 +1126,14 @@
         ],
         "avatar_url": ""
       },
+      "stars": 0,
+      "updated": "2025-04-17T11:45:11Z",
       "versions": [
         "1.0.0"
       ]
     },
     {
-      "tooth": "github.com/SkyEye-FAST/offer-flowers-faster-bedrock",
+      "tooth": "github.com/Repository(full_name=\"SkyEye-FAST/offer-flowers-faster-bedrock\")",
       "info": {
         "name": "offer-flowers-faster",
         "description": "Increases the probability of the Iron Golem delivering flowers.",
@@ -1142,13 +1143,15 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
       },
+      "stars": 1,
+      "updated": "2025-12-22T10:41:04Z",
       "versions": [
         "0.1.0",
         "0.2.0"
       ]
     },
     {
-      "tooth": "github.com/LordBombardir/LLPowerRanks",
+      "tooth": "github.com/Repository(full_name=\"LordBombardir/LLPowerRanks\")",
       "info": {
         "name": "PowerRanks",
         "description": "A mod that adds a rank (privilege) system to the game",
@@ -1158,6 +1161,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 14,
+      "updated": "2025-10-13T19:25:56Z",
       "versions": [
         "1.0.7",
         "1.0.8",
@@ -1170,7 +1175,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/LeviAntiCheat",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/LeviAntiCheat\")",
       "info": {
         "name": "LeviAntiCheat",
         "description": "Powerful anti-cheating for LeviLamina",
@@ -1180,6 +1185,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 43,
+      "updated": "2026-02-03T11:39:03Z",
       "versions": [
         "0.5.1",
         "0.5.2",
@@ -1201,7 +1208,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/MoreDimensions",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/MoreDimensions\")",
       "info": {
         "name": "MoreDimensions",
         "description": "More than three dimensions on BDS!",
@@ -1212,6 +1219,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 21,
+      "updated": "2026-02-03T12:49:16Z",
       "versions": [
         "0.8.0",
         "0.9.0",
@@ -1226,7 +1235,7 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/CrashLogger",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/CrashLogger\")",
       "info": {
         "name": "CrashLogger",
         "description": "Show crash log of LeviLamina",
@@ -1236,6 +1245,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2026-01-16T05:01:11Z",
       "versions": [
         "1.3.1",
         "1.3.2",
@@ -1243,13 +1254,15 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/PreLoader",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/PreLoader\")",
       "info": {
         "name": "PreLoader",
         "description": "A library preloader for loading LeviLamina",
         "tags": [],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2025-12-19T03:37:28Z",
       "versions": [
         "1.13.0",
         "1.14.1",
@@ -1262,7 +1275,7 @@
       ]
     },
     {
-      "tooth": "github.com/LordBombardir/LLRconServer",
+      "tooth": "github.com/Repository(full_name=\"LordBombardir/LLRconServer\")",
       "info": {
         "name": "RconServer",
         "description": "Implementation RCON for LeviLamina",
@@ -1272,6 +1285,8 @@
         ],
         "avatar_url": ""
       },
+      "stars": 6,
+      "updated": "2025-10-02T19:01:35Z",
       "versions": [
         "1.0.0",
         "1.0.1",
@@ -1279,13 +1294,15 @@
       ]
     },
     {
-      "tooth": "github.com/LiteLDev/bedrock-runtime-data",
+      "tooth": "github.com/Repository(full_name=\"LiteLDev/bedrock-runtime-data\")",
       "info": {
         "name": "bedrock-runtime-data",
         "description": "",
         "tags": [],
         "avatar_url": ""
       },
+      "stars": 15,
+      "updated": "2026-02-07T06:05:47Z",
       "versions": [
         "1.21.80-server.2",
         "1.21.80-server.3",
@@ -1314,6 +1331,7 @@
         "1.21.120-server.7",
         "1.21.124-client.1",
         "1.21.124-client.2",
+        "1.21.124-client.3",
         "1.21.124-server.1",
         "1.21.124-server.2",
         "1.21.124-server.3",
@@ -1346,7 +1364,7 @@
       ]
     },
     {
-      "tooth": "github.com/PuceLi/GunDamagePlus",
+      "tooth": "github.com/Repository(full_name=\"yangyangzhong82/CauldronZero\")",
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1356,10 +1374,54 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
-      "versions": [
-        "1.0.0",
-        "1.0.1"
-      ]
+      "stars": 0,
+      "updated": "2025-11-07T02:01:13Z",
+      "versions": []
+    },
+    {
+      "tooth": "github.com/Repository(full_name=\"yangyangzhong82/HFloatingText\")",
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "stars": 0,
+      "updated": "2025-11-13T07:28:14Z",
+      "versions": []
+    },
+    {
+      "tooth": "github.com/Repository(full_name=\"yangyangzhong82/Bedrock-Authority\")",
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "stars": 0,
+      "updated": "2025-11-06T15:44:40Z",
+      "versions": []
+    },
+    {
+      "tooth": "github.com/Repository(full_name=\"yangyangzhong82/czmoney\")",
+      "info": {
+        "name": "My Mod",
+        "description": "Description of my mod",
+        "tags": [
+          "platform:levilamina",
+          "type:mod"
+        ],
+        "avatar_url": "https://example.com/my-mod/avatar.png"
+      },
+      "stars": 0,
+      "updated": "2025-11-06T07:49:27Z",
+      "versions": []
     }
   ]
 }
