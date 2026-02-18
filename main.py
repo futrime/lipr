@@ -174,19 +174,19 @@ def main() -> None:
             try:
                 head_mft = fetch_manifest(repo.full_name, version=None, client=client)
             except Exception as ex:
-                logging.error(f"Failed to fetch manifest for github.com/{repo}: {ex}")
+                logging.error(f"Failed to fetch manifest for github.com/{repo.full_name}: {ex}")
                 continue
 
             try:
                 updated = repo.get_latest_release().published_at
             except Exception as ex:
                 logging.error(
-                    f"Failed to fetch latest release for github.com/{repo}: {ex}"
+                    f"Failed to fetch latest release for github.com/{repo.full_name}: {ex}"
                 )
                 continue
 
             package = PackageIndexEntry(
-                tooth=f"github.com/{repo}",
+                tooth=f"github.com/{repo.full_name}",
                 info=head_mft.info,
                 stars=repo.stargazers_count,
                 updated=updated,
@@ -196,7 +196,7 @@ def main() -> None:
             try:
                 versions = fetch_versions(repo.full_name, git=git)
             except Exception as ex:
-                logging.error(f"Failed to fetch versions for github.com/{repo}: {ex}")
+                logging.error(f"Failed to fetch versions for github.com/{repo.full_name}: {ex}")
                 continue
 
             for ver in versions:
@@ -204,7 +204,7 @@ def main() -> None:
                     manifest = fetch_manifest(repo.full_name, ver, client=client)
                 except Exception as ex:
                     logging.error(
-                        f"Failed to fetch manifest for github.com/{repo}@{ver}: {ex}"
+                        f"Failed to fetch manifest for github.com/{repo.full_name}@{ver}: {ex}"
                     )
                     continue
 
