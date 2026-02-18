@@ -42,6 +42,7 @@ jobs:
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes detected, skipping commit."
+            exit 0
           fi
 
           git add .
