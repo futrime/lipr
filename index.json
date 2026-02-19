@@ -516,7 +516,7 @@
         "avatar_url": ""
       },
       "stars": 7,
-      "updated": "2026-02-18T15:16:33Z",
+      "updated": "2026-02-19T13:41:10Z",
       "versions": [
         "2.8.8"
       ]
@@ -681,7 +681,7 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-LegacyRemoteCallApi/refs/heads/main/icon.jpg"
       },
-      "stars": 24,
+      "stars": 25,
       "updated": "2026-02-10T14:43:14Z",
       "versions": [
         "1.0.0-rc.1",
@@ -829,6 +829,7 @@
         "0.14.0",
         "0.15.0",
         "0.16.0",
+        "0.17.0-rc.1",
         "0.17.0"
       ]
     },
@@ -886,7 +887,7 @@
         ],
         "avatar_url": ""
       },
-      "stars": 31,
+      "stars": 30,
       "updated": "2026-02-15T07:56:33Z",
       "versions": [
         "0.11.0-rc.1",
