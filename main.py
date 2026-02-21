@@ -178,9 +178,21 @@ def main() -> None:
                     )
                     continue
 
+                if len(manifest.variants) == 0:
+                    logging.warning(
+                        f"No variants found in manifest for github.com/{repo.full_name}@{ver}. Skipping..."
+                    )
+                    continue
+
                 index_pkg_versions[str(ver)] = [
                     variant.label for variant in manifest.variants
                 ]
+
+            if len(index_pkg_versions) == 0:
+                logging.warning(
+                    f"No valid versions found for github.com/{repo.full_name}. Skipping..."
+                )
+                continue
 
             index.packages[f"github.com/{repo.full_name}"] = PackageIndexPackage(
                 info=head_mft.info,
