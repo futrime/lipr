@@ -1,10 +1,12 @@
 import logging
 import os
 import shutil
+import subprocess
 import time
 from collections.abc import Iterator
 from datetime import datetime, timezone
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import Final
 
 from git.cmd import Git
@@ -36,7 +38,18 @@ def download_manifest(
     response = client.get(url)
     response.raise_for_status()
 
-    manifest = PackageManifest.model_validate_json(response.content)
+    # Migrate manifest.
+    with TemporaryDirectory() as tmp_dir:
+        tmp_path_1 = Path(tmp_dir) / "old"
+        tmp_path_1.write_bytes(response.content)
+
+        tmp_path_2 = Path(tmp_dir) / "new"
+
+        subprocess.run(["lip", "migrate", str(tmp_path_1), str(tmp_path_2)], check=True)
+
+        content = tmp_path_2.read_bytes()
+
+    manifest = PackageManifest.model_validate_json(content)
 
     logging.info(
         f"Fetched manifest for github.com/{repo}" + (f"@{version}" if version else "")
@@ -46,7 +59,7 @@ def download_manifest(
         path = BASE_DIR / repo / "@v" / str(version) / "tooth.json"
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        path.write_bytes(response.content)
+        path.write_bytes(content)
 
         logging.info(f"Saved manifest file at {path}")
 
@@ -97,9 +110,7 @@ def search_repositories() -> Iterator[Repository]:
         raise RuntimeError("GITHUB_TOKEN environment variable is not set")
 
     with Github(auth=Token(token), per_page=100) as github:
-        pagination = github.search_code(
-            "289f771f-2c9a-4d73-9f3f-8492495a924d", filename="tooth.json", path="/"
-        )
+        pagination = github.search_code("", filename="tooth.json", path="/")
 
         page_idx = 0
         while True:

@@ -26,6 +26,9 @@ jobs:
       - uses: astral-sh/setup-uv@v7
 
       - run: |
+          curl -fsSL https://raw.githubusercontent.com/futrime/lip/HEAD/scripts/install.sh | sh
+
+      - run: |
           uv sync
 
       - env:

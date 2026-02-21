@@ -16,7 +16,7 @@ class PackageManifestInfo(BaseModel):
     name: str = ""
     description: str = ""
     tags: list[PackageManifestInfoTag] = []
-    avatar_url: str = ""
+    avatar_url: str | None = None
 
 
 class PackageManifestVariant(BaseModel):

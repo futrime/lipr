@@ -33,8 +33,15 @@
                 }
               },
               "avatar_url": {
-                "type": "string",
-                "format": "uri"
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ]
               }
             },
             "additionalProperties": false
