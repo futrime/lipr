@@ -8,4 +8,5 @@ dependencies = [
     "pydantic>=2.12.5",
     "pygithub>=2.8.1",
     "semver>=3.0.4",
+    "sh>=2.2.2",
 ]

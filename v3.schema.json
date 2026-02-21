@@ -16,21 +16,26 @@
       "additionalProperties": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "avatar_url": {
-            "type": "string",
-            "format": "uri"
+          "info": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "avatar_url": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
           },
           "updated_at": {
             "type": "string",
@@ -51,10 +56,7 @@
           }
         },
         "required": [
-          "name",
-          "description",
-          "tags",
-          "avatar_url",
+          "info",
           "updated_at",
           "stars",
           "versions"

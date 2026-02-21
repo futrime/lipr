@@ -13,40 +13,11 @@ from github.Auth import Token
 from github.GithubException import GithubException
 from github.Repository import Repository
 from httpx import URL, Client
-from pydantic import BaseModel, Field
 from semver import Version
 
+from entities import FORMAT_UUID, PackageIndex, PackageIndexPackage, PackageManifest
+
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
-UUID: Final = "289f771f-2c9a-4d73-9f3f-8492495a924d"
-
-
-class PackageInfo(BaseModel):
-    name: str = ""
-    description: str = ""
-    tags: list[str] = Field(default_factory=list)
-    avatar_url: str = ""
-
-
-class PackageIndexEntry(BaseModel):
-    tooth: str
-    info: PackageInfo
-    stars: int
-    updated: datetime
-    versions: list[str] = Field(default_factory=list)
-
-
-class PackageIndex(BaseModel):
-    format_version: int
-    format_uuid: str
-    packages: list[PackageIndexEntry] = Field(default_factory=list)
-
-
-class PackageManifest(BaseModel):
-    format_version: int
-    format_uuid: str
-    tooth: str
-    version: str
-    info: PackageInfo = Field(default_factory=PackageInfo)
 
 
 def fetch_manifest(
@@ -125,7 +96,7 @@ def search_repositories() -> Iterator[Repository]:
         raise RuntimeError("GITHUB_TOKEN environment variable is not set")
 
     with Github(auth=Token(token), per_page=100) as github:
-        pagination = github.search_code(UUID, filename="tooth.json", path="/")
+        pagination = github.search_code(FORMAT_UUID, filename="tooth.json", path="/")
 
         page_idx = 0
         while True:
@@ -167,14 +138,16 @@ def main() -> None:
 
     git = Git()
 
-    packages: list[PackageIndexEntry] = []
+    index = PackageIndex(packages={})
 
     with Client() as client:
         for repo in search_repositories():
             try:
                 head_mft = fetch_manifest(repo.full_name, version=None, client=client)
             except Exception as ex:
-                logging.error(f"Failed to fetch manifest for github.com/{repo.full_name}: {ex}")
+                logging.error(
+                    f"Failed to fetch manifest for github.com/{repo.full_name}: {ex}"
+                )
                 continue
 
             try:
@@ -185,19 +158,15 @@ def main() -> None:
                 )
                 continue
 
-            package = PackageIndexEntry(
-                tooth=f"github.com/{repo.full_name}",
-                info=head_mft.info,
-                stars=repo.stargazers_count,
-                updated=updated,
-                versions=[],
-            )
-
             try:
                 versions = fetch_versions(repo.full_name, git=git)
             except Exception as ex:
-                logging.error(f"Failed to fetch versions for github.com/{repo.full_name}: {ex}")
+                logging.error(
+                    f"Failed to fetch versions for github.com/{repo.full_name}: {ex}"
+                )
                 continue
+
+            pkg_versions: dict[str, list[str]] = {}
 
             for ver in versions:
                 try:
@@ -210,15 +179,16 @@ def main() -> None:
 
                 save_manifest_file(manifest, repo.full_name, ver)
 
-                package.versions.append(str(ver))
+                pkg_versions[str(ver)] = [
+                    variant.label for variant in manifest.variants
+                ]
 
-            packages.append(package)
-
-    index = PackageIndex(
-        format_version=3,
-        format_uuid=UUID,
-        packages=packages,
-    )
+            index.packages[f"github.com/{repo.full_name}"] = PackageIndexPackage(
+                info=head_mft.info,
+                updated_at=updated,
+                stars=repo.stargazers_count,
+                versions=pkg_versions,
+            )
 
     save_index_file(index)
 
