@@ -916,50 +916,6 @@
         ]
       }
     },
-    "github.com/leoweyr/LeviInterface": {
-      "info": {
-        "name": "LeviInterfaceMaster",
-        "description": "The master plugin that provides cross-plugin UI queues in Minecraft Legacy Script Engine.",
-        "tags": [
-          "platform:levilamina",
-          "lse",
-          "ui",
-          "ui-queue",
-          "logic-tree",
-          "ux",
-          "socket",
-          "ipc"
-        ],
-        "avatar_url": ""
-      },
-      "updated_at": "2025-06-17T09:52:33Z",
-      "stars": 1,
-      "versions": {
-        "0.1.0": [
-          ""
-        ]
-      }
-    },
-    "github.com/Pixovate/LifeApple": {
-      "info": {
-        "name": "LifeApple",
-        "description": "A mod that makes the apple can boost your health.",
-        "tags": [
-          "attributeModifier",
-          "lifeapple",
-          "type:mod",
-          "platform:levilamina"
-        ],
-        "avatar_url": ""
-      },
-      "updated_at": "2025-05-12T04:28:39Z",
-      "stars": 0,
-      "versions": {
-        "0.0.1": [
-          ""
-        ]
-      }
-    },
     "github.com/ZMBlocks/LL-BetterStop": {
       "info": {
         "name": "BetterStop",
@@ -2121,48 +2077,6 @@
         ],
         "0.18.1": [
           ""
-        ]
-      }
-    },
-    "github.com/GroupMountain/FuckNetherHeight": {
-      "info": {
-        "name": "FuckNetherHeight",
-        "description": "Fuck Vanilla Bedrock Edition Nether Height Limit",
-        "tags": [
-          "platform:levilamina",
-          "type:mod",
-          "NetherHeight"
-        ],
-        "avatar_url": ""
-      },
-      "updated_at": "2026-02-12T05:46:20Z",
-      "stars": 10,
-      "versions": {
-        "0.17.1": [
-          ""
-        ],
-        "0.18.0": [
-          ""
-        ],
-        "0.18.1": [
-          "",
-          "client"
-        ],
-        "0.18.2": [
-          "",
-          "client"
-        ],
-        "0.18.3": [
-          "",
-          "client"
-        ],
-        "0.18.4": [
-          "",
-          "client"
-        ],
-        "0.19.0": [
-          "",
-          "client"
         ]
       }
     },
