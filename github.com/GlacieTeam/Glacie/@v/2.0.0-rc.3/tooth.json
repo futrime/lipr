@@ -1,15 +1,27 @@
 {
-  "tooth": "github.com/GlacieTeam/Glacie",
-  "version": "2.0.0-rc.3",
-  "info": {
-    "name": "Glacie",
-    "description": "Muti-version support for LeviLamina",
-    "tags": [
-      "glacie",
-      "protocol",
-      "multiversion"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GlacieTeam/Glacie",
+    "version": "2.0.0-rc.3",
+    "info": {
+        "name": "Glacie",
+        "description": "Muti-version support for LeviLamina",
+        "author": "GlacieTeam",
+        "tags": [
+            "glacie",
+            "protocol",
+            "multiversion"
+        ]
+    },
+    "asset_url": "https://github.com/GlacieTeam/Glacie/releases/download/v2.0.0-rc.3/Glacie.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "1.0.1"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "Glacie/*",
+                "dest": "plugins/Glacie/"
+            }
+        ]
+    }
 }

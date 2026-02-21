@@ -1,18 +1,38 @@
 {
-  "tooth": "github.com/LiteLDev/LeviAntiCheat",
-  "version": "0.5.2",
-  "info": {
-    "name": "LeviAntiCheat",
-    "description": "Powerful anti-cheating for LeviLamina",
-    "tags": [
-      "levilamina",
-      "anticheat"
-    ],
-    "avatar_url": ""
-  },
-  "variants": [
-    {
-      "label": ""
-    }
-  ]
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/LeviAntiCheat",
+    "version": "0.5.2",
+    "info": {
+        "name": "LeviAntiCheat",
+        "description": "Powerful anti-cheating for LeviLamina",
+        "tags": [
+            "levilamina",
+            "anticheat"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "platform": "win-x64",
+            "dependencies": {
+				"github.com/LiteLDev/LeviLamina": "1.1.x"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/LeviAntiCheat-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LeviAntiCheat/",
+                            "dest": "plugins/LeviAntiCheat/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

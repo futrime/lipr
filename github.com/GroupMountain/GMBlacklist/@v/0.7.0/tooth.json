@@ -1,15 +1,24 @@
 {
-  "tooth": "github.com/GroupMountain/GMBlacklist",
-  "version": "0.7.0",
-  "info": {
-    "name": "GMBlacklist",
-    "description": "Group Mountain Blacklist Plugin",
-    "tags": [
-      "LeviLamina",
-      "GMLIB",
-      "GMBlacklist"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/GMBlacklist",
+    "version": "0.7.0",
+    "info": {
+        "name": "GMBlacklist",
+        "description": "Group Mountain Blacklist Plugin",
+        "author": "Tsubasa6848",
+        "source": "github.com/GroupMountain/GMBlacklist",
+        "tags": [
+            "LeviLamina",
+            "GMLIB",
+            "GMBlacklist"
+        ]
+    },
+    "files": {
+        "place": [
+            {
+                "src": "GMBlacklist/*",
+                "dest": "plugins/GMBlacklist"
+            }
+        ]
+    }
 }

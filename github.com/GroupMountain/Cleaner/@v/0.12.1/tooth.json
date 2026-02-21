@@ -1,15 +1,28 @@
 {
-  "tooth": "github.com/GroupMountain/Cleaner",
-  "version": "0.12.0",
-  "info": {
-    "name": "Cleaner",
-    "description": "A Powerful Entities Cleaning up Plugin for BDS",
-    "tags": [
-      "levilamina",
-      "cleaner",
-      "gmlib"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/Cleaner",
+    "version": "0.12.0",
+    "info": {
+        "name": "Cleaner",
+        "description": "A Powerful Entities Cleaning up Plugin for BDS",
+        "author": "GroupMountain",
+        "source": "github.com/GroupMountain/Cleaner",
+        "tags": [
+            "levilamina",
+            "cleaner",
+            "gmlib"
+        ]
+    },
+    "asset_url": "https://github.com/GroupMountain/Cleaner/releases/download/v0.12.0/Cleaner-windows-x64.zip",
+    "dependencies": {
+        "github.com/GroupMountain/GMLIB": ">=0.12.1"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "Cleaner/*",
+                "dest": "plugins/Cleaner"
+            }
+        ]
+    }
 }

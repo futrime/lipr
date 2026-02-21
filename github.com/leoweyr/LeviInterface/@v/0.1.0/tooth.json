@@ -1,4 +1,6 @@
 {
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/leoweyr/LeviInterface",
   "version": "0.1.0",
   "info": {
@@ -13,12 +15,31 @@
       "ux",
       "socket",
       "IPC"
-    ],
-    "avatar_url": ""
+    ]
   },
   "variants": [
     {
-      "label": ""
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "1.*",
+        "github.com/LiteLDev/LegacyScriptEngine#nodejs": "0.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/core%2Fv{{version}}/levi-interface-master-plugin.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LeviInterfaceMaster/",
+              "dest": "plugins/LeviInterfaceMaster/"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

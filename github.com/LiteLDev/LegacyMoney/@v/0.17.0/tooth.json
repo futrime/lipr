@@ -1,4 +1,6 @@
 {
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/LiteLDev/LegacyMoney",
   "version": "0.17.0",
   "info": {
@@ -14,10 +16,47 @@
   },
   "variants": [
     {
-      "label": ""
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "1.9.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/LegacyMoney-server-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LegacyMoney/",
+              "dest": "plugins/LegacyMoney"
+            }
+          ]
+        }
+      ]
     },
     {
-      "label": "client"
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina#client": "1.9.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/LegacyMoney-client-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LegacyMoney/",
+              "dest": "mods/LegacyMoney"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

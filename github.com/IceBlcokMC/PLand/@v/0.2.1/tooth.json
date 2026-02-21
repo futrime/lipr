@@ -1,17 +1,30 @@
 {
-  "tooth": "github.com/engsr6982/PLand",
-  "version": "0.2.1",
-  "info": {
-    "name": "PLand - 领地系统",
-    "description": "基于 LeviLamina 的领地系统",
-    "tags": [
-      "levilamina",
-      "plugin",
-      "mod",
-      "land",
-      "pland"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/engsr6982/PLand",
+    "version": "0.2.1",
+    "info": {
+        "name": "PLand - 领地系统",
+        "description": "基于 LeviLamina 的领地系统",
+        "author": "engsr6982",
+        "tags": [
+            "levilamina",
+            "plugin",
+            "mod",
+            "land",
+            "pland"
+        ]
+    },
+    "asset_url": "https://github.com/engsr6982/PLand/releases/download/v0.2.1/PLand-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.13.4 <0.14.0",
+        "github.com/LiteLDev/LegacyMoney": ">=0.8.3"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "PLand/*",
+                "dest": "plugins/PLand/"
+            }
+        ]
+    }
 }

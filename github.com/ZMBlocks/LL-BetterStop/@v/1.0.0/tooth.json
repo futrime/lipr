@@ -1,21 +1,40 @@
 {
-  "tooth": "github.com/ZMBlocks/LL-BetterStop",
-  "version": "1.0.0",
-  "info": {
-    "name": "BetterStop",
-    "description": "When the server is shut down, the player shows the reason for the shutdown.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod",
-      "stop",
-      "server",
-      "tools"
-    ],
-    "avatar_url": ""
-  },
-  "variants": [
-    {
-      "label": ""
-    }
-  ]
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/ZMBlocks/LL-BetterStop",
+    "version": "1.0.0",
+    "info": {
+        "name": "BetterStop",
+        "description": "When the server is shut down, the player shows the reason for the shutdown.",
+        "tags": [
+            "platform:levilamina",
+            "type:mod",
+            "stop",
+            "server",
+            "tools"
+        ]
+    },
+    "variants": [
+        {
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": ">=1.1.1"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/BetterStop-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "BetterStop/",
+                            "dest": "plugins/BetterStop/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

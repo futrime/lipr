@@ -1,15 +1,27 @@
 {
-  "tooth": "github.com/LiteLDev/MoreDimensions",
-  "version": "0.4.1",
-  "info": {
-    "name": "MoreDimensions",
-    "description": "More than three dimensions on BDS!",
-    "tags": [
-      "levilamina",
-      "library",
-      "plugin"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/LiteLDev/MoreDimensions",
+    "version": "0.4.1",
+    "info": {
+        "name": "MoreDimensions",
+        "description": "More than three dimensions on BDS!",
+        "author": "LiteLDev",
+        "tags": [
+            "levilamina",
+            "library",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/LiteLDev/MoreDimensions/releases/download/v0.4.1/more-dimensions-windows-x64-v0.4.1.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.13.x"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "more-dimensions/*",
+                "dest": "plugins/more-dimensions/"
+            }
+        ]
+    }
 }

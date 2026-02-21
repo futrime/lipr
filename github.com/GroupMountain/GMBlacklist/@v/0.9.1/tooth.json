@@ -1,16 +1,29 @@
 {
-  "tooth": "github.com/GroupMountain/GMBlacklist",
-  "version": "0.9.1",
-  "info": {
-    "name": "GMBlacklist",
-    "description": "Blacklist Plugin on Bedrock Dedicated Server",
-    "tags": [
-      "leviLamina",
-      "gmlib",
-      "blacklist",
-      "ban"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/GMBlacklist",
+    "version": "0.9.1",
+    "info": {
+        "name": "GMBlacklist",
+        "description": "Blacklist Plugin on Bedrock Dedicated Server",
+        "author": "GroupMountain",
+        "source": "github.com/GroupMountain/GMBlacklist",
+        "tags": [
+            "leviLamina",
+            "gmlib",
+            "blacklist",
+            "ban"
+        ]
+    },
+    "asset_url": "https://github.com/GroupMountain/GMBlacklist/releases/download/v0.9.1/GMBlacklist-windows-x64.zip",
+    "dependencies": {
+        "github.com/GroupMountain/GMLIB": ">=0.9.8"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "GMBlacklist/*",
+                "dest": "plugins/GMBlacklist"
+            }
+        ]
+    }
 }

@@ -1,13 +1,21 @@
 {
-  "tooth": "github.com/LiteLDev/levilamina-loc",
-  "version": "1.3.0",
-  "info": {
-    "name": "levilamina-loc",
-    "description": "Language packs of LeviLamina",
-    "tags": [
-      "levilamina"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/LiteLDev/levilamina-loc",
+    "version": "1.3.0",
+    "info": {
+        "name": "levilamina-loc",
+        "description": "Language packs of LeviLamina",
+        "author": "LiteLDev",
+        "tags": [
+            "levilamina"
+        ]
+    },
+    "files": {
+        "place": [
+            {
+                "src": "lang/*",
+                "dest": "mods/LeviLamina/lang/"
+            }
+        ]
+    }
 }

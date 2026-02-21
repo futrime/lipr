@@ -1,4 +1,6 @@
 {
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/PuceLi/NameTagPlus",
   "version": "1.0.0",
   "info": {
@@ -12,10 +14,72 @@
   },
   "variants": [
     {
-      "label": ""
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "1.8.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/NameTagPlus-server-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "NameTagPlus/",
+              "dest": "plugins/NameTagPlus/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_pack": [],
+        "post_pack": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
     },
     {
-      "label": "client"
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina#client": "1.8.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://{{tooth}}/releases/download/v{{version}}/NameTagPlus-client-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "NameTagPlus/",
+              "dest": "mods/NameTagPlus/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_pack": [],
+        "post_pack": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
     }
   ]
 }

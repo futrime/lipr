@@ -1,14 +1,27 @@
 {
-  "tooth": "github.com/GroupMountain/FuckNetherHeight",
-  "version": "0.12.0",
-  "info": {
-    "name": "FuckNetherHeight",
-    "description": "Fuck Vinalla Bedrock Edition Nether Height Limit",
-    "tags": [
-      "levilamina",
-      "netherheight"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/FuckNetherHeight",
+    "version": "0.12.0",
+    "info": {
+        "name": "FuckNetherHeight",
+        "description": "Fuck Vinalla Bedrock Edition Nether Height Limit",
+        "author": "GroupMountain",
+        "source": "github.com/GroupMountain/FuckNetherHeight",
+        "tags": [
+            "levilamina",
+            "netherheight"
+        ]
+    },
+    "asset_url": "https://github.com/GroupMountain/FuckNetherHeight/releases/download/v0.12.0/FuckNetherHeight-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.12.1"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "FuckNetherHeight/*",
+                "dest": "plugins/FuckNetherHeight"
+            }
+        ]
+    }
 }

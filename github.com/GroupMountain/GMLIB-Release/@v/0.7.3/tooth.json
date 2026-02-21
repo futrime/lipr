@@ -1,14 +1,23 @@
 {
-  "tooth": "github.com/GroupMountain/GMLIB",
-  "version": "0.7.3",
-  "info": {
-    "name": "GMLIB",
-    "description": "Group Mountain Library",
-    "tags": [
-      "LeviLamina",
-      "GMLIB"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/GMLIB",
+    "version": "0.7.3",
+    "info": {
+        "name": "GMLIB",
+        "description": "Group Mountain Library",
+        "author": "GroupMountain",
+        "source": "github.com/GroupMountain/GMLIB",
+        "tags": [
+            "LeviLamina",
+            "GMLIB"
+        ]
+    },
+    "files": {
+        "place": [
+            {
+                "src": "GMLIB/*",
+                "dest": "plugins/GMLIB"
+            }
+        ]
+    }
 }

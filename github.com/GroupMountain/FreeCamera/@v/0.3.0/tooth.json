@@ -1,14 +1,23 @@
 {
-  "tooth": "github.com/GroupMountain/FreeCamera",
-  "version": "0.3.0",
-  "info": {
-    "name": "FreeCamera",
-    "description": "Free Camera Plugin on Bedrock Dedicated Server",
-    "tags": [
-      "LeveLamina",
-      "FreeCamera"
-    ],
-    "avatar_url": ""
-  },
-  "variants": []
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/FreeCamera",
+    "version": "0.3.0",
+    "info": {
+        "name": "FreeCamera",
+        "description": "Free Camera Plugin on Bedrock Dedicated Server",
+        "author": "Tsubasa6848",
+        "source": "github.com/GroupMountain/FreeCamera",
+        "tags": [
+            "LeveLamina",
+            "FreeCamera"
+        ]
+    },
+    "files": {
+        "place": [
+            {
+                "src": "FreeCamera/*",
+                "dest": "plugins/FreeCamera"
+            }
+        ]
+    }
 }
