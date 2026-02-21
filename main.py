@@ -29,7 +29,6 @@ def download_manifest(
         url = URL(f"https://raw.githubusercontent.com/{repo}/v{version}/tooth.json")
 
     response = client.get(url)
-
     response.raise_for_status()
 
     manifest = PackageManifest.model_validate_json(response.content)
@@ -42,9 +41,7 @@ def download_manifest(
         path = BASE_DIR / repo / "@v" / str(version) / "tooth.json"
         path.parent.mkdir(parents=True, exist_ok=True)
 
-        content = manifest.model_dump_json(ensure_ascii=False, indent=2)
-
-        path.write_text(content, encoding="utf-8")
+        path.write_bytes(response.content)
 
         logging.info(f"Saved manifest file at {path}")
 
