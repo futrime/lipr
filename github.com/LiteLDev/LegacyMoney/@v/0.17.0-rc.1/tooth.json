@@ -16,6 +16,7 @@
   },
   "variants": [
     {
+      "label": "",
       "platform": "win-x64",
       "dependencies": {
         "github.com/LiteLDev/LeviLamina": "1.8.0-rc.2"
@@ -24,7 +25,7 @@
         {
           "type": "zip",
           "urls": [
-            "https://{{tooth}}/releases/download/v{{version}}/LegacyMoney-server-windows-x64.zip"
+            "https://github.com/LiteLDev/LegacyMoney/releases/download/v0.17.0-rc.1/LegacyMoney-server-windows-x64.zip"
           ],
           "placements": [
             {
@@ -34,7 +35,15 @@
             }
           ]
         }
-      ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     },
     {
       "label": "client",
@@ -46,7 +55,7 @@
         {
           "type": "zip",
           "urls": [
-            "https://{{tooth}}/releases/download/v{{version}}/LegacyMoney-client-windows-x64.zip"
+            "https://github.com/LiteLDev/LegacyMoney/releases/download/v0.17.0-rc.1/LegacyMoney-client-windows-x64.zip"
           ],
           "placements": [
             {
@@ -56,7 +65,15 @@
             }
           ]
         }
-      ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
   ]
 }

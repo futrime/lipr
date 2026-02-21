@@ -1,52 +1,49 @@
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/LordBombardir/LLPowerRanks",
-    "version": "1.1.4",
-    "info": {
-        "name": "PowerRanks",
-        "description": "A mod that adds a rank (privilege) system to the game",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
-        ]
-    },
-    "variants": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LordBombardir/LLPowerRanks",
+  "version": "1.1.4",
+  "info": {
+    "name": "PowerRanks",
+    "description": "A mod that adds a rank (privilege) system to the game",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "\u003E=1.6.0",
+        "github.com/LordBombardir/LLTranslatorApi": "\u003E=1.2.8",
+        "github.com/LordBombardir/LLPlayerDB-Release": "\u003E=1.1.0"
+      },
+      "assets": [
         {
-            "label": "",
-            "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": ">=1.6.0",
-                "github.com/LordBombardir/LLTranslatorApi": ">=1.2.8",
-                "github.com/LordBombardir/LLPlayerDB-Release": ">=1.1.0"
-            },
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/LLPowerRanks-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "dir",
-                            "src": "PowerRanks/",
-                            "dest": "plugins/PowerRanks/"
-                        }
-                    ]
-                }
-            ],
-            "preserve_files": [],
-            "remove_files": [],
-            "scripts": {
-                "pre_install": [],
-                "install": [],
-                "post_install": [],
-                "pre_pack": [],
-                "post_pack": [],
-                "pre_uninstall": [],
-                "uninstall": [],
-                "post_uninstall": []
+          "type": "zip",
+          "urls": [
+            "https://github.com/LordBombardir/LLPowerRanks/releases/download/v1.1.4/LLPowerRanks-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "PowerRanks/",
+              "dest": "plugins/PowerRanks/"
             }
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

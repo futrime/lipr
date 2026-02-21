@@ -1,41 +1,49 @@
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/GroupMountain/GMDebugStick",
-    "version": "1.4.0",
-    "info": {
-        "name": "GMDebugStick",
-        "description": "Register for a debug stick item",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
-        ],
-        "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
-    },
-    "variants": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/GroupMountain/GMDebugStick",
+  "version": "1.4.0",
+  "info": {
+    "name": "GMDebugStick",
+    "description": "Register for a debug stick item",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "\u003E=1.6.0",
+        "github.com/GroupMountain/GMLIB-Release": "\u003E=1.6.0",
+        "github.com/GroupMountain/ModAPI-Release": "\u003E=0.2.1"
+      },
+      "assets": [
         {
-            "label": "",
-            "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": ">=1.6.0",
-                "github.com/GroupMountain/GMLIB-Release": ">=1.6.0",
-                "github.com/GroupMountain/ModAPI-Release": ">=0.2.1"
-            },
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/{{version}}/GMDebugStick-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "dir",
-                            "src": "DebugStick/",
-                            "dest": "plugins/DebugStick/"
-                        }
-                    ]
-                }
-            ]
+          "type": "zip",
+          "urls": [
+            "https://github.com/GroupMountain/GMDebugStick/releases/download/1.4.0/GMDebugStick-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "DebugStick/",
+              "dest": "plugins/DebugStick/"
+            }
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

@@ -1,0 +1,47 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/pingguo114514/DisconnectScreen",
+  "version": "1.0.0",
+  "info": {
+    "name": "DisconnectScreen",
+    "description": "DisconnectScreen\u0027s LeviLamina ported version",
+    "tags": [
+      "levilamina",
+      "mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/pingguo114514/DisconnectScreen/releases/download/v1.0.0/DisconnectScreen-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "DisconnectScreen/",
+              "dest": "plugins/DisconnectScreen/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [
+        "Language.json"
+      ],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

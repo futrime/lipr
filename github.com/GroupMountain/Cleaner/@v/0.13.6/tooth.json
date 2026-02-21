@@ -18,8 +18,8 @@
       "label": "",
       "platform": "win-x64",
       "dependencies": {
-        "github.com/GroupMountain/GMLIB": ">=1.2.0-rc.1",
-        "github.com/MiracleForest/iListenAttentively-Release": ">=0.5.0-rc.1"
+        "github.com/GroupMountain/GMLIB": "\u003E=1.2.0-rc.1",
+        "github.com/MiracleForest/iListenAttentively-Release": "\u003E=0.5.0-rc.1"
       },
       "assets": [
         {
@@ -40,12 +40,8 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
-        "install": [],
         "post_install": [],
-        "pre_pack": [],
-        "post_pack": [],
         "pre_uninstall": [],
-        "uninstall": [],
         "post_uninstall": []
       }
     }

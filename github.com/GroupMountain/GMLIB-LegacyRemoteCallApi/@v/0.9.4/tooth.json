@@ -1,29 +1,49 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
-    "version": "0.9.4",
-    "info": {
-        "name": "GMLIB-LegacyRemoteCallApi",
-        "description": "Legacy RemoteCall API for GMLIB",
-        "source": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
-        "author": "GroupMountain",
-        "tags": [
-            "levilamina",
-            "gmlib",
-            "lse",
-            "library"
-        ]
-    },
-    "asset_url": "https://github.com/GroupMountain/GMLIB-LegacyRemoteCallApi/releases/download/v0.9.4/GMLIB-LegacyRemoteCallApi-windows-x64.zip",
-    "dependencies": {
-        "github.com/GroupMountain/GMLIB": ">=0.9.6"
-    },
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
+  "version": "0.9.4",
+  "info": {
+    "name": "GMLIB-LegacyRemoteCallApi",
+    "description": "Legacy RemoteCall API for GMLIB",
+    "tags": [
+      "levilamina",
+      "gmlib",
+      "lse",
+      "library"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {
+        "github.com/GroupMountain/GMLIB": "\u003E=0.9.6"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/GroupMountain/GMLIB-LegacyRemoteCallApi/releases/download/v0.9.4/GMLIB-LegacyRemoteCallApi-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "GMLIB-LegacyRemoteCallApi/*",
-                "dest": "plugins/GMLIB-LegacyRemoteCallApi"
+              "type": "dir",
+              "src": "GMLIB-LegacyRemoteCallApi/",
+              "dest": "plugins/GMLIB-LegacyRemoteCallApi"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

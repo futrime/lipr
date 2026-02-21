@@ -1,0 +1,45 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/TelluriumDev/BanExplosion",
+  "version": "1.0.1",
+  "info": {
+    "name": "BanExplosion",
+    "description": "A Plugin to control explosions in LeviLamina",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/TelluriumDev/BanExplosion/releases/download/v{{version}}/BanExplosion-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "BanExplosion/",
+              "dest": "plugins/BanExplosion/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

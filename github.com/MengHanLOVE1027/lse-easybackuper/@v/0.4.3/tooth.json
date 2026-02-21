@@ -1,0 +1,49 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/MengHanLOVE1027/lse-easybackuper",
+  "version": "0.4.3",
+  "info": {
+    "name": "EasyBackuper",
+    "description": "\u4E00\u4E2A\u57FA\u4E8E LSE\u5F15\u64CE \u7684\u8F7B\u91CF\u7EA7\u3001\u9AD8\u6027\u80FD\u3001\u529F\u80FD\u5168\u9762\u7684Minecraft\u670D\u52A1\u5668\u70ED\u5907\u4EFD\u63D2\u4EF6 / A lightweight, high-performance, and feature-rich hot backup plugin for Minecraft servers based on LSE.",
+    "tags": [
+      "levilamina",
+      "lse",
+      "plugin",
+      "backup",
+      "ezbackuper",
+      "easybackuper"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/MengHanLOVE1027/lse-easybackuper/releases/download/v0.4.3/EasyBackuper-v0.4.3.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "EasyBackuper/",
+              "dest": "plugins/EasyBackuper/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

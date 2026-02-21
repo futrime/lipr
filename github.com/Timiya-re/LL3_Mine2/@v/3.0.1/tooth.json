@@ -1,0 +1,32 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/Timiya-re/LL3_Mine2",
+  "version": "3.0.1",
+  "info": {
+    "name": "LL3Mine2",
+    "description": "\u5237\u77FF\u673ALL3\u9002\u914D\u7248",
+    "tags": [
+      "levilamina",
+      "plugin",
+      "mine2"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
