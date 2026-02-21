@@ -1,16 +1,19 @@
 from datetime import datetime
-from typing import Final
+from typing import Annotated, Final
 
-from pydantic import BaseModel
+from pydantic import BaseModel, StringConstraints
 
 FORMAT_UUID: Final = "289f771f-2c9a-4d73-9f3f-8492495a924d"
 FORMAT_VERSION: Final = 3
 
 
+type Tag = Annotated[str, StringConstraints(pattern=r"^[a-z0-9-]+(:[a-z0-9-]+)?$")]
+
+
 class PackageManifestInfo(BaseModel):
     name: str = ""
     description: str = ""
-    tags: list[str] = []
+    tags: list[Tag] = []
     avatar_url: str = ""
 
 
