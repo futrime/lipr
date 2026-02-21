@@ -1,29 +1,31 @@
 from datetime import datetime
-from typing import Annotated, Final
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, StringConstraints
+from pydantic_extra_types.semantic_version import SemanticVersion
 
-FORMAT_UUID: Final = "289f771f-2c9a-4d73-9f3f-8492495a924d"
-FORMAT_VERSION: Final = 3
-
-
-type Tag = Annotated[str, StringConstraints(pattern=r"^[a-z0-9-]+(:[a-z0-9-]+)?$")]
+type PackageManifestVariantLabel = Annotated[
+    str, StringConstraints(pattern=r"^([a-z0-9-]+(/[a-z0-9-]+)?)?$")
+]
+type PackageManifestInfoTag = Annotated[
+    str, StringConstraints(pattern=r"^[a-z0-9-]+(:[a-z0-9-]+)?$")
+]
 
 
 class PackageManifestInfo(BaseModel):
     name: str = ""
     description: str = ""
-    tags: list[Tag] = []
+    tags: list[PackageManifestInfoTag] = []
     avatar_url: str = ""
 
 
 class PackageManifestVariant(BaseModel):
-    label: str = ""
+    label: PackageManifestVariantLabel = ""
 
 
 class PackageManifest(BaseModel):
     tooth: str
-    version: str
+    version: SemanticVersion
     info: PackageManifestInfo = PackageManifestInfo()
     variants: list[PackageManifestVariant] = []
 
@@ -32,10 +34,12 @@ class PackageIndexPackage(BaseModel):
     info: PackageManifestInfo = PackageManifestInfo()
     updated_at: datetime
     stars: int
-    versions: dict[str, list[str]]
+    versions: dict[SemanticVersion, list[PackageManifestVariantLabel]]
 
 
 class PackageIndex(BaseModel):
-    format_version: int = FORMAT_VERSION
-    format_uuid: str = FORMAT_UUID
+    format_version: Literal[3] = 3
+    format_uuid: Literal["289f771f-2c9a-4d73-9f3f-8492495a924d"] = (
+        "289f771f-2c9a-4d73-9f3f-8492495a924d"
+    )
     packages: dict[str, PackageIndexPackage]

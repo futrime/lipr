@@ -13,15 +13,20 @@ from github.Auth import Token
 from github.GithubException import GithubException
 from github.Repository import Repository
 from httpx import URL, Client
-from semver import Version
+from pydantic_extra_types.semantic_version import SemanticVersion
 
-from entities import FORMAT_UUID, PackageIndex, PackageIndexPackage, PackageManifest
+from entities import (
+    PackageIndex,
+    PackageIndexPackage,
+    PackageManifest,
+    PackageManifestVariantLabel,
+)
 
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
 
 
 def download_manifest(
-    repo: str, version: Version | None, *, client: Client
+    repo: str, version: SemanticVersion | None, *, client: Client
 ) -> PackageManifest:
     if version is None:
         url = URL(f"https://raw.githubusercontent.com/{repo}/HEAD/tooth.json")
@@ -48,7 +53,7 @@ def download_manifest(
     return manifest
 
 
-def fetch_versions(repo: str, *, git: Git) -> list[Version]:
+def fetch_versions(repo: str, *, git: Git) -> list[SemanticVersion]:
     url = URL(f"https://github.com/{repo}.git")
 
     result: str = git.ls_remote("-t", "--refs", url)
@@ -63,7 +68,7 @@ def fetch_versions(repo: str, *, git: Git) -> list[Version]:
         ver_str = ref.removeprefix("refs/tags/v")
 
         try:
-            ver = Version.parse(ver_str)
+            ver = SemanticVersion.parse(ver_str)
         except ValueError:
             continue
 
@@ -92,7 +97,9 @@ def search_repositories() -> Iterator[Repository]:
         raise RuntimeError("GITHUB_TOKEN environment variable is not set")
 
     with Github(auth=Token(token), per_page=100) as github:
-        pagination = github.search_code(FORMAT_UUID, filename="tooth.json", path="/")
+        pagination = github.search_code(
+            PackageIndex.format_uuid, filename="tooth.json", path="/"
+        )
 
         page_idx = 0
         while True:
@@ -164,7 +171,9 @@ def main() -> None:
                 )
                 continue
 
-            index_pkg_versions: dict[str, list[str]] = {}
+            index_pkg_versions: dict[
+                SemanticVersion, list[PackageManifestVariantLabel]
+            ] = {}
 
             for ver in versions:
                 try:
@@ -181,7 +190,7 @@ def main() -> None:
                     )
                     continue
 
-                index_pkg_versions[str(ver)] = [
+                index_pkg_versions[ver] = [
                     variant.label for variant in manifest.variants
                 ]
 
