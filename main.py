@@ -20,7 +20,7 @@ from entities import FORMAT_UUID, PackageIndex, PackageIndexPackage, PackageMani
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
 
 
-def fetch_manifest(
+def download_manifest(
     repo: str, version: Version | None, *, client: Client
 ) -> PackageManifest:
     if version is None:
@@ -37,6 +37,16 @@ def fetch_manifest(
     logging.info(
         f"Fetched manifest for github.com/{repo}" + (f"@{version}" if version else "")
     )
+
+    if version is not None:
+        path = BASE_DIR / repo / "@v" / str(version) / "tooth.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+
+        content = manifest.model_dump_json(ensure_ascii=False, indent=2)
+
+        path.write_text(content, encoding="utf-8")
+
+        logging.info(f"Saved manifest file at {path}")
 
     return manifest
 
@@ -78,17 +88,6 @@ def save_index_file(index: PackageIndex) -> None:
     path.write_text(content, encoding="utf-8")
 
     logging.info(f"Saved index file at {path}")
-
-
-def save_manifest_file(manifest: PackageManifest, repo: str, version: Version) -> None:
-    path = BASE_DIR / repo / str(version) / "tooth.json"
-    path.parent.mkdir(parents=True, exist_ok=True)
-
-    content = manifest.model_dump_json(ensure_ascii=False, indent=2)
-
-    path.write_text(content, encoding="utf-8")
-
-    logging.info(f"Saved manifest file for github.com/{repo}@{version} at {path}")
 
 
 def search_repositories() -> Iterator[Repository]:
@@ -143,7 +142,9 @@ def main() -> None:
     with Client() as client:
         for repo in search_repositories():
             try:
-                head_mft = fetch_manifest(repo.full_name, version=None, client=client)
+                head_mft = download_manifest(
+                    repo.full_name, version=None, client=client
+                )
             except Exception as ex:
                 logging.error(
                     f"Failed to fetch manifest for github.com/{repo.full_name}: {ex}"
@@ -166,20 +167,18 @@ def main() -> None:
                 )
                 continue
 
-            pkg_versions: dict[str, list[str]] = {}
+            index_pkg_versions: dict[str, list[str]] = {}
 
             for ver in versions:
                 try:
-                    manifest = fetch_manifest(repo.full_name, ver, client=client)
+                    manifest = download_manifest(repo.full_name, ver, client=client)
                 except Exception as ex:
                     logging.error(
                         f"Failed to fetch manifest for github.com/{repo.full_name}@{ver}: {ex}"
                     )
                     continue
 
-                save_manifest_file(manifest, repo.full_name, ver)
-
-                pkg_versions[str(ver)] = [
+                index_pkg_versions[str(ver)] = [
                     variant.label for variant in manifest.variants
                 ]
 
@@ -187,7 +186,7 @@ def main() -> None:
                 info=head_mft.info,
                 updated_at=updated,
                 stars=repo.stargazers_count,
-                versions=pkg_versions,
+                versions=index_pkg_versions,
             )
 
     save_index_file(index)
