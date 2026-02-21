@@ -1,0 +1,15 @@
+{
+  "tooth": "github.com/GroupMountain/Cleaner",
+  "version": "0.12.3",
+  "info": {
+    "name": "Cleaner",
+    "description": "A Powerful Entities Cleaning up Plugin for BDS",
+    "tags": [
+      "levilamina",
+      "cleaner",
+      "gmlib"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

@@ -1,0 +1,17 @@
+{
+  "tooth": "github.com/engsr6982/PLand",
+  "version": "0.2.0",
+  "info": {
+    "name": "PLand - 领地系统",
+    "description": "基于 LeviLamina 的领地系统",
+    "tags": [
+      "levilamina",
+      "plugin",
+      "mod",
+      "land",
+      "pland"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

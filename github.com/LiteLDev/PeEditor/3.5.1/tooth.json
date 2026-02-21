@@ -1,0 +1,11 @@
+{
+  "tooth": "github.com/LiteLDev/PeEditor",
+  "version": "3.5.1",
+  "info": {
+    "name": "PeEditor",
+    "description": "A tool to inject PreLoader to Minecraft Bedrock Dedicated Server",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": []
+}

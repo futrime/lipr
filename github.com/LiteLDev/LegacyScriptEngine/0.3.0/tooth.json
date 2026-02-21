@@ -1,0 +1,14 @@
+{
+  "tooth": "github.com/LiteLDev/LegacyScriptEngine",
+  "version": "0.3.0",
+  "info": {
+    "name": "LegacyScriptEngine",
+    "description": "A plugin engine for running LLSE plugins on LeviLamina",
+    "tags": [
+      "levilamina",
+      "plugin-engine"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

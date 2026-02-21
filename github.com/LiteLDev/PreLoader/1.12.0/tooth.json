@@ -1,0 +1,11 @@
+{
+  "tooth": "github.com/LiteLDev/PreLoader",
+  "version": "1.12.0",
+  "info": {
+    "name": "PreLoader",
+    "description": "A library preloader for loading LeviLamina",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": []
+}

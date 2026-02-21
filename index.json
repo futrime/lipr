@@ -1,58 +1,183 @@
 {
   "format_version": 3,
   "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "packages": [
-    {
-      "tooth": "github.com/LiteLDev/LeviLamina",
+  "packages": {
+    "github.com/LiteLDev/LeviLamina": {
       "info": {
         "name": "LeviLamina",
         "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
         "tags": [],
         "avatar_url": "https://lamina.levimc.org/logo.svg"
       },
+      "updated_at": "2026-02-07T06:15:16Z",
       "stars": 1500,
-      "updated": "2026-02-07T06:15:16Z",
-      "versions": [
-        "1.1.1",
-        "1.1.2",
-        "1.2.0-rc.1",
-        "1.2.0-rc.2",
-        "1.2.0",
-        "1.2.1",
-        "1.3.0",
-        "1.3.1",
-        "1.3.2",
-        "1.3.3",
-        "1.3.4",
-        "1.4.1",
-        "1.4.2",
-        "1.4.3",
-        "1.4.4",
-        "1.5.0",
-        "1.5.1",
-        "1.5.2",
-        "1.6.0",
-        "1.6.1",
-        "1.6.2",
-        "1.7.0",
-        "1.7.1",
-        "1.7.3",
-        "1.7.4",
-        "1.7.5",
-        "1.7.6",
-        "1.7.7",
-        "1.8.0-rc.1",
-        "1.8.0-rc.2",
-        "1.9.0",
-        "1.9.1",
-        "1.9.2",
-        "1.9.3",
-        "1.9.4",
-        "1.9.5"
-      ]
+      "versions": {
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.4.2": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.6.2": [],
+        "0.6.3": [],
+        "0.7.1": [],
+        "0.7.2": [],
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.8.4": [],
+        "0.9.0": [],
+        "0.9.1": [],
+        "0.9.2": [],
+        "0.9.3": [],
+        "0.9.4": [],
+        "0.9.5": [],
+        "0.10.0": [],
+        "0.10.1": [],
+        "0.10.2": [],
+        "0.10.4": [],
+        "0.10.5": [],
+        "0.11.0": [],
+        "0.11.1": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.12.2": [],
+        "0.12.3": [],
+        "0.12.4": [],
+        "0.13.0": [],
+        "0.13.1": [],
+        "0.13.2": [],
+        "0.13.3": [],
+        "0.13.4": [],
+        "0.13.5": [],
+        "1.0.0-rc.1": [],
+        "1.0.0-rc.2": [],
+        "1.0.0-rc.3": [],
+        "1.0.0": [],
+        "1.0.1": [],
+        "1.1.0-rc.1": [],
+        "1.1.0": [],
+        "1.1.1": [
+          ""
+        ],
+        "1.1.2": [
+          ""
+        ],
+        "1.2.0-rc.1": [
+          ""
+        ],
+        "1.2.0-rc.2": [
+          ""
+        ],
+        "1.2.0": [
+          ""
+        ],
+        "1.2.1": [
+          ""
+        ],
+        "1.3.0": [
+          ""
+        ],
+        "1.3.1": [
+          ""
+        ],
+        "1.3.2": [
+          ""
+        ],
+        "1.3.3": [
+          ""
+        ],
+        "1.3.4": [
+          ""
+        ],
+        "1.4.1": [
+          ""
+        ],
+        "1.4.2": [
+          ""
+        ],
+        "1.4.3": [
+          ""
+        ],
+        "1.4.4": [
+          ""
+        ],
+        "1.5.0": [
+          ""
+        ],
+        "1.5.1": [
+          ""
+        ],
+        "1.5.2": [
+          ""
+        ],
+        "1.6.0": [
+          ""
+        ],
+        "1.6.1": [
+          ""
+        ],
+        "1.6.2": [
+          ""
+        ],
+        "1.7.0": [
+          ""
+        ],
+        "1.7.1": [
+          ""
+        ],
+        "1.7.3": [
+          ""
+        ],
+        "1.7.4": [
+          ""
+        ],
+        "1.7.5": [
+          ""
+        ],
+        "1.7.6": [
+          ""
+        ],
+        "1.7.7": [
+          ""
+        ],
+        "1.8.0-rc.1": [
+          "",
+          "client"
+        ],
+        "1.8.0-rc.2": [
+          "",
+          "client"
+        ],
+        "1.9.0": [
+          "",
+          "client"
+        ],
+        "1.9.1": [
+          "",
+          "client"
+        ],
+        "1.9.2": [
+          "",
+          "client"
+        ],
+        "1.9.3": [
+          "",
+          "client"
+        ],
+        "1.9.4": [
+          "",
+          "client"
+        ],
+        "1.9.5": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/superx101/CALL",
+    "github.com/superx101/CALL": {
       "info": {
         "name": "CALL",
         "description": "A simple building tool",
@@ -63,15 +188,31 @@
         ],
         "avatar_url": "https://github.com/superx101/CALL/blob/main/docs/image/CALL_dark.png"
       },
+      "updated_at": "2025-07-11T06:01:19Z",
       "stars": 14,
-      "updated": "2025-07-11T06:01:19Z",
-      "versions": [
-        "1.6.0",
-        "1.6.1"
-      ]
+      "versions": {
+        "1.3.0": [],
+        "1.3.1": [],
+        "1.3.2": [],
+        "1.3.3": [],
+        "1.3.4": [],
+        "1.3.5": [],
+        "1.3.6": [],
+        "1.3.7": [],
+        "1.4.0": [],
+        "1.4.1": [],
+        "1.4.2": [],
+        "1.5.0": [],
+        "1.5.1": [],
+        "1.6.0": [
+          ""
+        ],
+        "1.6.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/Cleaner",
+    "github.com/GroupMountain/Cleaner": {
       "info": {
         "name": "Cleaner",
         "description": "A Powerful Entities Cleaning up Mod for BDS",
@@ -82,22 +223,57 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-12T04:29:56Z",
       "stars": 14,
-      "updated": "2026-02-12T04:29:56Z",
-      "versions": [
-        "0.13.4",
-        "0.13.5",
-        "0.13.6",
-        "0.13.7",
-        "0.13.8",
-        "0.14.0",
-        "0.15.0",
-        "0.15.1",
-        "0.16.0"
-      ]
+      "versions": {
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.9.0": [],
+        "0.9.1": [],
+        "0.9.2": [],
+        "0.10.0": [],
+        "0.10.1": [],
+        "0.10.2": [],
+        "0.11.0": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.12.2": [],
+        "0.12.3": [],
+        "0.13.0": [],
+        "0.13.1": [],
+        "0.13.2": [],
+        "0.13.3": [],
+        "0.13.4": [
+          ""
+        ],
+        "0.13.5": [
+          ""
+        ],
+        "0.13.6": [
+          ""
+        ],
+        "0.13.7": [
+          ""
+        ],
+        "0.13.8": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ],
+        "0.15.0": [
+          ""
+        ],
+        "0.15.1": [
+          ""
+        ],
+        "0.16.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/LegacyScriptEngine",
+    "github.com/LiteLDev/LegacyScriptEngine": {
       "info": {
         "name": "LegacyScriptEngine",
         "description": "A plugin engine for running LLSE plugins on LeviLamina",
@@ -108,46 +284,337 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-04T05:24:10Z",
       "stars": 93,
-      "updated": "2026-02-04T05:24:10Z",
-      "versions": [
-        "0.10.0",
-        "0.10.2",
-        "0.10.3",
-        "0.10.4",
-        "0.10.5",
-        "0.10.6",
-        "0.10.7",
-        "0.10.8",
-        "0.10.9",
-        "0.11.0",
-        "0.11.1",
-        "0.11.2",
-        "0.11.3",
-        "0.12.0",
-        "0.12.1",
-        "0.13.0",
-        "0.13.1",
-        "0.13.2",
-        "0.14.0",
-        "0.15.0",
-        "0.16.0",
-        "0.16.1",
-        "0.16.2",
-        "0.16.3",
-        "0.16.4",
-        "0.16.5",
-        "0.16.6",
-        "0.16.7",
-        "0.16.8",
-        "0.17.0-rc.2",
-        "0.17.0",
-        "0.17.1",
-        "0.17.2"
-      ]
+      "versions": {
+        "0.1.4": [],
+        "0.1.5": [],
+        "0.1.6": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.2.2": [],
+        "0.2.3": [],
+        "0.2.4": [],
+        "0.3.0": [],
+        "0.3.1": [],
+        "0.3.2": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.4.2": [],
+        "0.4.3": [],
+        "0.4.4": [],
+        "0.4.5": [],
+        "0.4.6": [],
+        "0.4.7": [],
+        "0.4.8": [],
+        "0.4.9": [],
+        "0.4.10": [],
+        "0.4.11": [],
+        "0.4.12": [],
+        "0.4.13": [],
+        "0.4.14": [],
+        "0.4.15": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.5.2": [],
+        "0.5.3": [],
+        "0.5.4": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.6.2": [],
+        "0.6.3": [],
+        "0.6.4": [],
+        "0.7.0": [],
+        "0.7.1": [],
+        "0.7.2": [],
+        "0.7.3": [],
+        "0.7.4": [],
+        "0.7.5": [],
+        "0.7.6": [],
+        "0.7.7": [],
+        "0.7.8": [],
+        "0.7.9": [],
+        "0.7.10": [],
+        "0.7.11": [],
+        "0.7.12": [],
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.8.4": [],
+        "0.8.5": [],
+        "0.8.6": [],
+        "0.8.7": [],
+        "0.8.8": [],
+        "0.8.9": [],
+        "0.8.10": [],
+        "0.8.11": [],
+        "0.8.12": [],
+        "0.8.13": [],
+        "0.8.14": [],
+        "0.8.16": [],
+        "0.8.17": [],
+        "0.8.18": [],
+        "0.8.19": [],
+        "0.8.20": [],
+        "0.9.0-rc.1": [],
+        "0.9.0-rc.2": [],
+        "0.9.0-rc.3": [],
+        "0.9.0-rc.4": [],
+        "0.10.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.2": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.3": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.4": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.5": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.6": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.7": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.8": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.10.9": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.11.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.11.1": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.11.2": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.11.3": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.12.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.12.1": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.13.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.13.1": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.13.2": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.14.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.15.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.0": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.1": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.2": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.3": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.4": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.5": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.6": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.7": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.16.8": [
+          "",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python"
+        ],
+        "0.17.0-rc.2": [
+          "",
+          "client",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python",
+          "client_nodejs",
+          "client_quickjs",
+          "client_lua",
+          "client_python"
+        ],
+        "0.17.0": [
+          "",
+          "client",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python",
+          "client_nodejs",
+          "client_quickjs",
+          "client_lua",
+          "client_python"
+        ],
+        "0.17.1": [
+          "",
+          "client",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python",
+          "client_nodejs",
+          "client_quickjs",
+          "client_lua",
+          "client_python"
+        ],
+        "0.17.2": [
+          "",
+          "client",
+          "nodejs",
+          "quickjs",
+          "lua",
+          "python",
+          "client_nodejs",
+          "client_quickjs",
+          "client_lua",
+          "client_python"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LordBombardir/LLStructureLoader",
+    "github.com/LordBombardir/LLStructureLoader": {
       "info": {
         "name": "StructureLoader",
         "description": "A mod that can help load MCBE structures",
@@ -157,18 +624,27 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-10-13T18:31:53Z",
       "stars": 3,
-      "updated": "2025-10-13T18:31:53Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.0.2",
-        "1.1.0",
-        "1.1.1"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.0.2": [
+          ""
+        ],
+        "1.1.0": [
+          ""
+        ],
+        "1.1.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/AccessHiddenItem",
+    "github.com/GroupMountain/AccessHiddenItem": {
       "info": {
         "name": "AccessHiddenItem",
         "description": "Get hidden items in creative inventory",
@@ -178,16 +654,21 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-04-19T10:52:03Z",
       "stars": 1,
-      "updated": "2025-04-19T10:52:03Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.0.2"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.0.2": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ye111566/browser",
+    "github.com/ye111566/browser": {
       "info": {
         "name": "browser",
         "description": "browser for bedrock edition",
@@ -197,12 +678,11 @@
         ],
         "avatar_url": "https://www.minebbs.com/data/resource_icons/10/10936.jpg?1742231017"
       },
+      "updated_at": "2025-04-01T15:02:29Z",
       "stars": 1,
-      "updated": "2025-04-01T15:02:29Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/GlacieTeam/AntiXray",
+    "github.com/GlacieTeam/AntiXray": {
       "info": {
         "name": "AntiXray",
         "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
@@ -215,21 +695,36 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-07-23T14:21:24Z",
       "stars": 6,
-      "updated": "2025-07-23T14:21:24Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.1.0-rc.1",
-        "1.1.0",
-        "1.2.0",
-        "1.3.0-rc.1",
-        "1.3.0",
-        "1.4.0-rc.1"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.1.0-rc.1": [
+          ""
+        ],
+        "1.1.0": [
+          ""
+        ],
+        "1.2.0": [
+          ""
+        ],
+        "1.3.0-rc.1": [
+          ""
+        ],
+        "1.3.0": [
+          ""
+        ],
+        "1.4.0-rc.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/IceBlcokMC/PlotX",
+    "github.com/IceBlcokMC/PlotX": {
       "info": {
         "name": "PlotX",
         "description": "PlotX — Next-gen plot management for Bedrock servers.",
@@ -239,17 +734,27 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-23T16:06:25Z",
       "stars": 0,
-      "updated": "2026-01-23T16:06:25Z",
-      "versions": [
-        "0.1.0-alpha.1",
-        "0.1.0-beta.1",
-        "0.1.0-beta.2",
-        "0.1.0"
-      ]
+      "versions": {
+        "0.1.0-alpha.1": [
+          ""
+        ],
+        "0.1.0-beta.1": [
+          "vanilla",
+          "mdim"
+        ],
+        "0.1.0-beta.2": [
+          "vanilla",
+          "mdim"
+        ],
+        "0.1.0": [
+          "vanilla",
+          "mdim"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/GMDebugStick",
+    "github.com/GroupMountain/GMDebugStick": {
       "info": {
         "name": "GMDebugStick",
         "description": "Register for a debug stick item",
@@ -259,33 +764,45 @@
         ],
         "avatar_url": "https://i.mcmod.cn/item/icon/128x128/10/103544.png"
       },
+      "updated_at": "2025-10-23T12:28:30Z",
       "stars": 2,
-      "updated": "2025-10-23T12:28:30Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.1.0",
-        "1.2.0",
-        "1.3.0",
-        "1.4.0"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.1.0": [
+          ""
+        ],
+        "1.2.0": [
+          ""
+        ],
+        "1.3.0": [
+          ""
+        ],
+        "1.4.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/Nico6719/YEssential",
+    "github.com/Nico6719/YEssential": {
       "info": {
         "name": "YEssential",
         "description": "一款基础功能插件",
         "tags": [],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-20T13:47:48Z",
       "stars": 7,
-      "updated": "2026-02-20T13:47:48Z",
-      "versions": [
-        "2.8.8"
-      ]
+      "versions": {
+        "2.8.8": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/ModAPI-Release",
+    "github.com/GroupMountain/ModAPI-Release": {
       "info": {
         "name": "ModAPI",
         "description": "Group Mountain Mod Api",
@@ -297,20 +814,33 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/ModAPI-Release/refs/heads/main/icon.png"
       },
+      "updated_at": "2026-01-31T15:20:47Z",
       "stars": 4,
-      "updated": "2026-01-31T15:20:47Z",
-      "versions": [
-        "0.1.0",
-        "0.1.1",
-        "0.2.0",
-        "0.2.1",
-        "0.3.0",
-        "0.3.1",
-        "0.4.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.1.1": [
+          ""
+        ],
+        "0.2.0": [
+          ""
+        ],
+        "0.2.1": [
+          ""
+        ],
+        "0.3.0": [
+          ""
+        ],
+        "0.3.1": [
+          ""
+        ],
+        "0.4.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/LeviOptimize",
+    "github.com/LiteLDev/LeviOptimize": {
       "info": {
         "name": "LeviOptimize",
         "description": "A performance optimization mod for Minecraft Bedrock Server",
@@ -320,24 +850,66 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-26T04:04:53Z",
       "stars": 59,
-      "updated": "2026-01-26T04:04:53Z",
-      "versions": [
-        "0.5.2",
-        "0.5.3",
-        "0.6.0",
-        "0.6.1",
-        "0.7.0",
-        "0.8.0",
-        "0.9.0",
-        "0.10.0",
-        "0.11.0",
-        "0.12.0",
-        "0.12.1"
-      ]
+      "versions": {
+        "0.1.2": [],
+        "0.1.3": [],
+        "0.1.4": [],
+        "0.1.5": [],
+        "0.1.6": [],
+        "0.1.7": [],
+        "0.1.8": [],
+        "0.1.9": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.2.2": [],
+        "0.2.3": [],
+        "0.2.4": [],
+        "0.2.5": [],
+        "0.3.0": [],
+        "0.4.0-rc.1": [],
+        "0.4.0": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.5.2": [
+          ""
+        ],
+        "0.5.3": [
+          ""
+        ],
+        "0.6.0": [
+          ""
+        ],
+        "0.6.1": [
+          ""
+        ],
+        "0.7.0": [
+          ""
+        ],
+        "0.8.0": [
+          ""
+        ],
+        "0.9.0": [
+          ""
+        ],
+        "0.10.0": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.12.0": [
+          "",
+          "client"
+        ],
+        "0.12.1": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GeneralUniversal/EnchantX",
+    "github.com/GeneralUniversal/EnchantX": {
       "info": {
         "name": "EnchantX",
         "description": "A Native Pluyin which enchanced enchantment function",
@@ -347,15 +919,18 @@
         ],
         "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40&v=4"
       },
+      "updated_at": "2026-02-20T23:52:31Z",
       "stars": 1,
-      "updated": "2026-02-20T23:52:31Z",
-      "versions": [
-        "0.1.0",
-        "0.3.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.3.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/lwenk/PlandProjectileFix",
+    "github.com/lwenk/PlandProjectileFix": {
       "info": {
         "name": "PlandProjectileFix",
         "description": "Description of my mod",
@@ -365,15 +940,18 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-10-11T08:05:10Z",
       "stars": 0,
-      "updated": "2025-10-11T08:05:10Z",
-      "versions": [
-        "0.1.0",
-        "0.1.2"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.1.2": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/PuceLi/NameTagPlus",
+    "github.com/PuceLi/NameTagPlus": {
       "info": {
         "name": "NameTagPlus",
         "description": "解除命名牌的使用限制",
@@ -383,15 +961,20 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-01T03:26:56Z",
       "stars": 0,
-      "updated": "2026-02-01T03:26:56Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1"
-      ]
+      "versions": {
+        "1.0.0": [
+          "",
+          "client"
+        ],
+        "1.0.1": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/leaftail1880/LLTranslatorApi",
+    "github.com/leaftail1880/LLTranslatorApi": {
       "info": {
         "name": "TranslatorApi",
         "description": "This mod is intended for developers who want to support multilingualism.",
@@ -401,19 +984,30 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-08-27T11:56:26Z",
       "stars": 0,
-      "updated": "2025-08-27T11:56:26Z",
-      "versions": [
-        "0.0.1",
-        "0.0.2",
-        "0.0.3",
-        "0.0.4",
-        "0.0.5",
-        "0.0.6"
-      ]
+      "versions": {
+        "0.0.1": [
+          ""
+        ],
+        "0.0.2": [
+          ""
+        ],
+        "0.0.3": [
+          ""
+        ],
+        "0.0.4": [
+          ""
+        ],
+        "0.0.5": [
+          ""
+        ],
+        "0.0.6": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LordBombardir/LLPowerRanks",
+    "github.com/LordBombardir/LLPowerRanks": {
       "info": {
         "name": "PowerRanks",
         "description": "A mod that adds a rank (privilege) system to the game",
@@ -423,21 +1017,43 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-10-13T19:25:56Z",
       "stars": 14,
-      "updated": "2025-10-13T19:25:56Z",
-      "versions": [
-        "1.0.7",
-        "1.0.8",
-        "1.0.9",
-        "1.1.0",
-        "1.1.1",
-        "1.1.2",
-        "1.1.3",
-        "1.1.4"
-      ]
+      "versions": {
+        "1.0.0": [],
+        "1.0.1": [],
+        "1.0.2": [],
+        "1.0.3": [],
+        "1.0.4": [],
+        "1.0.5": [],
+        "1.0.6": [],
+        "1.0.7": [
+          ""
+        ],
+        "1.0.8": [
+          ""
+        ],
+        "1.0.9": [
+          ""
+        ],
+        "1.1.0": [
+          ""
+        ],
+        "1.1.1": [
+          ""
+        ],
+        "1.1.2": [
+          ""
+        ],
+        "1.1.3": [
+          ""
+        ],
+        "1.1.4": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/LegacyRemoteCall",
+    "github.com/LiteLDev/LegacyRemoteCall": {
       "info": {
         "name": "LegacyRemoteCall",
         "description": "A part of LegacyScriptEngine",
@@ -449,25 +1065,68 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-25T12:36:06Z",
       "stars": 6,
-      "updated": "2026-01-25T12:36:06Z",
-      "versions": [
-        "0.10.1",
-        "0.10.2",
-        "0.11.0",
-        "0.11.1",
-        "0.11.2",
-        "0.12.0",
-        "0.13.0",
-        "0.14.0",
-        "0.15.0",
-        "0.16.0",
-        "0.17.0-rc.1",
-        "0.17.0"
-      ]
+      "versions": {
+        "0.1.0": [],
+        "0.1.1": [],
+        "0.2.0": [],
+        "0.3.0": [],
+        "0.4.0": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.6.0": [],
+        "0.7.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.9.0-rc.1": [],
+        "0.9.0-rc.2": [],
+        "0.9.0-rc.3": [],
+        "0.9.0-rc.4": [],
+        "0.9.0": [],
+        "0.10.0": [],
+        "0.10.1": [
+          ""
+        ],
+        "0.10.2": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.11.1": [
+          ""
+        ],
+        "0.11.2": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ],
+        "0.15.0": [
+          ""
+        ],
+        "0.16.0": [
+          ""
+        ],
+        "0.17.0-rc.1": [
+          "",
+          "client"
+        ],
+        "0.17.0": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/leoweyr/LeviInterface",
+    "github.com/leoweyr/LeviInterface": {
       "info": {
         "name": "LeviInterfaceMaster",
         "description": "The master plugin that provides cross-plugin UI queues in Minecraft Legacy Script Engine.",
@@ -483,14 +1142,15 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-06-17T09:52:33Z",
       "stars": 1,
-      "updated": "2025-06-17T09:52:33Z",
-      "versions": [
-        "0.1.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/Pixovate/LifeApple",
+    "github.com/Pixovate/LifeApple": {
       "info": {
         "name": "LifeApple",
         "description": "A mod that makes the apple can boost your health.",
@@ -502,14 +1162,15 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-05-12T04:28:39Z",
       "stars": 0,
-      "updated": "2025-05-12T04:28:39Z",
-      "versions": [
-        "0.0.1"
-      ]
+      "versions": {
+        "0.0.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ZMBlocks/LL-BetterStop",
+    "github.com/ZMBlocks/LL-BetterStop": {
       "info": {
         "name": "BetterStop",
         "description": "When the server is shut down, the player shows the reason for the shutdown.",
@@ -522,14 +1183,15 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-04-17T11:45:11Z",
       "stars": 0,
-      "updated": "2025-04-17T11:45:11Z",
-      "versions": [
-        "1.0.0"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/UpdateNotice",
+    "github.com/GroupMountain/UpdateNotice": {
       "info": {
         "name": "UpdateNotice",
         "description": "Remind players of earlier versions to update the client",
@@ -539,28 +1201,40 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-07-08T03:39:54Z",
       "stars": 0,
-      "updated": "2025-07-08T03:39:54Z",
-      "versions": [
-        "1.0.0"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/GMBlacklist",
+    "github.com/GroupMountain/GMBlacklist": {
       "info": {
         "name": "GMBlacklist",
         "description": "Blacklist Mod on Bedrock Dedicated Server",
         "tags": [],
         "avatar_url": ""
       },
+      "updated_at": "2025-04-13T12:59:58Z",
       "stars": 2,
-      "updated": "2025-04-13T12:59:58Z",
-      "versions": [
-        "0.12.3"
-      ]
+      "versions": {
+        "0.5.7": [],
+        "0.7.0": [],
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.9.0": [],
+        "0.9.1": [],
+        "0.11.0": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.12.2": [],
+        "0.12.3": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/LeviAntiCheat",
+    "github.com/LiteLDev/LeviAntiCheat": {
       "info": {
         "name": "LeviAntiCheat",
         "description": "Powerful anti-cheating for LeviLamina",
@@ -570,30 +1244,92 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-03T11:39:03Z",
       "stars": 43,
-      "updated": "2026-02-03T11:39:03Z",
-      "versions": [
-        "0.5.1",
-        "0.5.2",
-        "0.6.0",
-        "0.6.1",
-        "0.6.2",
-        "0.7.0",
-        "0.7.1",
-        "0.7.2",
-        "0.8.0",
-        "0.8.1",
-        "0.8.2",
-        "0.9.0",
-        "0.10.0",
-        "0.11.0",
-        "0.12.0",
-        "0.12.1",
-        "0.12.2"
-      ]
+      "versions": {
+        "0.1.0": [],
+        "0.1.1": [],
+        "0.1.2": [],
+        "0.1.3": [],
+        "0.1.4": [],
+        "0.1.5": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.2.2": [],
+        "0.2.3": [],
+        "0.2.4": [],
+        "0.2.6": [],
+        "0.2.8": [],
+        "0.3.0": [],
+        "0.3.1": [],
+        "0.3.2": [],
+        "0.3.3": [],
+        "0.3.4": [],
+        "0.3.5": [],
+        "0.3.6": [],
+        "0.3.7": [],
+        "0.4.0-rc.11": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.4.2": [],
+        "0.4.3": [],
+        "0.4.4": [],
+        "0.4.5": [],
+        "0.5.0-rc.1": [],
+        "0.5.1": [
+          ""
+        ],
+        "0.5.2": [
+          ""
+        ],
+        "0.6.0": [
+          ""
+        ],
+        "0.6.1": [
+          ""
+        ],
+        "0.6.2": [
+          ""
+        ],
+        "0.7.0": [
+          ""
+        ],
+        "0.7.1": [
+          ""
+        ],
+        "0.7.2": [
+          ""
+        ],
+        "0.8.0": [
+          ""
+        ],
+        "0.8.1": [
+          ""
+        ],
+        "0.8.2": [
+          ""
+        ],
+        "0.9.0": [
+          ""
+        ],
+        "0.10.0": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.12.1": [
+          ""
+        ],
+        "0.12.2": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LordBombardir/LLPlaceholderApi",
+    "github.com/LordBombardir/LLPlaceholderApi": {
       "info": {
         "name": "PlaceholderApi",
         "description": "This mod is intended for developers who want to support multilingualism.",
@@ -603,15 +1339,20 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-04T09:44:23Z",
       "stars": 0,
-      "updated": "2026-02-04T09:44:23Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1"
-      ]
+      "versions": {
+        "1.0.0": [
+          "",
+          "client"
+        ],
+        "1.0.1": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LordBombardir/LLRconServer",
+    "github.com/LordBombardir/LLRconServer": {
       "info": {
         "name": "RconServer",
         "description": "Implementation RCON for LeviLamina",
@@ -621,16 +1362,21 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-10-02T19:01:35Z",
       "stars": 6,
-      "updated": "2025-10-02T19:01:35Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.0.2"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.0.2": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/MoreDimensions",
+    "github.com/LiteLDev/MoreDimensions": {
       "info": {
         "name": "MoreDimensions",
         "description": "More than three dimensions on BDS!",
@@ -641,23 +1387,55 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-03T12:49:16Z",
       "stars": 21,
-      "updated": "2026-02-03T12:49:16Z",
-      "versions": [
-        "0.8.0",
-        "0.9.0",
-        "0.10.0",
-        "0.10.1",
-        "0.11.0",
-        "0.11.2",
-        "0.12.0",
-        "0.12.1",
-        "0.12.2",
-        "0.13.0"
-      ]
+      "versions": {
+        "0.1.0": [],
+        "0.1.1": [],
+        "0.1.2": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.3.0": [],
+        "0.3.1": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.5.0": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.7.0": [],
+        "0.8.0": [
+          ""
+        ],
+        "0.9.0": [
+          ""
+        ],
+        "0.10.0": [
+          ""
+        ],
+        "0.10.1": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.11.2": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.12.1": [
+          ""
+        ],
+        "0.12.2": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/CrashLogger",
+    "github.com/LiteLDev/CrashLogger": {
       "info": {
         "name": "CrashLogger",
         "description": "Show crash log of LeviLamina",
@@ -667,16 +1445,29 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-16T05:01:11Z",
       "stars": 6,
-      "updated": "2026-01-16T05:01:11Z",
-      "versions": [
-        "1.3.1",
-        "1.3.2",
-        "1.3.3"
-      ]
+      "versions": {
+        "1.1.0": [],
+        "1.1.1": [],
+        "1.2.0": [],
+        "1.2.1": [],
+        "1.2.2": [],
+        "1.3.0": [],
+        "1.3.1": [
+          ""
+        ],
+        "1.3.2": [
+          "",
+          "client"
+        ],
+        "1.3.3": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/PuceLi/PlayerCounter",
+    "github.com/PuceLi/PlayerCounter": {
       "info": {
         "name": "PlayerCounter",
         "description": "Get the number of players in the world.",
@@ -686,12 +1477,11 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-08-10T12:36:44Z",
       "stars": 0,
-      "updated": "2025-08-10T12:36:44Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/GroupMountain/FreeCamera",
+    "github.com/GroupMountain/FreeCamera": {
       "info": {
         "name": "FreeCamera",
         "description": "Free Camera Mod on Bedrock Dedicated Server",
@@ -701,18 +1491,40 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-06-15T08:26:21Z",
       "stars": 21,
-      "updated": "2025-06-15T08:26:21Z",
-      "versions": [
-        "0.13.3",
-        "0.13.4",
-        "0.13.5",
-        "0.13.6",
-        "0.13.8"
-      ]
+      "versions": {
+        "0.3.0": [],
+        "0.5.0": [],
+        "0.5.4": [],
+        "0.7.0": [],
+        "0.8.0": [],
+        "0.9.0": [],
+        "0.10.0": [],
+        "0.11.0": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.13.0": [],
+        "0.13.1": [],
+        "0.13.2": [],
+        "0.13.3": [
+          ""
+        ],
+        "0.13.4": [
+          ""
+        ],
+        "0.13.5": [
+          ""
+        ],
+        "0.13.6": [
+          ""
+        ],
+        "0.13.8": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ShrBox/BackupHelper",
+    "github.com/ShrBox/BackupHelper": {
       "info": {
         "name": "BackupHelper",
         "description": "A LeviLamina plugin which is port from LiteLoaderBDS to help you backup more easily",
@@ -722,29 +1534,81 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-26T05:04:45Z",
       "stars": 18,
-      "updated": "2026-01-26T05:04:45Z",
-      "versions": [
-        "0.7.1",
-        "0.8.0",
-        "0.8.1",
-        "0.8.2",
-        "0.9.0",
-        "0.9.1",
-        "0.10.0",
-        "0.10.1",
-        "0.11.0",
-        "0.12.0",
-        "0.12.1",
-        "0.13.0",
-        "0.13.1",
-        "0.14.0",
-        "0.14.1",
-        "0.14.2"
-      ]
+      "versions": {
+        "0.1.1": [],
+        "0.1.2": [],
+        "0.1.3": [],
+        "0.1.4": [],
+        "0.1.5": [],
+        "0.1.6": [],
+        "0.1.7": [],
+        "0.1.8": [],
+        "0.2.0": [],
+        "0.3.0": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.4.2": [],
+        "0.4.3": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.5.2": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.6.2": [],
+        "0.7.0": [],
+        "0.7.1": [
+          ""
+        ],
+        "0.8.0": [
+          ""
+        ],
+        "0.8.1": [
+          ""
+        ],
+        "0.8.2": [
+          ""
+        ],
+        "0.9.0": [
+          ""
+        ],
+        "0.9.1": [
+          ""
+        ],
+        "0.10.0": [
+          ""
+        ],
+        "0.10.1": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.12.1": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ],
+        "0.13.1": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ],
+        "0.14.1": [
+          ""
+        ],
+        "0.14.2": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/loitietu/LOICollectionA",
+    "github.com/loitietu/LOICollectionA": {
       "info": {
         "name": "LOICollectionA",
         "description": "Multifunctional plug-in set",
@@ -756,26 +1620,69 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-12T12:41:50Z",
       "stars": 11,
-      "updated": "2026-02-12T12:41:50Z",
-      "versions": [
-        "1.7.0",
-        "1.7.1",
-        "1.7.2",
-        "1.8.0",
-        "1.8.1",
-        "1.8.2",
-        "1.9.0",
-        "1.9.1",
-        "1.9.2",
-        "1.10.0",
-        "1.10.1",
-        "1.11.0",
-        "1.11.1"
-      ]
+      "versions": {
+        "1.4.0": [],
+        "1.4.1": [],
+        "1.4.2": [],
+        "1.4.3": [],
+        "1.4.4": [],
+        "1.4.5": [],
+        "1.4.6": [],
+        "1.4.7": [],
+        "1.4.8": [],
+        "1.4.9": [],
+        "1.5.0": [],
+        "1.5.1": [],
+        "1.6.0": [],
+        "1.6.1": [],
+        "1.6.2": [],
+        "1.6.3": [],
+        "1.6.4": [],
+        "1.6.5": [],
+        "1.7.0": [
+          ""
+        ],
+        "1.7.1": [
+          ""
+        ],
+        "1.7.2": [
+          ""
+        ],
+        "1.8.0": [
+          ""
+        ],
+        "1.8.1": [
+          ""
+        ],
+        "1.8.2": [
+          ""
+        ],
+        "1.9.0": [
+          ""
+        ],
+        "1.9.1": [
+          ""
+        ],
+        "1.9.2": [
+          ""
+        ],
+        "1.10.0": [
+          ""
+        ],
+        "1.10.1": [
+          ""
+        ],
+        "1.11.0": [
+          ""
+        ],
+        "1.11.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ShrBox/ResourcePackEncryption",
+    "github.com/ShrBox/ResourcePackEncryption": {
       "info": {
         "name": "ResourcePackEncryption",
         "description": "Provide BDS support for resource pack encryption",
@@ -785,22 +1692,47 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-25T13:56:12Z",
       "stars": 8,
-      "updated": "2026-01-25T13:56:12Z",
-      "versions": [
-        "0.7.0",
-        "0.8.0",
-        "0.9.0",
-        "0.9.1",
-        "0.10.0",
-        "0.11.0",
-        "0.12.0",
-        "0.13.0",
-        "0.14.0"
-      ]
+      "versions": {
+        "0.1.0": [],
+        "0.1.1": [],
+        "0.2.1": [],
+        "0.3.0": [],
+        "0.4.0": [],
+        "0.5.0": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.7.0": [
+          ""
+        ],
+        "0.8.0": [
+          ""
+        ],
+        "0.9.0": [
+          ""
+        ],
+        "0.9.1": [
+          ""
+        ],
+        "0.10.0": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ZMBlocks/LL-ScalePersistenceFix",
+    "github.com/ZMBlocks/LL-ScalePersistenceFix": {
       "info": {
         "name": "ScalePersistenceFix",
         "description": "",
@@ -810,14 +1742,15 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-11-26T13:23:20Z",
       "stars": 0,
-      "updated": "2025-11-26T13:23:20Z",
-      "versions": [
-        "1.0.0"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/carefly/RLXMoney",
+    "github.com/carefly/RLXMoney": {
       "info": {
         "name": "RLXMoney",
         "description": "A comprehensive money management plugin for Minecraft servers based on LeviLamina framework",
@@ -829,17 +1762,24 @@
         ],
         "avatar_url": "https://github.com/carefly/RLXMoney/raw/main/avatar.png"
       },
+      "updated_at": "2026-02-08T02:37:18Z",
       "stars": 0,
-      "updated": "2026-02-08T02:37:18Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.9.2",
-        "1.9.5"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.9.2": [
+          ""
+        ],
+        "1.9.5": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/kuangby/InfiniteBlockFixer",
+    "github.com/kuangby/InfiniteBlockFixer": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -849,17 +1789,24 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-07-21T11:45:49Z",
       "stars": 2,
-      "updated": "2025-07-21T11:45:49Z",
-      "versions": [
-        "0.1.0",
-        "0.1.1",
-        "0.2.0",
-        "0.3.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.1.1": [
+          ""
+        ],
+        "0.2.0": [
+          ""
+        ],
+        "0.3.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GlacieTeam/Glacie",
+    "github.com/GlacieTeam/Glacie": {
       "info": {
         "name": "Glacie",
         "description": "BDS Multi-version",
@@ -873,77 +1820,218 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-29T19:24:17Z",
       "stars": 94,
-      "updated": "2026-01-29T19:24:17Z",
-      "versions": [
-        "1.0.0-rc.2",
-        "2.0.1",
-        "2.0.2",
-        "2.0.3",
-        "2.0.4",
-        "2.1.2",
-        "2.1.3",
-        "2.1.4",
-        "2.1.5",
-        "2.1.6-rc.1",
-        "2.1.6-rc.2",
-        "2.1.6",
-        "2.2.0-rc.1",
-        "2.2.0-rc.2",
-        "2.2.0",
-        "3.0.0",
-        "3.0.1",
-        "3.0.2",
-        "3.0.3",
-        "3.0.4",
-        "3.0.5",
-        "3.0.6",
-        "3.1.0",
-        "3.1.1",
-        "3.1.2",
-        "3.1.3",
-        "3.1.4",
-        "3.1.5",
-        "3.1.6",
-        "3.2.0",
-        "3.2.1",
-        "3.2.2",
-        "3.2.3",
-        "3.2.4",
-        "3.2.5",
-        "3.2.6",
-        "3.3.0",
-        "3.3.1",
-        "3.3.2",
-        "3.3.3",
-        "3.3.4",
-        "3.3.5",
-        "3.3.6",
-        "3.4.0-rc.1",
-        "3.4.0-rc.2",
-        "3.4.0-rc.3",
-        "3.4.0",
-        "3.4.1",
-        "3.4.2",
-        "3.4.3",
-        "3.4.4",
-        "3.5.0-rc.1",
-        "3.5.0-rc.2",
-        "3.5.0",
-        "3.5.1",
-        "3.5.2",
-        "3.5.3",
-        "3.6.0-rc.1",
-        "3.6.0",
-        "3.6.1",
-        "3.7.0",
-        "3.8.0-rc.1",
-        "3.8.0",
-        "3.9.0-rc.1"
-      ]
+      "versions": {
+        "1.0.0-rc.1": [],
+        "1.0.0-rc.2": [
+          ""
+        ],
+        "2.0.0-rc.1": [],
+        "2.0.0-rc.2": [],
+        "2.0.0-rc.3": [],
+        "2.0.0-rc.4": [],
+        "2.0.0-rc.5": [],
+        "2.0.0": [],
+        "2.0.1": [
+          ""
+        ],
+        "2.0.2": [
+          ""
+        ],
+        "2.0.3": [
+          ""
+        ],
+        "2.0.4": [
+          ""
+        ],
+        "2.1.0-rc.1": [],
+        "2.1.0-rc.2": [],
+        "2.1.0": [],
+        "2.1.1": [],
+        "2.1.2-rc.1": [],
+        "2.1.2-rc.2": [],
+        "2.1.2-rc.3": [],
+        "2.1.2": [
+          ""
+        ],
+        "2.1.3": [
+          ""
+        ],
+        "2.1.4": [
+          ""
+        ],
+        "2.1.5": [
+          ""
+        ],
+        "2.1.6-rc.1": [
+          ""
+        ],
+        "2.1.6-rc.2": [
+          ""
+        ],
+        "2.1.6": [
+          ""
+        ],
+        "2.2.0-rc.1": [
+          ""
+        ],
+        "2.2.0-rc.2": [
+          ""
+        ],
+        "2.2.0": [
+          ""
+        ],
+        "3.0.0": [
+          ""
+        ],
+        "3.0.1": [
+          ""
+        ],
+        "3.0.2": [
+          ""
+        ],
+        "3.0.3": [
+          ""
+        ],
+        "3.0.4": [
+          ""
+        ],
+        "3.0.5": [
+          ""
+        ],
+        "3.0.6": [
+          ""
+        ],
+        "3.1.0": [
+          ""
+        ],
+        "3.1.1": [
+          ""
+        ],
+        "3.1.2": [
+          ""
+        ],
+        "3.1.3": [
+          ""
+        ],
+        "3.1.4": [
+          ""
+        ],
+        "3.1.5": [
+          ""
+        ],
+        "3.1.6": [
+          ""
+        ],
+        "3.2.0": [
+          ""
+        ],
+        "3.2.1": [
+          ""
+        ],
+        "3.2.2": [
+          ""
+        ],
+        "3.2.3": [
+          ""
+        ],
+        "3.2.4": [
+          ""
+        ],
+        "3.2.5": [
+          ""
+        ],
+        "3.2.6": [
+          ""
+        ],
+        "3.3.0": [
+          ""
+        ],
+        "3.3.1": [
+          ""
+        ],
+        "3.3.2": [
+          ""
+        ],
+        "3.3.3": [
+          ""
+        ],
+        "3.3.4": [
+          ""
+        ],
+        "3.3.5": [
+          ""
+        ],
+        "3.3.6": [
+          ""
+        ],
+        "3.4.0-rc.1": [
+          ""
+        ],
+        "3.4.0-rc.2": [
+          ""
+        ],
+        "3.4.0-rc.3": [
+          ""
+        ],
+        "3.4.0": [
+          ""
+        ],
+        "3.4.1": [
+          ""
+        ],
+        "3.4.2": [
+          ""
+        ],
+        "3.4.3": [
+          ""
+        ],
+        "3.4.4": [
+          ""
+        ],
+        "3.5.0-rc.1": [
+          ""
+        ],
+        "3.5.0-rc.2": [
+          ""
+        ],
+        "3.5.0": [
+          ""
+        ],
+        "3.5.1": [
+          ""
+        ],
+        "3.5.2": [
+          ""
+        ],
+        "3.5.3": [
+          ""
+        ],
+        "3.6.0-rc.1": [
+          ""
+        ],
+        "3.6.0": [
+          ""
+        ],
+        "3.6.1": [
+          ""
+        ],
+        "3.7.0": [
+          ""
+        ],
+        "3.8.0-rc.1": [
+          ""
+        ],
+        "3.8.0": [
+          ""
+        ],
+        "3.9.0-rc.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/ZMBlocks/LL-UniteBan",
+    "github.com/ZMBlocks/LL-UniteBan": {
       "info": {
         "name": "UniteBan",
         "description": "跨服联合封禁黑名单",
@@ -953,21 +2041,36 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-08-10T06:38:20Z",
       "stars": 1,
-      "updated": "2025-08-10T06:38:20Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1",
-        "1.0.2",
-        "1.0.3",
-        "1.1.0",
-        "1.1.1",
-        "1.1.2",
-        "1.1.3"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.0.2": [
+          ""
+        ],
+        "1.0.3": [
+          ""
+        ],
+        "1.1.0": [
+          ""
+        ],
+        "1.1.1": [
+          ""
+        ],
+        "1.1.2": [
+          ""
+        ],
+        "1.1.3": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/SkyEye-FAST/offer-flowers-faster-bedrock",
+    "github.com/SkyEye-FAST/offer-flowers-faster-bedrock": {
       "info": {
         "name": "offer-flowers-faster",
         "description": "Increases the probability of the Iron Golem delivering flowers.",
@@ -977,15 +2080,18 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
       },
+      "updated_at": "2025-12-22T10:41:04Z",
       "stars": 1,
-      "updated": "2025-12-22T10:41:04Z",
-      "versions": [
-        "0.1.0",
-        "0.2.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.2.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/MiracleForest/iAutomaticFishing",
+    "github.com/MiracleForest/iAutomaticFishing": {
       "info": {
         "name": "iAutomaticFishing",
         "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
@@ -995,85 +2101,207 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
       },
+      "updated_at": "2026-01-27T13:18:23Z",
       "stars": 5,
-      "updated": "2026-01-27T13:18:23Z",
-      "versions": [
-        "1.0.0",
-        "1.1.0"
-      ]
+      "versions": {
+        "1.0.0": [
+          "",
+          "server",
+          "client"
+        ],
+        "1.1.0": [
+          "",
+          "server",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/bedrock-runtime-data",
+    "github.com/LiteLDev/bedrock-runtime-data": {
       "info": {
         "name": "bedrock-runtime-data",
         "description": "",
         "tags": [],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-07T06:05:47Z",
       "stars": 15,
-      "updated": "2026-02-07T06:05:47Z",
-      "versions": [
-        "1.21.80-server.2",
-        "1.21.80-server.3",
-        "1.21.80-server.4",
-        "1.21.80-server.5",
-        "1.21.80-server.6",
-        "1.21.80-server.7",
-        "1.21.80-server.8",
-        "1.21.93-server.1",
-        "1.21.93-server.2",
-        "1.21.93-server.3",
-        "1.21.93-server.4",
-        "1.21.93-server.5",
-        "1.21.93-server.6",
-        "1.21.102-server.1",
-        "1.21.102-server.2",
-        "1.21.111-server.1",
-        "1.21.111-server.2",
-        "1.21.111-server.3",
-        "1.21.120-server.1",
-        "1.21.120-server.2",
-        "1.21.120-server.3",
-        "1.21.120-server.4",
-        "1.21.120-server.5",
-        "1.21.120-server.6",
-        "1.21.120-server.7",
-        "1.21.124-client.1",
-        "1.21.124-client.2",
-        "1.21.124-client.3",
-        "1.21.124-server.1",
-        "1.21.124-server.2",
-        "1.21.124-server.3",
-        "1.21.124-server.4",
-        "1.21.124-server.5",
-        "1.21.132-client.1",
-        "1.21.132-client.2",
-        "1.21.132-client.3",
-        "1.21.132-client.4",
-        "1.21.132-client.5",
-        "1.21.132-client.6",
-        "1.21.132-client.7",
-        "1.21.132-client.8",
-        "1.21.132-server.1",
-        "1.21.132-server.2",
-        "1.21.132-server.3",
-        "1.21.132-server.4",
-        "1.21.132-server.5",
-        "1.21.132-server.6",
-        "1.21.132-server.7",
-        "1.21.803-server.1",
-        "1.21.7004-server.1",
-        "1.21.7004-server.2",
-        "1.21.7004-server.3",
-        "1.21.7004-server.4",
-        "1.21.7004-server.5",
-        "1.21.7004-server.6",
-        "1.21.7004-server.7",
-        "1.21.7004-server.9"
-      ]
+      "versions": {
+        "1.21.80-server.2": [
+          ""
+        ],
+        "1.21.80-server.3": [
+          ""
+        ],
+        "1.21.80-server.4": [
+          ""
+        ],
+        "1.21.80-server.5": [
+          ""
+        ],
+        "1.21.80-server.6": [
+          ""
+        ],
+        "1.21.80-server.7": [
+          ""
+        ],
+        "1.21.80-server.8": [
+          ""
+        ],
+        "1.21.93-server.1": [
+          ""
+        ],
+        "1.21.93-server.2": [
+          ""
+        ],
+        "1.21.93-server.3": [
+          ""
+        ],
+        "1.21.93-server.4": [
+          ""
+        ],
+        "1.21.93-server.5": [
+          ""
+        ],
+        "1.21.93-server.6": [
+          ""
+        ],
+        "1.21.102-server.1": [
+          ""
+        ],
+        "1.21.102-server.2": [
+          ""
+        ],
+        "1.21.111-server.1": [
+          ""
+        ],
+        "1.21.111-server.2": [
+          ""
+        ],
+        "1.21.111-server.3": [
+          ""
+        ],
+        "1.21.120-server.1": [
+          ""
+        ],
+        "1.21.120-server.2": [
+          ""
+        ],
+        "1.21.120-server.3": [
+          ""
+        ],
+        "1.21.120-server.4": [
+          ""
+        ],
+        "1.21.120-server.5": [
+          ""
+        ],
+        "1.21.120-server.6": [
+          ""
+        ],
+        "1.21.120-server.7": [
+          ""
+        ],
+        "1.21.124-client.1": [
+          ""
+        ],
+        "1.21.124-client.2": [
+          ""
+        ],
+        "1.21.124-client.3": [
+          ""
+        ],
+        "1.21.124-server.1": [
+          ""
+        ],
+        "1.21.124-server.2": [
+          ""
+        ],
+        "1.21.124-server.3": [
+          ""
+        ],
+        "1.21.124-server.4": [
+          ""
+        ],
+        "1.21.124-server.5": [
+          ""
+        ],
+        "1.21.132-client.1": [
+          ""
+        ],
+        "1.21.132-client.2": [
+          ""
+        ],
+        "1.21.132-client.3": [
+          ""
+        ],
+        "1.21.132-client.4": [
+          ""
+        ],
+        "1.21.132-client.5": [
+          ""
+        ],
+        "1.21.132-client.6": [
+          ""
+        ],
+        "1.21.132-client.7": [
+          ""
+        ],
+        "1.21.132-client.8": [
+          ""
+        ],
+        "1.21.132-server.1": [
+          ""
+        ],
+        "1.21.132-server.2": [
+          ""
+        ],
+        "1.21.132-server.3": [
+          ""
+        ],
+        "1.21.132-server.4": [
+          ""
+        ],
+        "1.21.132-server.5": [
+          ""
+        ],
+        "1.21.132-server.6": [
+          ""
+        ],
+        "1.21.132-server.7": [
+          ""
+        ],
+        "1.21.803-server.1": [
+          ""
+        ],
+        "1.21.5010-server": [],
+        "1.21.6010-server": [],
+        "1.21.7004-server.1": [
+          ""
+        ],
+        "1.21.7004-server.2": [
+          ""
+        ],
+        "1.21.7004-server.3": [
+          ""
+        ],
+        "1.21.7004-server.4": [
+          ""
+        ],
+        "1.21.7004-server.5": [
+          ""
+        ],
+        "1.21.7004-server.6": [
+          ""
+        ],
+        "1.21.7004-server.7": [
+          ""
+        ],
+        "1.21.7004-server.9": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/LegacyMoney",
+    "github.com/LiteLDev/LegacyMoney": {
       "info": {
         "name": "LegacyMoney",
         "description": "LLMoney, but adapted to LeviLamina",
@@ -1085,24 +2313,74 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-25T12:36:01Z",
       "stars": 6,
-      "updated": "2026-01-25T12:36:01Z",
-      "versions": [
-        "0.10.1",
-        "0.11.0",
-        "0.11.1",
-        "0.11.2",
-        "0.12.0",
-        "0.13.0",
-        "0.14.0",
-        "0.15.0",
-        "0.16.0",
-        "0.17.0-rc.1",
-        "0.17.0"
-      ]
+      "versions": {
+        "0.1.3": [],
+        "0.1.4": [],
+        "0.1.5": [],
+        "0.1.6": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.3.0": [],
+        "0.3.1": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.5.0": [],
+        "0.6.0": [],
+        "0.7.0": [],
+        "0.7.1": [],
+        "0.7.2": [],
+        "0.7.3": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.8.4": [],
+        "0.8.5": [],
+        "0.9.0-rc.1": [],
+        "0.9.0-rc.2": [],
+        "0.9.0-rc.3": [],
+        "0.9.0-rc.4": [],
+        "0.9.0": [],
+        "0.10.0": [],
+        "0.10.1": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.11.1": [
+          ""
+        ],
+        "0.11.2": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ],
+        "0.15.0": [
+          ""
+        ],
+        "0.16.0": [
+          ""
+        ],
+        "0.17.0-rc.1": [
+          "",
+          "client"
+        ],
+        "0.17.0": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/bdsdown",
+    "github.com/LiteLDev/bdsdown": {
       "info": {
         "name": "bdsdown",
         "description": "Downloader for Minecraft BDS",
@@ -1111,18 +2389,74 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-05-06T18:01:21Z",
       "stars": 3,
-      "updated": "2025-05-06T18:01:21Z",
-      "versions": [
-        "1.1.0",
-        "1.1.1",
-        "1.1.2",
-        "1.1.3",
-        "1.1.4"
-      ]
+      "versions": {
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "1.0.0": [],
+        "1.0.1": [],
+        "1.0.2": [],
+        "1.0.3": [],
+        "1.0.4": [],
+        "1.0.5": [],
+        "1.1.0": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "1.1.1": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "1.1.2": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "1.1.3": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "1.1.4": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/yangyangzhong82/Placeholder",
+    "github.com/yangyangzhong82/Placeholder": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1132,12 +2466,11 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2026-01-26T19:14:53Z",
       "stars": 0,
-      "updated": "2026-01-26T19:14:53Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/IceBlcokMC/PLand",
+    "github.com/IceBlcokMC/PLand": {
       "info": {
         "name": "PLand",
         "description": "基于 LeviLamina 的领地系统 / A land system based on LeviLamina",
@@ -1149,29 +2482,85 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-15T07:56:33Z",
       "stars": 30,
-      "updated": "2026-02-15T07:56:33Z",
-      "versions": [
-        "0.11.0-rc.1",
-        "0.11.0-rc.2",
-        "0.11.0",
-        "0.12.0-rc.1",
-        "0.12.0-rc.2",
-        "0.12.0",
-        "0.13.0",
-        "0.14.0",
-        "0.14.1",
-        "0.15.0",
-        "0.16.0",
-        "0.17.0",
-        "0.17.1",
-        "0.17.2",
-        "0.18.0",
-        "0.18.1"
-      ]
+      "versions": {
+        "0.0.3": [],
+        "0.1.0": [],
+        "0.2.0": [],
+        "0.2.1": [],
+        "0.2.2": [],
+        "0.2.3": [],
+        "0.2.4": [],
+        "0.2.5": [],
+        "0.2.6": [],
+        "0.2.7": [],
+        "0.3.0": [],
+        "0.3.1": [],
+        "0.4.0-rc.1": [],
+        "0.4.0-rc.2": [],
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.6.0": [],
+        "0.7.0": [],
+        "0.7.1": [],
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.9.0": [],
+        "0.10.0": [],
+        "0.11.0-rc.1": [
+          ""
+        ],
+        "0.11.0-rc.2": [
+          ""
+        ],
+        "0.11.0": [
+          ""
+        ],
+        "0.12.0-rc.1": [
+          ""
+        ],
+        "0.12.0-rc.2": [
+          ""
+        ],
+        "0.12.0": [
+          ""
+        ],
+        "0.13.0": [
+          ""
+        ],
+        "0.14.0": [
+          ""
+        ],
+        "0.14.1": [
+          ""
+        ],
+        "0.15.0": [
+          ""
+        ],
+        "0.16.0": [
+          ""
+        ],
+        "0.17.0": [
+          ""
+        ],
+        "0.17.1": [
+          ""
+        ],
+        "0.17.2": [
+          ""
+        ],
+        "0.18.0": [
+          ""
+        ],
+        "0.18.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/FuckNetherHeight",
+    "github.com/GroupMountain/FuckNetherHeight": {
       "info": {
         "name": "FuckNetherHeight",
         "description": "Fuck Vanilla Bedrock Edition Nether Height Limit",
@@ -1182,55 +2571,128 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-02-12T05:46:20Z",
       "stars": 10,
-      "updated": "2026-02-12T05:46:20Z",
-      "versions": [
-        "0.17.1",
-        "0.18.0",
-        "0.18.1",
-        "0.18.2",
-        "0.18.3",
-        "0.18.4",
-        "0.19.0"
-      ]
+      "versions": {
+        "0.5.0": [],
+        "0.6.0": [],
+        "0.8.0": [],
+        "0.9.0": [],
+        "0.9.1": [],
+        "0.11.0": [],
+        "0.12.0": [],
+        "0.13.0": [],
+        "0.13.1": [],
+        "0.13.2": [],
+        "0.13.3": [],
+        "0.13.4": [],
+        "0.13.5": [],
+        "0.17.0": [],
+        "0.17.1": [
+          ""
+        ],
+        "0.18.0": [
+          ""
+        ],
+        "0.18.1": [
+          "",
+          "client"
+        ],
+        "0.18.2": [
+          "",
+          "client"
+        ],
+        "0.18.3": [
+          "",
+          "client"
+        ],
+        "0.18.4": [
+          "",
+          "client"
+        ],
+        "0.19.0": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/PeEditor",
+    "github.com/LiteLDev/PeEditor": {
       "info": {
         "name": "PeEditor",
         "description": "A tool to inject PreLoader to Minecraft Bedrock Edition",
         "tags": [],
         "avatar_url": ""
       },
+      "updated_at": "2025-04-10T04:22:26Z",
       "stars": 6,
-      "updated": "2025-04-10T04:22:26Z",
-      "versions": [
-        "3.9.0"
-      ]
+      "versions": {
+        "3.5.1": [],
+        "3.6.0": [],
+        "3.6.1": [],
+        "3.7.0": [],
+        "3.8.0": [],
+        "3.8.1": [],
+        "3.8.2": [],
+        "3.9.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/PreLoader",
+    "github.com/LiteLDev/PreLoader": {
       "info": {
         "name": "PreLoader",
         "description": "A library preloader for loading LeviLamina",
         "tags": [],
         "avatar_url": ""
       },
+      "updated_at": "2025-12-19T03:37:28Z",
       "stars": 6,
-      "updated": "2025-12-19T03:37:28Z",
-      "versions": [
-        "1.13.0",
-        "1.14.1",
-        "1.15.2",
-        "1.15.3",
-        "1.15.4",
-        "1.15.5",
-        "1.15.6",
-        "1.15.7"
-      ]
+      "versions": {
+        "1.4.1": [],
+        "1.4.2": [],
+        "1.4.3": [],
+        "1.5.0": [],
+        "1.5.1": [],
+        "1.5.2": [],
+        "1.6.0": [],
+        "1.6.1": [],
+        "1.6.2": [],
+        "1.6.3": [],
+        "1.7.0": [],
+        "1.8.0": [],
+        "1.9.0": [],
+        "1.9.1": [],
+        "1.9.2": [],
+        "1.10.0": [],
+        "1.11.0": [],
+        "1.12.0": [],
+        "1.13.0": [
+          ""
+        ],
+        "1.14.1": [
+          ""
+        ],
+        "1.15.2": [
+          ""
+        ],
+        "1.15.3": [
+          ""
+        ],
+        "1.15.4": [
+          ""
+        ],
+        "1.15.5": [
+          ""
+        ],
+        "1.15.6": [
+          ""
+        ],
+        "1.15.7": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/GMLIB-Release",
+    "github.com/GroupMountain/GMLIB-Release": {
       "info": {
         "name": "GMLIB",
         "description": "Group Mountain Library",
@@ -1242,35 +2704,136 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-Release/refs/heads/release/icon.jpg"
       },
+      "updated_at": "2026-01-31T12:49:25Z",
       "stars": 93,
-      "updated": "2026-01-31T12:49:25Z",
-      "versions": [
-        "1.0.0-rc.1",
-        "1.0.0-rc.2",
-        "1.0.0-rc.3",
-        "1.0.0",
-        "1.0.1",
-        "1.0.2",
-        "1.2.0-rc.1",
-        "1.2.0",
-        "1.2.1",
-        "1.3.0-rc.1",
-        "1.3.0",
-        "1.3.1",
-        "1.4.0",
-        "1.4.1",
-        "1.4.2",
-        "1.4.3",
-        "1.5.0",
-        "1.5.1",
-        "1.5.2",
-        "1.6.0",
-        "1.7.0",
-        "1.9.0"
-      ]
+      "versions": {
+        "0.4.0": [],
+        "0.4.1": [],
+        "0.4.2": [],
+        "0.5.0": [],
+        "0.5.1": [],
+        "0.5.2": [],
+        "0.5.3": [],
+        "0.5.4": [],
+        "0.5.5": [],
+        "0.5.6": [],
+        "0.5.7": [],
+        "0.6.0": [],
+        "0.6.1": [],
+        "0.7.0": [],
+        "0.7.1": [],
+        "0.7.2": [],
+        "0.7.3": [],
+        "0.7.4": [],
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.8.4": [],
+        "0.8.5": [],
+        "0.9.1": [],
+        "0.9.2": [],
+        "0.9.3": [],
+        "0.9.4": [],
+        "0.9.5": [],
+        "0.9.6": [],
+        "0.9.7": [],
+        "0.9.8": [],
+        "0.10.0": [],
+        "0.10.1": [],
+        "0.10.2": [],
+        "0.11.0": [],
+        "0.11.1": [],
+        "0.11.2": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.12.2": [],
+        "0.12.3": [],
+        "0.12.4": [],
+        "0.12.5": [],
+        "0.12.6": [],
+        "0.12.7": [],
+        "0.12.8": [],
+        "0.12.9": [],
+        "0.13.0": [],
+        "0.13.1": [],
+        "0.13.2": [],
+        "0.13.4": [],
+        "0.13.5": [],
+        "0.13.6": [],
+        "0.13.7": [],
+        "0.13.8": [],
+        "0.13.9": [],
+        "0.13.10": [],
+        "1.0.0-rc.1": [
+          ""
+        ],
+        "1.0.0-rc.2": [
+          ""
+        ],
+        "1.0.0-rc.3": [
+          ""
+        ],
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.0.2": [
+          ""
+        ],
+        "1.2.0-rc.1": [
+          ""
+        ],
+        "1.2.0": [
+          ""
+        ],
+        "1.2.1": [
+          ""
+        ],
+        "1.3.0-rc.1": [
+          ""
+        ],
+        "1.3.0": [
+          ""
+        ],
+        "1.3.1": [
+          ""
+        ],
+        "1.4.0": [
+          ""
+        ],
+        "1.4.1": [
+          ""
+        ],
+        "1.4.2": [
+          ""
+        ],
+        "1.4.3": [
+          ""
+        ],
+        "1.5.0": [
+          ""
+        ],
+        "1.5.1": [
+          ""
+        ],
+        "1.5.2": [
+          ""
+        ],
+        "1.6.0": [
+          ""
+        ],
+        "1.7.0": [
+          ""
+        ],
+        "1.9.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/LiteLDev/levilamina-loc",
+    "github.com/LiteLDev/levilamina-loc": {
       "info": {
         "name": "levilamina-loc",
         "description": "Language packs of LeviLamina",
@@ -1279,19 +2842,49 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-25T16:53:41Z",
       "stars": 1,
-      "updated": "2026-01-25T16:53:41Z",
-      "versions": [
-        "1.5.2",
-        "1.5.3",
-        "1.5.4",
-        "1.6.0",
-        "1.6.1",
-        "1.6.2"
-      ]
+      "versions": {
+        "0.1.0": [],
+        "0.1.1": [],
+        "0.1.2": [],
+        "0.1.5": [],
+        "1.0.1": [],
+        "1.0.2": [],
+        "1.1.0": [],
+        "1.1.1": [],
+        "1.1.2": [],
+        "1.1.3": [],
+        "1.2.0": [],
+        "1.3.0": [],
+        "1.4.0": [],
+        "1.4.1": [],
+        "1.5.0": [],
+        "1.5.1": [],
+        "1.5.2": [
+          ""
+        ],
+        "1.5.3": [
+          ""
+        ],
+        "1.5.4": [
+          ""
+        ],
+        "1.6.0": [
+          "",
+          "client"
+        ],
+        "1.6.1": [
+          "",
+          "client"
+        ],
+        "1.6.2": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
+    "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi": {
       "info": {
         "name": "GMLIB-LegacyRemoteCallApi",
         "description": "Legacy RemoteCall API for GMLIB",
@@ -1304,27 +2897,83 @@
         ],
         "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-LegacyRemoteCallApi/refs/heads/main/icon.jpg"
       },
+      "updated_at": "2026-02-10T14:43:14Z",
       "stars": 25,
-      "updated": "2026-02-10T14:43:14Z",
-      "versions": [
-        "1.0.0-rc.1",
-        "1.0.0",
-        "1.0.1",
-        "1.1.1",
-        "1.1.2",
-        "1.2.0",
-        "1.4.0",
-        "1.4.1",
-        "1.5.0",
-        "1.5.1",
-        "1.6.0",
-        "1.7.0",
-        "1.7.1",
-        "1.9.0"
-      ]
+      "versions": {
+        "0.8.0": [],
+        "0.8.1": [],
+        "0.8.2": [],
+        "0.8.3": [],
+        "0.8.4": [],
+        "0.9.0": [],
+        "0.9.1": [],
+        "0.9.2": [],
+        "0.9.3": [],
+        "0.9.4": [],
+        "0.9.5": [],
+        "0.10.0": [],
+        "0.10.1": [],
+        "0.11.0": [],
+        "0.12.0": [],
+        "0.12.1": [],
+        "0.12.2": [],
+        "0.12.3": [],
+        "0.12.4": [],
+        "0.12.5": [],
+        "0.12.6": [],
+        "0.12.7": [],
+        "0.12.8": [],
+        "0.13.0": [],
+        "0.13.2": [],
+        "0.13.3": [],
+        "0.13.4": [],
+        "0.13.5": [],
+        "0.13.6": [],
+        "1.0.0-rc.1": [
+          ""
+        ],
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ],
+        "1.1.1": [
+          ""
+        ],
+        "1.1.2": [
+          ""
+        ],
+        "1.2.0": [
+          ""
+        ],
+        "1.4.0": [
+          ""
+        ],
+        "1.4.1": [
+          ""
+        ],
+        "1.5.0": [
+          ""
+        ],
+        "1.5.1": [
+          ""
+        ],
+        "1.6.0": [
+          ""
+        ],
+        "1.7.0": [
+          ""
+        ],
+        "1.7.1": [
+          ""
+        ],
+        "1.9.0": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/GroupMountain/ThrowableFireball",
+    "github.com/GroupMountain/ThrowableFireball": {
       "info": {
         "name": "ThrowableFireball",
         "description": "Make vanilla fire charge throwable",
@@ -1334,15 +2983,18 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2025-06-02T15:43:00Z",
       "stars": 2,
-      "updated": "2025-06-02T15:43:00Z",
-      "versions": [
-        "1.0.0",
-        "1.0.1"
-      ]
+      "versions": {
+        "1.0.0": [
+          ""
+        ],
+        "1.0.1": [
+          ""
+        ]
+      }
     },
-    {
-      "tooth": "github.com/IceBlcokMC/DebugShape",
+    "github.com/IceBlcokMC/DebugShape": {
       "info": {
         "name": "DebugShape",
         "description": "minecraft bedrock debug shape packet wrapper",
@@ -1353,20 +3005,34 @@
         ],
         "avatar_url": ""
       },
+      "updated_at": "2026-01-25T15:30:59Z",
       "stars": 4,
-      "updated": "2026-01-25T15:30:59Z",
-      "versions": [
-        "0.1.0",
-        "0.2.0",
-        "0.3.0",
-        "0.4.0",
-        "0.4.1",
-        "0.5.0",
-        "0.6.0"
-      ]
+      "versions": {
+        "0.1.0": [
+          ""
+        ],
+        "0.2.0": [
+          ""
+        ],
+        "0.3.0": [
+          ""
+        ],
+        "0.4.0": [
+          ""
+        ],
+        "0.4.1": [
+          ""
+        ],
+        "0.5.0": [
+          ""
+        ],
+        "0.6.0": [
+          "",
+          "client"
+        ]
+      }
     },
-    {
-      "tooth": "github.com/yangyangzhong82/CauldronZero",
+    "github.com/yangyangzhong82/CauldronZero": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1376,12 +3042,11 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-11-07T02:01:13Z",
       "stars": 0,
-      "updated": "2025-11-07T02:01:13Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/yangyangzhong82/HFloatingText",
+    "github.com/yangyangzhong82/HFloatingText": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1391,12 +3056,11 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-11-13T07:28:14Z",
       "stars": 0,
-      "updated": "2025-11-13T07:28:14Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/yangyangzhong82/Bedrock-Authority",
+    "github.com/yangyangzhong82/Bedrock-Authority": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1406,12 +3070,11 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-11-06T15:44:40Z",
       "stars": 0,
-      "updated": "2025-11-06T15:44:40Z",
-      "versions": []
+      "versions": {}
     },
-    {
-      "tooth": "github.com/yangyangzhong82/czmoney",
+    "github.com/yangyangzhong82/czmoney": {
       "info": {
         "name": "My Mod",
         "description": "Description of my mod",
@@ -1421,9 +3084,9 @@
         ],
         "avatar_url": "https://example.com/my-mod/avatar.png"
       },
+      "updated_at": "2025-11-06T07:49:27Z",
       "stars": 0,
-      "updated": "2025-11-06T07:49:27Z",
-      "versions": []
+      "versions": {}
     }
-  ]
+  }
 }

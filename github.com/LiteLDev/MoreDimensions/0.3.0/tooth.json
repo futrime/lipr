@@ -1,0 +1,15 @@
+{
+  "tooth": "github.com/LiteLDev/MoreDimensions",
+  "version": "0.3.0",
+  "info": {
+    "name": "MoreDimensions",
+    "description": "More than three dimensions on BDS!",
+    "tags": [
+      "levilamina",
+      "library",
+      "plugin"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

@@ -1,0 +1,14 @@
+{
+  "tooth": "github.com/GroupMountain/FreeCamera",
+  "version": "0.9.0",
+  "info": {
+    "name": "FreeCamera",
+    "description": "Free Camera Plugin on Bedrock Dedicated Server",
+    "tags": [
+      "LeviLamina",
+      "FreeCamera"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

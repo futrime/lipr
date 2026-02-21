@@ -1,0 +1,14 @@
+{
+  "tooth": "github.com/ShrBox/ResourcePackEncryption",
+  "version": "0.1.1",
+  "info": {
+    "name": "ResourcePackEncryption",
+    "description": "Provide BDS support for resource pack encryption",
+    "tags": [
+      "levilamina",
+      "plugin"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

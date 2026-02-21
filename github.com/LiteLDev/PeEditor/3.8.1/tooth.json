@@ -1,0 +1,11 @@
+{
+  "tooth": "github.com/LiteLDev/PeEditor",
+  "version": "3.8.1",
+  "info": {
+    "name": "PeEditor",
+    "description": "A tool to inject PreLoader to Minecraft Bedrock Edition",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": []
+}

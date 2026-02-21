@@ -1,6 +1,4 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/superx101/CALL",
   "version": "1.6.0",
   "info": {
@@ -12,5 +10,10 @@
       "plugin"
     ],
     "avatar_url": "https://github.com/superx101/CALL/blob/main/docs/image/CALL_dark.png"
-  }
+  },
+  "variants": [
+    {
+      "label": ""
+    }
+  ]
 }

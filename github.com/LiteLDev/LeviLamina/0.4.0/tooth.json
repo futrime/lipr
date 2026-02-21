@@ -1,0 +1,11 @@
+{
+  "tooth": "github.com/tooth-hub/levilamina",
+  "version": "0.4.0",
+  "info": {
+    "name": "LeviLamina",
+    "description": "A lightweight, modular and versatile plugin loader for Minecraft Bedrock Server BDS, formerly known as LiteLoaderBDS",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": []
+}

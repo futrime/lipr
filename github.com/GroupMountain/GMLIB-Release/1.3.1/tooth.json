@@ -1,6 +1,4 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/GroupMountain/GMLIB-Release",
   "version": "1.3.1",
   "info": {
@@ -13,5 +11,10 @@
       "library"
     ],
     "avatar_url": "https://raw.githubusercontent.com/GroupMountain/GMLIB-Release/refs/heads/release/icon.jpg"
-  }
+  },
+  "variants": [
+    {
+      "label": ""
+    }
+  ]
 }

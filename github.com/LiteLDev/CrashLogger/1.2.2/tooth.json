@@ -1,0 +1,14 @@
+{
+  "tooth": "github.com/LiteLDev/CrashLogger",
+  "version": "1.2.2",
+  "info": {
+    "name": "CrashLogger",
+    "description": "Show crash log of LeviLamina",
+    "tags": [
+      "levilamina",
+      "utility"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

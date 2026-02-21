@@ -1,0 +1,16 @@
+{
+  "tooth": "github.com/LordBombardir/LLPowerRanks",
+  "version": "1.0.6",
+  "info": {
+    "name": "PowerRanks",
+    "description": "A mod that adds a rank (privilege) system to the game",
+    "tags": [
+      "levilamina",
+      "mod",
+      "ranks",
+      "privileges"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

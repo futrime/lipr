@@ -1,0 +1,15 @@
+{
+  "tooth": "github.com/GlacieTeam/Glacie",
+  "version": "2.0.0",
+  "info": {
+    "name": "Glacie",
+    "description": "Muti-version support for LeviLamina",
+    "tags": [
+      "glacie",
+      "protocol",
+      "multiversion"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

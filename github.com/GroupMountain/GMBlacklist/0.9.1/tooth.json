@@ -1,0 +1,16 @@
+{
+  "tooth": "github.com/GroupMountain/GMBlacklist",
+  "version": "0.9.1",
+  "info": {
+    "name": "GMBlacklist",
+    "description": "Blacklist Plugin on Bedrock Dedicated Server",
+    "tags": [
+      "leviLamina",
+      "gmlib",
+      "blacklist",
+      "ban"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

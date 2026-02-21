@@ -1,0 +1,14 @@
+{
+  "tooth": "github.com/LiteLDev/LeviOptimize",
+  "version": "0.2.2",
+  "info": {
+    "name": "LeviOptimize",
+    "description": "A performance optimization plugin for Minecraft Bedrock Server",
+    "tags": [
+      "levilamina",
+      "plugin"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

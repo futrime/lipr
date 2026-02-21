@@ -1,0 +1,16 @@
+{
+  "tooth": "github.com/LiteLDev/LegacyMoney",
+  "version": "0.1.5",
+  "info": {
+    "name": "LegacyMoney",
+    "description": "LLMoney, but adapted to LeviLamina",
+    "tags": [
+      "plugin",
+      "ll",
+      "library",
+      "economy"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

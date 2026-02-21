@@ -1,0 +1,15 @@
+{
+  "tooth": "github.com/GroupMountain/GMBlacklist",
+  "version": "0.5.7",
+  "info": {
+    "name": "GMBlacklist",
+    "description": "Group Mountain Blacklist Plugin",
+    "tags": [
+      "LeveLamina",
+      "GMLIB",
+      "GMBlacklist"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

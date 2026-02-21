@@ -1,0 +1,16 @@
+{
+  "tooth": "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi",
+  "version": "0.12.4",
+  "info": {
+    "name": "GMLIB-LegacyRemoteCallApi",
+    "description": "Legacy RemoteCall API for GMLIB",
+    "tags": [
+      "levilamina",
+      "gmlib",
+      "lse",
+      "library"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}

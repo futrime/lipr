@@ -1,0 +1,16 @@
+{
+  "tooth": "github.com/LiteLDev/LegacyRemoteCall",
+  "version": "0.10.0",
+  "info": {
+    "name": "LegacyRemoteCall",
+    "description": "A part of LegacyScriptEngine",
+    "tags": [
+      "type:mod",
+      "platform:levilamina",
+      "library",
+      "lse"
+    ],
+    "avatar_url": ""
+  },
+  "variants": []
+}
