@@ -98,7 +98,7 @@ def search_repositories() -> Iterator[Repository]:
 
     with Github(auth=Token(token), per_page=100) as github:
         pagination = github.search_code(
-            PackageIndex.format_uuid, filename="tooth.json", path="/"
+            "289f771f-2c9a-4d73-9f3f-8492495a924d", filename="tooth.json", path="/"
         )
 
         page_idx = 0
