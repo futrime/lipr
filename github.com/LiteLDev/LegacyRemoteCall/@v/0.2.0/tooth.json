@@ -1,47 +1,28 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/LegacyRemoteCall",
-  "version": "0.2.0",
-  "info": {
-    "name": "LegacyRemoteCall",
-    "description": "A part of LegacyScriptEngine",
-    "tags": [
-      "plugin",
-      "levilamina",
-      "library",
-      "legacyscriptengine"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/LegacyRemoteCall/releases/download/v0.2.0/LegacyRemoteCall-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/LiteLDev/LegacyRemoteCall",
+    "version": "0.2.0",
+    "info": {
+        "name": "LegacyRemoteCall",
+        "description": "A part of LegacyScriptEngine",
+        "author": "LiteLDev",
+        "tags": [
+            "plugin",
+            "levilamina",
+            "library",
+            "legacyscriptengine"
+        ]
+    },
+    "asset_url": "https://github.com/LiteLDev/LegacyRemoteCall/releases/download/v0.2.0/LegacyRemoteCall-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.7.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "LegacyRemoteCall/",
-              "dest": "plugins/LegacyRemoteCall"
+                "src": "LegacyRemoteCall/*",
+                "dest": "plugins/LegacyRemoteCall"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

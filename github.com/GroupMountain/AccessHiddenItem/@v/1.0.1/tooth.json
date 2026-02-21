@@ -1,48 +1,39 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/GroupMountain/AccessHiddenItem",
-  "version": "1.0.1",
-  "info": {
-    "name": "AccessHiddenItem",
-    "description": "Get hidden items in creative inventory",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "\u003E=1.1.1",
-        "github.com/GroupMountain/GMLIB-Release": "\u003E=1.0.1"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/GroupMountain/AccessHiddenItem",
+    "version": "1.0.1",
+    "info": {
+        "name": "AccessHiddenItem",
+        "description": "Get hidden items in creative inventory",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/GroupMountain/AccessHiddenItem/releases/download/v1.0.1/AccessHiddenItem-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "AccessHiddenItem/",
-              "dest": "plugins/AccessHiddenItem/"
-            }
-          ]
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": ">=1.1.1",
+                "github.com/GroupMountain/GMLIB-Release": ">=1.0.1"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/AccessHiddenItem-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "AccessHiddenItem/",
+                            "dest": "plugins/AccessHiddenItem/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

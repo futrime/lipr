@@ -10,20 +10,20 @@
       "platform:levilamina",
       "library",
       "type:mod"
-    ],
-    "avatar_url": null
+    ]
   },
   "variants": [
     {
-      "label": "",
       "platform": "win-x64",
-      "dependencies": {},
       "assets": [
         {
           "type": "zip",
           "urls": [
-            "https://github.com/LiteLDev/MoreDimensions/releases/download/v0.13.0/MoreDimensions-server-windows-x64.zip"
+            "https://{{tooth}}/releases/download/v{{version}}/MoreDimensions-server-windows-x64.zip"
           ],
+          "dependencies": {
+            "github.com/LiteLDev/LeviLamina": ">=1.9.2 <1.10.0"
+          },
           "placements": [
             {
               "type": "dir",
@@ -32,15 +32,7 @@
             }
           ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      ]
     }
   ]
 }

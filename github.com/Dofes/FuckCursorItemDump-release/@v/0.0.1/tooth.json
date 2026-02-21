@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/Dofes/FuckCursorItemDump-release",
-  "version": "0.0.1",
-  "info": {
-    "name": "FuckCursorItemDump",
-    "description": "A single moudule part of LeviAntiCheat",
-    "tags": [
-      "levilamina",
-      "plugin"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/Dofes/FuckCursorItemDump-release/releases/download/v0.0.1/FuckCursorItemDump-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/Dofes/FuckCursorItemDump-release",
+    "version": "0.0.1",
+    "info": {
+        "name": "FuckCursorItemDump",
+        "description": "A single moudule part of LeviAntiCheat",
+        "author": "Dofes",
+        "tags": [
+            "levilamina",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/Dofes/FuckCursorItemDump-release/releases/download/v0.0.1/FuckCursorItemDump-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.10.2"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "FuckCursorItemDump/",
-              "dest": "plugins/FuckCursorItemDump/"
+                "src": "FuckCursorItemDump/*",
+                "dest": "plugins/FuckCursorItemDump/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

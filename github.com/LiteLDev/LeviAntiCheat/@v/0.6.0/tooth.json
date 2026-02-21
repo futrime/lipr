@@ -1,45 +1,36 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/LeviAntiCheat",
-  "version": "0.6.0",
-  "info": {
-    "name": "LeviAntiCheat",
-    "description": "Powerful anti-cheating for LeviLamina",
-    "tags": [
-      "levilamina",
-      "anticheat"
-    ],
-    "avatar_url": ""
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.2.0-rc.2"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/LeviAntiCheat",
+    "version": "0.6.0",
+    "info": {
+        "name": "LeviAntiCheat",
+        "description": "Powerful anti-cheating for LeviLamina",
+        "tags": [
+            "levilamina",
+            "anticheat"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
         {
-          "type": "self",
-          "urls": [],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "LeviAntiCheat/",
-              "dest": "plugins/LeviAntiCheat/"
-            }
-          ]
+            "platform": "win-x64",
+            "dependencies": {
+				"github.com/LiteLDev/LeviLamina": "1.2.0-rc.2"
+            },
+            "assets": [
+                {
+                    "type": "self",
+                    "urls": [],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LeviAntiCheat/",
+                            "dest": "plugins/LeviAntiCheat/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

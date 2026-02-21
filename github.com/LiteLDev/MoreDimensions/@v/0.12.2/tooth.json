@@ -1,46 +1,39 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/MoreDimensions",
-  "version": "0.12.2",
-  "info": {
-    "name": "MoreDimensions",
-    "description": "More than three dimensions on BDS!",
-    "tags": [
-      "platform:levilamina",
-      "library",
-      "type:mod"
-    ],
-    "avatar_url": ""
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {},
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/MoreDimensions",
+    "version": "0.12.2",
+    "info": {
+        "name": "MoreDimensions",
+        "description": "More than three dimensions on BDS!",
+        "tags": [
+            "platform:levilamina",
+            "library",
+            "type:mod"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/MoreDimensions/releases/download/v0.12.2/more-dimensions-windows-x64-v0.12.2.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "more-dimensions/",
-              "dest": "plugins/more-dimensions/"
-            }
-          ]
+            "platform": "win-x64",
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/more-dimensions-windows-x64-v{{version}}.zip"
+                    ],
+                    "dependencies": {
+                        "github.com/LiteLDev/LeviLamina": ">=1.7.6 <=1.8.0"
+                    },
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "more-dimensions/",
+                            "dest": "plugins/more-dimensions/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

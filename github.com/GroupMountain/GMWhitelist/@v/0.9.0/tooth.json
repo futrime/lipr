@@ -1,0 +1,28 @@
+{
+    "format_version": 2,
+    "tooth": "github.com/GroupMountain/GMWhitelist",
+    "version": "0.9.0",
+    "info": {
+        "name": "GMWhitelist",
+        "description": "Whitelist Plugin on Bedrock Dedicated Server",
+        "author": "GroupMountain",
+        "source": "github.com/GroupMountain/GMWhitelist",
+        "tags": [
+            "levilamina",
+            "whitelist",
+            "gmlib"
+        ]
+    },
+    "asset_url": "https://github.com/GroupMountain/GMWhitelist/releases/download/v0.9.0/GMWhitelist-windows-x64.zip",
+    "dependencies": {
+        "github.com/GroupMountain/GMLIB": ">=0.9.0"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "GMWhitelist/*",
+                "dest": "plugins/GMWhitelist"
+            }
+        ]
+    }
+}

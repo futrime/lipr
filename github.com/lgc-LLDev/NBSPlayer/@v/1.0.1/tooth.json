@@ -1,45 +1,24 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "format_version": 1,
   "tooth": "github.com/lgc-LLSEDev/NbsPlayer",
   "version": "1.0.1",
-  "info": {
+  "dependencies": {},
+  "information": {
     "name": "NbsPlayer",
-    "description": "BDS \u4E2D\u7684 NBS \u97F3\u4E50\u64AD\u653E\u5668\uFF01",
-    "tags": [],
-    "avatar_url": null
+    "description": "BDS 中的 NBS 音乐播放器！",
+    "author": "lgc2333",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/lgc-LLSEDev/NbsPlayer"
   },
-  "variants": [
+  "placement": [
     {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "self",
-          "urls": [],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "dist/",
-              "dest": "plugins/nodejs/nbs_player/dist/"
-            },
-            {
-              "type": "file",
-              "src": "package.json",
-              "dest": "plugins/nodejs/nbs_player/package.json"
-            }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      "source": "dist/*",
+      "destination": "plugins/nodejs/nbs_player/dist/*"
+    },
+    {
+      "source": "package.json",
+      "destination": "plugins/nodejs/nbs_player/package.json"
     }
-  ]
+  ],
+  "possession": ["plugins/NbsPlayer/"]
 }

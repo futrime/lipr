@@ -1,48 +1,30 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/engsr6982/PLand",
-  "version": "0.2.2",
-  "info": {
-    "name": "PLand - \u9886\u5730\u7CFB\u7EDF",
-    "description": "\u57FA\u4E8E LeviLamina \u7684\u9886\u5730\u7CFB\u7EDF",
-    "tags": [
-      "levilamina",
-      "plugin",
-      "mod",
-      "land",
-      "pland"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/engsr6982/PLand/releases/download/v0.2.2/PLand-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/engsr6982/PLand",
+    "version": "0.2.2",
+    "info": {
+        "name": "PLand - 领地系统",
+        "description": "基于 LeviLamina 的领地系统",
+        "author": "engsr6982",
+        "tags": [
+            "levilamina",
+            "plugin",
+            "mod",
+            "land",
+            "pland"
+        ]
+    },
+    "asset_url": "https://github.com/engsr6982/PLand/releases/download/v0.2.2/PLand-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.13.4 <0.14.0",
+        "github.com/LiteLDev/LegacyMoney": ">=0.8.3"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "PLand/",
-              "dest": "plugins/PLand/"
+                "src": "PLand/*",
+                "dest": "plugins/PLand/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

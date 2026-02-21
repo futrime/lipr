@@ -1,0 +1,26 @@
+{
+    "format_version": 2,
+    "tooth": "my-mod",
+    "version": "0.0.1",
+    "info": {
+        "name": "DropItemx100",
+        "description": "百倍掉落物",
+        "author": "CNGEGE",
+        "tags": [
+            "levilamina",
+            "mod"
+        ]
+    },
+    "asset_url": "https://github.com/cngege/DropItemx100",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.13.4"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "my-mod/*",
+                "dest": "plugins/my-mod/"
+            }
+        ]
+    }
+}

@@ -1,46 +1,27 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/MengHanLOVE1027/EasyBackuper",
-  "version": "0.0.6-beta",
-  "info": {
-    "name": "EasyBackuper",
-    "description": "A LeviLamina plugin form LegacyScriptEngine to help you bakup the server world files easily and this\u0027s a easy js",
-    "tags": [
-      "levilamina",
-      "lse",
-      "plugin"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/MengHanLOVE1027/EasyBackuper/releases/download/v0.0.6-beta/EasyBackuper-v0.0.6-beta.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/MengHanLOVE1027/EasyBackuper",
+    "version": "0.0.6-beta",
+    "info": {
+        "name": "EasyBackuper",
+        "description": "A LeviLamina plugin form LegacyScriptEngine to help you bakup the server world files easily and this's a easy js",
+        "author": "MengHanLOVE1027",
+        "tags": [
+            "levilamina",
+            "lse",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/MengHanLOVE1027/EasyBackuper/releases/download/v0.0.6-beta/EasyBackuper-v0.0.6-beta.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.9.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "EasyBackuper/",
-              "dest": "plugins/EasyBackuper/"
+                "src": "EasyBackuper/*",
+                "dest": "plugins/EasyBackuper/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

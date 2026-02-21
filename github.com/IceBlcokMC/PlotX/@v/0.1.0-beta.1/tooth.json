@@ -1,78 +1,62 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/IceBlcokMC/PlotX",
-  "version": "0.1.0-beta.1",
-  "info": {
-    "name": "PlotX",
-    "description": "PlotX \u2014 Next-gen plot management for Bedrock servers.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "vanilla",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.7.*"
-      },
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/IceBlcokMC/PlotX/releases/download/v0.1.0-beta.1/PlotX-windows-x64-vanilla.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "PlotX/",
-              "dest": "plugins/PlotX/"
-            }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+    "$schema": "https://lip.levimc.org/schemas/tooth.v3.schema.json",
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/IceBlcokMC/PlotX",
+    "version": "0.1.0-beta.1",
+    "info": {
+        "name": "PlotX",
+        "description": "PlotX — Next-gen plot management for Bedrock servers.",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
     },
-    {
-      "label": "mdim",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.7.*",
-        "github.com/LiteLDev/MoreDimensions": "0.12.2"
-      },
-      "assets": [
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/IceBlcokMC/PlotX/releases/download/v0.1.0-beta.1/PlotX-windows-x64-mdim.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "PlotX/",
-              "dest": "plugins/PlotX/"
-            }
-          ]
+            "label": "vanilla",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.7.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/PlotX-windows-x64-vanilla.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "PlotX/",
+                            "dest": "plugins/PlotX/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "mdim",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.7.*",
+                "github.com/LiteLDev/MoreDimensions": "0.12.2"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/PlotX-windows-x64-mdim.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "PlotX/",
+                            "dest": "plugins/PlotX/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

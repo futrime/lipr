@@ -1,0 +1,37 @@
+{
+    "format_version": 3,
+    "format_uuid": "329f57ab-4e28-47c9-acdc-dc149ad72edb",
+    "tooth": "github.com/GroupMountain/GMWhitelist",
+    "version": "0.13.5",
+    "info": {
+        "name": "GMWhitelist",
+        "description": "Blacklist Mod on Bedrock Dedicated Server",
+        "tags": [],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/GroupMountain/GMLIB-Release": "1.4.*",
+                "github.com/MiracleForest/iListenAttentively-Release": "0.7.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/GMWhitelist-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "GMWhitelist/",
+                            "dest": "plugins/GMWhitelist/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

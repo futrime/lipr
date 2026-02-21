@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/carefly/RLXTeleport",
-  "version": "1.1.3",
-  "info": {
-    "name": "RLXTeleport",
-    "description": "A mod that allows you to teleport to a specific location.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/carefly/RLXTeleport/releases/download/v1.1.3/RLXTeleport-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/carefly/RLXTeleport",
+    "version": "1.1.3",
+    "info": {
+        "name": "RLXTeleport",
+        "description": "A mod that allows you to teleport to a specific location.",
+        "author": "carefly",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "asset_url": "https://github.com/carefly/RLXTeleport/releases/download/v1.1.3/RLXTeleport-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "1.3.1"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "RLXTeleport/",
-              "dest": "plugins/RLXTeleport"
+                "src": "RLXTeleport/*",
+                "dest": "plugins/RLXTeleport"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

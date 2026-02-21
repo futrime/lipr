@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/sapidexs/lualoader-plugin-demo",
-  "version": "1.0.1",
-  "info": {
-    "name": "lualoader-plugin-demo",
-    "description": "hello, world!",
-    "tags": [
-      "lualoader",
-      "plugin"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/sapidexs/lualoader-plugin-demo/releases/download/v1.0.1/lualoader-plugin-demo.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/sapidexs/lualoader-plugin-demo",
+    "version": "1.0.1",
+    "info": {
+        "name": "lualoader-plugin-demo",
+        "description": "hello, world!",
+        "author": "odorajbotoj",
+        "tags": [
+            "lualoader",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/sapidexs/lualoader-plugin-demo/releases/download/v1.0.1/lualoader-plugin-demo.zip",
+    "prerequisites": {
+        "github.com/sapidexs/lualoader": ">=1.1.0"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "lualoader-plugin-demo/",
-              "dest": "plugins/lualoader-plugin-demo/"
+                "src": "lualoader-plugin-demo/*",
+                "dest": "plugins/lualoader-plugin-demo/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

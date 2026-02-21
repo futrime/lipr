@@ -1,47 +1,28 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/LegacyMoney",
-  "version": "0.4.0",
-  "info": {
-    "name": "LegacyMoney",
-    "description": "LLMoney, but adapted to LeviLamina",
-    "tags": [
-      "plugin",
-      "levilamina",
-      "library",
-      "economy"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/LegacyMoney/releases/download/v0.4.0/LegacyMoney-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/LiteLDev/LegacyMoney",
+    "version": "0.4.0",
+    "info": {
+        "name": "LegacyMoney",
+        "description": "LLMoney, but adapted to LeviLamina",
+        "author": "LiteLDev",
+        "tags": [
+            "plugin",
+            "levilamina",
+            "library",
+            "economy"
+        ]
+    },
+    "asset_url": "https://github.com/LiteLDev/LegacyMoney/releases/download/v0.4.0/LegacyMoney-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.9.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "LegacyMoney/",
-              "dest": "plugins/LegacyMoney"
+                "src": "LegacyMoney/*",
+                "dest": "plugins/LegacyMoney"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

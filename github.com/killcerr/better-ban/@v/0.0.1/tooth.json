@@ -1,47 +1,28 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/killcerr/better-ban",
-  "version": "0.0.1",
-  "info": {
-    "name": "better-ban",
-    "description": "Offer ban command for the BDS.",
-    "tags": [
-      "levilamina",
-      "plugin",
-      "ban",
-      "command"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/killcerr/better-ban/releases/download/v0.0.1/better-ban-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/killcerr/better-ban",
+    "version": "0.0.1",
+    "info": {
+        "name": "better-ban",
+        "description": "Offer ban command for the BDS.",
+        "author": "killcerr",
+        "tags": [
+            "levilamina",
+            "plugin",
+            "ban",
+            "command"
+        ]
+    },
+    "asset_url": "https://github.com/killcerr/better-ban/releases/download/v0.0.1/better-ban-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.11.0"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "better-ban/",
-              "dest": "plugins/better-ban/"
+                "src": "better-ban/*",
+                "dest": "plugins/better-ban/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

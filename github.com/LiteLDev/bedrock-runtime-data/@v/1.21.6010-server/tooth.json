@@ -1,84 +1,29 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "format_version": 2,
   "tooth": "github.com/LiteLDev/bedrock-runtime-data",
   "version": "1.21.6010-server",
   "info": {
     "name": "bedrock-runtime-data",
     "description": "",
-    "tags": [],
-    "avatar_url": null
+    "author": "LiteLDev",
+    "tags": []
   },
-  "variants": [
+  "platforms": [
     {
-      "label": "",
-      "platform": "linux-x64",
-      "dependencies": {},
-      "assets": [],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      "asset_url": "https://github.com/LiteLDev/bedrock-runtime-data/releases/download/1.21.60.10-server/bedrock-runtime-data-windows-x64.zip",
+      "goos": "windows"
     },
     {
-      "label": "",
-      "platform": "win-*",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/bedrock-runtime-data/releases/download/1.21.60.10-server/bedrock-runtime-data-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "file",
-              "src": "bedrock_runtime_data",
-              "dest": "bedrock_runtime_data"
-            }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    },
-    {
-      "label": "",
-      "platform": "linux-*",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/bedrock-runtime-data/releases/download/1.21.60.10-server/bedrock-runtime-data-linux-x86_64.zip"
-          ],
-          "placements": [
-            {
-              "type": "file",
-              "src": "bedrock_runtime_data",
-              "dest": "bedrock_runtime_data"
-            }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      "asset_url": "https://github.com/LiteLDev/bedrock-runtime-data/releases/download/1.21.60.10-server/bedrock-runtime-data-linux-x86_64.zip",
+      "goos": "linux"
     }
-  ]
+  ],
+  "files": {
+    "place": [
+      {
+        "src": "bedrock_runtime_data",
+        "dest": "bedrock_runtime_data"
+      }
+    ]
+  }
 }

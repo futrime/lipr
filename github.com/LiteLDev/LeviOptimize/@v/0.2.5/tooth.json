@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/LeviOptimize",
-  "version": "0.2.5",
-  "info": {
-    "name": "LeviOptimize",
-    "description": "A performance optimization plugin for Minecraft Bedrock Server",
-    "tags": [
-      "levilamina",
-      "plugin"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/LeviOptimize/releases/download/v0.2.5/LeviOptimize-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/LiteLDev/LeviOptimize",
+    "version": "0.2.5",
+    "info": {
+        "name": "LeviOptimize",
+        "description": "A performance optimization plugin for Minecraft Bedrock Server",
+        "author": "LiteLDev",
+        "tags": [
+            "levilamina",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/LiteLDev/LeviOptimize/releases/download/v0.2.5/LeviOptimize-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.12.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "LeviOptimize/",
-              "dest": "plugins/LeviOptimize"
+                "src": "LeviOptimize/*",
+                "dest": "plugins/LeviOptimize"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

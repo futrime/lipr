@@ -1,45 +1,27 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LeafKnife/ForbidExplosionBreak",
-  "version": "0.3.2",
-  "info": {
-    "name": "ForbidExplosionBreak",
-    "description": "ForbidExplosionBreak",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": "https://github.com/LeafKnife/ForbidExplosionBreak/raw/main/logo.png"
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LeafKnife/ForbidExplosionBreak/releases/download/v{{version}}/ForbidExplosionBreak-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/LeafKnife/ForbidExplosionBreak",
+    "version": "0.3.2",
+    "info": {
+        "name": "ForbidExplosionBreak",
+        "description": "ForbidExplosionBreak",
+        "author": "lwenk",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ],
+        "avatar_url":"https://github.com/LeafKnife/ForbidExplosionBreak/raw/main/logo.png"
+    },
+    "asset_url": "https://github.com/LeafKnife/ForbidExplosionBreak/releases/download/v$(version)/ForbidExplosionBreak-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "1.9.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "ForbidExplosionBreak/",
-              "dest": "plugins/ForbidExplosionBreak/"
+                "src": "ForbidExplosionBreak/*",
+                "dest": "plugins/ForbidExplosionBreak/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

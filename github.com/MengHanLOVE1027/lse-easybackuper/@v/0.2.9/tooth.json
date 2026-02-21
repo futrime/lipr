@@ -1,47 +1,28 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/MengHanLOVE1027/EasyBackuper",
-  "version": "0.2.9",
-  "info": {
-    "name": "EasyBackuper",
-    "description": "\u7B80\u5355\u5316\u7684LSE - JS\u5907\u4EFD\u63D2\u4EF6",
-    "tags": [
-      "levilamina",
-      "lse",
-      "plugin",
-      "ezbackuper"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/MengHanLOVE1027/EasyBackuper/releases/download/v0.2.9/EasyBackuper-v0.2.9.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/MengHanLOVE1027/EasyBackuper",
+    "version": "0.2.9",
+    "info": {
+        "name": "EasyBackuper",
+        "description": "简单化的LSE - JS备份插件",
+        "author": "MengHanLOVE1027",
+        "tags": [
+            "levilamina",
+            "lse",
+            "plugin",
+            "ezbackuper"
+        ]
+    },
+    "asset_url": "https://github.com/MengHanLOVE1027/EasyBackuper/releases/download/v0.2.9/EasyBackuper-v0.2.9.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.12.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "EasyBackuper/",
-              "dest": "plugins/EasyBackuper/"
+                "src": "EasyBackuper/*",
+                "dest": "plugins/EasyBackuper/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

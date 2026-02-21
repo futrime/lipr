@@ -1,47 +1,38 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/SkyEye-FAST/offer-flowers-faster-bedrock",
-  "version": "0.2.0",
-  "info": {
-    "name": "offer-flowers-faster",
-    "description": "Increases the probability of the Iron Golem delivering flowers.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.7.*"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/SkyEye-FAST/offer-flowers-faster-bedrock",
+    "version": "0.2.0",
+    "info": {
+        "name": "offer-flowers-faster",
+        "description": "Increases the probability of the Iron Golem delivering flowers.",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ],
+        "avatar_url": "https://raw.githubusercontent.com/SkyEye-FAST/offer-flowers-faster-bedrock/refs/heads/main/logo.png"
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/SkyEye-FAST/offer-flowers-faster-bedrock/releases/download/v0.2.0/offer-flowers-faster-bedrock-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "offer-flowers-faster/",
-              "dest": "plugins/offer-flowers-faster/"
-            }
-          ]
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.7.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/offer-flowers-faster-bedrock-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "offer-flowers-faster/",
+                            "dest": "plugins/offer-flowers-faster/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

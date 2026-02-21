@@ -1,45 +1,27 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/ZMBlocks/LL-TpOfflinePlayer",
-  "version": "1.0.0",
-  "info": {
-    "name": "TpOfflinePlayer - TP\u79BB\u7EBF\u73A9\u5BB6",
-    "description": "Teleporting Offline Players - \u53EF\u4EE5\u4F20\u9001\u79BB\u7EBF\u73A9\u5BB6",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/ZMBlocks/LL-TpOfflinePlayer/releases/download/v1.0.0/LL-TpOfflinePlayer-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/ZMBlocks/LL-TpOfflinePlayer",
+    "version": "1.0.0",
+    "info": {
+        "name": "TpOfflinePlayer - TP离线玩家",
+        "description": "Teleporting Offline Players - 可以传送离线玩家",
+        "author": "啥也不会的子沐呀",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "asset_url": "https://github.com/ZMBlocks/LL-TpOfflinePlayer/releases/download/v1.0.0/LL-TpOfflinePlayer-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=1.0.0",
+        "github.com/GroupMountain/GMLIB": ">=0.13.10"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "LL-TpOfflinePlayer/",
-              "dest": "plugins/LL-TpOfflinePlayer/"
+                "src": "LL-TpOfflinePlayer/*",
+                "dest": "plugins/LL-TpOfflinePlayer/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

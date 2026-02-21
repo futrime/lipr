@@ -1,0 +1,25 @@
+{
+    "format_version": 2,
+    "tooth": "CustomMob",
+    "version": "1.0.0",
+    "info": {
+        "name": "CustomMob",
+        "description": "自定义生成的生物",
+        "author": "xianyubb",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.13.5"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "CustomMob/*",
+                "dest": "plugins/CustomMob/"
+            }
+        ]
+    }
+}

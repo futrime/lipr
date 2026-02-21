@@ -1,0 +1,53 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/carefly/rlxmoney",
+    "version": "1.9.2",
+    "info": {
+        "name": "RLXMoney",
+        "description": "A comprehensive money management plugin for Minecraft servers based on LeviLamina framework",
+        "tags": [
+            "platform:levilamina",
+            "type:mod",
+            "economy",
+            "money"
+        ],
+        "avatar_url": "https://github.com/carefly/RLXMoney/raw/main/avatar.png"
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "Required LeviLamina version range"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://github.com/carefly/RLXMoney/releases/download/v1.9.2/RLXMoney-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "RLXMoney/",
+                            "dest": "plugins/RLXMoney/"
+                        }
+                    ]
+                }
+            ],
+            "preserve_files": [],
+            "remove_files": [],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
+            }
+        }
+    ]
+}

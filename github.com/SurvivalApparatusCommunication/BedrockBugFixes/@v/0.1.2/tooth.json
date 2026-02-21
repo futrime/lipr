@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/SurvivalApparatusCommunication/BedrockBugFixes",
-  "version": "0.1.2",
-  "info": {
-    "name": "BedrockBugFixes",
-    "description": "fix bugs",
-    "tags": [
-      "levilamina",
-      "plugin"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/SurvivalApparatusCommunication/BedrockBugFixes/releases/download/v0.1.2/BedrockBugFixes-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/SurvivalApparatusCommunication/BedrockBugFixes",
+    "version": "0.1.2",
+    "info": {
+        "name": "BedrockBugFixes",
+        "description": "fix bugs",
+        "author": "OEOTYAN",
+        "tags": [
+            "levilamina",
+            "plugin"
+        ]
+    },
+    "asset_url": "https://github.com/SurvivalApparatusCommunication/BedrockBugFixes/releases/download/v0.1.2/BedrockBugFixes-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=0.10.0"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "BedrockBugFixes/",
-              "dest": "plugins/BedrockBugFixes/"
+                "src": "BedrockBugFixes/*",
+                "dest": "plugins/BedrockBugFixes/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "tooth": "MForceAchievements",
+    "version": "1.0.1",
+    "info": {
+        "name": "MForceAchievements",
+        "description": "A lightweight native mod to keep achievements on.",
+        "author": "mrmagic2020",
+        "tags": [
+            "levilamina",
+            "mod",
+            "native",
+            "m-series",
+            "achievement",
+            "force"
+        ]
+    },
+    "asset_url": "https://github.com/mrmagic2020/MForceAchievements/releases/download/v$(version)/MForceAchievements-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": ">=1.0.0"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "MForceAchievements/*",
+                "dest": "plugins/MForceAchievements/"
+            }
+        ]
+    }
+}

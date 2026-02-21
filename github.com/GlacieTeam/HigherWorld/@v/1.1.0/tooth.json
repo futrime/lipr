@@ -1,45 +1,26 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/GlacieTeam/HigherWorld",
-  "version": "1.1.0",
-  "info": {
-    "name": "HigherWorld",
-    "description": "Modify the overworld max height.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
-      "assets": [
-        {
-          "type": "zip",
-          "urls": [
-            "https://github.com/GlacieTeam/HigherWorld/releases/download/v1.1.0/HigherWorld-windows-x64.zip"
-          ],
-          "placements": [
+    "format_version": 2,
+    "tooth": "github.com/GlacieTeam/HigherWorld",
+    "version": "1.1.0",
+    "info": {
+        "name": "HigherWorld",
+        "description": "Modify the overworld max height.",
+        "author": "My Name",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "asset_url": "https://github.com/GlacieTeam/HigherWorld/releases/download/v1.1.0/HigherWorld-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "1.1.x"
+    },
+    "files": {
+        "place": [
             {
-              "type": "dir",
-              "src": "HigherWorld/",
-              "dest": "plugins/HigherWorld/"
+                "src": "HigherWorld/*",
+                "dest": "plugins/HigherWorld/"
             }
-          ]
-        }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+        ]
     }
-  ]
 }

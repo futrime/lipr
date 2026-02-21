@@ -1,47 +1,50 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LordBombardir/LLRconServer",
-  "version": "1.0.2",
-  "info": {
-    "name": "RconServer",
-    "description": "Implementation RCON for LeviLamina",
-    "tags": [
-      "platform:levilamina",
-      "type:mod"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "\u003E=1.3.0"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LordBombardir/LLRconServer",
+    "version": "1.0.2",
+    "info": {
+        "name": "RconServer",
+        "description": "Implementation RCON for LeviLamina",
+        "tags": [
+            "platform:levilamina",
+            "type:mod"
+        ]
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LordBombardir/LLRconServer/releases/download/v1.0.2/LLRconServer-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "RconServer/",
-              "dest": "plugins/RconServer/"
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": ">=1.3.0"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/LLRconServer-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "RconServer/",
+                            "dest": "plugins/RconServer/"
+                        }
+                    ]
+                }
+            ],
+            "preserve_files": [],
+            "remove_files": [],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
             }
-          ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }
