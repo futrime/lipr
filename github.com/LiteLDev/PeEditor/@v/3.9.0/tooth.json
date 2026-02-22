@@ -11,14 +11,12 @@
   },
   "variants": [
     {
-      "label": "",
       "platform": "win-x64",
-      "dependencies": {},
       "assets": [
         {
           "type": "zip",
           "urls": [
-            "https://github.com/LiteLDev/PeEditor/releases/download/v3.9.0/peeditor-windows-x64.zip"
+            "https://github.com/LiteLDev/PeEditor/releases/download/v{{version}}/peeditor-windows-x64.zip"
           ],
           "placements": [
             {
@@ -28,15 +26,7 @@
             }
           ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      ]
     }
   ]
 }

@@ -5,20 +5,16 @@
   "version": "2.8.6",
   "info": {
     "name": "YEssential",
-    "description": "\u4E00\u6B3E\u57FA\u7840\u529F\u80FD\u63D2\u4EF6",
-    "tags": [],
-    "avatar_url": null
+    "description": "一款基础功能插件"
   },
   "variants": [
     {
-      "label": "",
-      "platform": "",
-      "dependencies": {},
+      "selector": {},
       "assets": [
         {
           "type": "zip",
           "urls": [
-            "https://github.com/Nico6719/YEssential/releases/download/2.8.6/YEssential.zip"
+            "https://{{tooth}}/releases/download/{{version}}/YEssential.zip"
           ],
           "placements": [
             {
@@ -28,15 +24,7 @@
             }
           ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
+      ]
     }
   ]
 }

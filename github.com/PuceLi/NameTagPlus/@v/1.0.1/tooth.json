@@ -5,7 +5,7 @@
   "version": "1.0.1",
   "info": {
     "name": "NameTagPlus",
-    "description": "\u89E3\u9664\u547D\u540D\u724C\u7684\u4F7F\u7528\u9650\u5236",
+    "description": "解除命名牌的使用限制",
     "tags": [
       "platform:levilamina",
       "type:mod"
@@ -23,7 +23,7 @@
         {
           "type": "zip",
           "urls": [
-            "https://github.com/PuceLi/NameTagPlus/releases/download/v1.0.1/NameTagPlus-server-windows-x64.zip"
+            "https://{{tooth}}/releases/download/v{{version}}/NameTagPlus-server-windows-x64.zip"
           ],
           "placements": [
             {
@@ -38,8 +38,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
+        "pre_pack": [],
+        "post_pack": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -53,7 +57,7 @@
         {
           "type": "zip",
           "urls": [
-            "https://github.com/PuceLi/NameTagPlus/releases/download/v1.0.1/NameTagPlus-client-windows-x64.zip"
+            "https://{{tooth}}/releases/download/v{{version}}/NameTagPlus-client-windows-x64.zip"
           ],
           "placements": [
             {
@@ -68,8 +72,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
+        "pre_pack": [],
+        "post_pack": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     }

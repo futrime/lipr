@@ -1,50 +1,40 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/ZMBlocks/LL-BetterStop",
-  "version": "1.0.0",
-  "info": {
-    "name": "BetterStop",
-    "description": "When the server is shut down, the player shows the reason for the shutdown.",
-    "tags": [
-      "platform:levilamina",
-      "type:mod",
-      "stop",
-      "server",
-      "tools"
-    ],
-    "avatar_url": null
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "\u003E=1.1.1"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/ZMBlocks/LL-BetterStop",
+    "version": "1.0.0",
+    "info": {
+        "name": "BetterStop",
+        "description": "When the server is shut down, the player shows the reason for the shutdown.",
+        "tags": [
+            "platform:levilamina",
+            "type:mod",
+            "stop",
+            "server",
+            "tools"
+        ]
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/ZMBlocks/LL-BetterStop/releases/download/v1.0.0/BetterStop-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "BetterStop/",
-              "dest": "plugins/BetterStop/"
-            }
-          ]
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": ">=1.1.1"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/BetterStop-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "BetterStop/",
+                            "dest": "plugins/BetterStop/"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }

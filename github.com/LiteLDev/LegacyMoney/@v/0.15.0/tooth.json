@@ -1,49 +1,40 @@
 {
-  "format_version": 3,
-  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-  "tooth": "github.com/LiteLDev/LegacyMoney",
-  "version": "0.15.0",
-  "info": {
-    "name": "LegacyMoney",
-    "description": "LLMoney, but adapted to LeviLamina",
-    "tags": [
-      "type:mod",
-      "platform:levilamina",
-      "library",
-      "economy"
-    ],
-    "avatar_url": ""
-  },
-  "variants": [
-    {
-      "label": "",
-      "platform": "win-x64",
-      "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.6.*"
-      },
-      "assets": [
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/LiteLDev/LegacyMoney",
+    "version": "0.15.0",
+    "info": {
+        "name": "LegacyMoney",
+        "description": "LLMoney, but adapted to LeviLamina",
+        "tags": [
+            "type:mod",
+            "platform:levilamina",
+            "library",
+            "economy"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
         {
-          "type": "zip",
-          "urls": [
-            "https://github.com/LiteLDev/LegacyMoney/releases/download/v0.15.0/LegacyMoney-windows-x64.zip"
-          ],
-          "placements": [
-            {
-              "type": "dir",
-              "src": "LegacyMoney/",
-              "dest": "plugins/LegacyMoney"
-            }
-          ]
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.6.*"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/LegacyMoney-windows-x64.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "LegacyMoney/",
+                            "dest": "plugins/LegacyMoney"
+                        }
+                    ]
+                }
+            ]
         }
-      ],
-      "preserve_files": [],
-      "remove_files": [],
-      "scripts": {
-        "pre_install": [],
-        "post_install": [],
-        "pre_uninstall": [],
-        "post_uninstall": []
-      }
-    }
-  ]
+    ]
 }
