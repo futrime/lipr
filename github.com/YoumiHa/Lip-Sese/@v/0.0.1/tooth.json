@@ -1,20 +1,44 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/YoumiHa/Lip-Sese",
-    "version": "0.0.1",
-    "asset_url": "https://github.com/YoumiHa/Lip-Sese/releases/download/0.0.1/photo.zip",
-    "info": {
-        "name": "SeTu",
-        "description": "SESE",
-        "author": "YoumiHa",
-        "tags": ["sese"]
-    },
-    "files": {
-    "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/YoumiHa/Lip-Sese",
+  "version": "0.0.1",
+  "info": {
+    "name": "SeTu",
+    "description": "SESE",
+    "tags": [
+      "sese"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/YoumiHa/Lip-Sese/releases/download/0.0.1/photo.zip"
+          ],
+          "placements": [
             {
-                "src": "photo/*",
-                "dest": "photo/"
+              "type": "dir",
+              "src": "photo/",
+              "dest": "photo/"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

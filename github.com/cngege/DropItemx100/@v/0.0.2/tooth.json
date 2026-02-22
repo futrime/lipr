@@ -1,26 +1,45 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/cngege/DropItemx100",
-    "version": "0.0.2",
-    "info": {
-        "name": "DropItemx100",
-        "description": "百倍掉落物",
-        "author": "CNGEGE",
-        "tags": [
-            "levilamina",
-            "mod"
-        ]
-    },
-    "asset_url": "https://github.com/cngege/DropItemx100/releases/download/v$(version)/DropItemx100-windows-x64.zip",
-    "prerequisites": {
-        "github.com/LiteLDev/LeviLamina": "0.13.4"
-    },
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/cngege/DropItemx100",
+  "version": "0.0.2",
+  "info": {
+    "name": "DropItemx100",
+    "description": "\u767E\u500D\u6389\u843D\u7269",
+    "tags": [
+      "levilamina",
+      "mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/cngege/DropItemx100/releases/download/v{{version}}/DropItemx100-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "DropItemx100/*",
-                "dest": "plugins/DropItemx100/"
+              "type": "dir",
+              "src": "DropItemx100/",
+              "dest": "plugins/DropItemx100/"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

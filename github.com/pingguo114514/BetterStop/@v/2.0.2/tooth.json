@@ -1,26 +1,45 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/pingguo114514/BetterStop",
-    "version": "2.0.2",
-    "info": {
-        "name": "BetterStop",
-        "description": "更好地关闭服务器",
-        "author": "pingguo114514",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
-        ]
-    },
-    "prerequisites": {
-        "github.com/LiteLDev/Levilamina": "1.1.x"
-    },
-    "asset_url": "https://github.com/pingguo114514/BetterStop/releases/download/v$(version)/BetterStop-windows-x64.zip",
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/pingguo114514/BetterStop",
+  "version": "2.0.2",
+  "info": {
+    "name": "BetterStop",
+    "description": "\u66F4\u597D\u5730\u5173\u95ED\u670D\u52A1\u5668",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/pingguo114514/BetterStop/releases/download/v{{version}}/BetterStop-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "BetterStop/*",
-                "dest": "plugins/BetterStop/"
+              "type": "dir",
+              "src": "BetterStop/",
+              "dest": "plugins/BetterStop/"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

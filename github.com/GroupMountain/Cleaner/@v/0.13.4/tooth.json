@@ -6,7 +6,11 @@
   "info": {
     "name": "Cleaner",
     "description": "A Powerful Entities Cleaning up Mod for BDS",
-    "tags": ["levilamina", "cleaner", "gmlib"],
+    "tags": [
+      "levilamina",
+      "cleaner",
+      "gmlib"
+    ],
     "avatar_url": ""
   },
   "variants": [
@@ -14,7 +18,7 @@
       "label": "",
       "platform": "win-x64",
       "dependencies": {
-        "github.com/GroupMountain/GMLIB": ">= 1.0.0"
+        "github.com/GroupMountain/GMLIB": "\u003E=1.0.0"
       },
       "assets": [
         {
@@ -35,12 +39,8 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
-        "install": [],
         "post_install": [],
-        "pre_pack": [],
-        "post_pack": [],
         "pre_uninstall": [],
-        "uninstall": [],
         "post_uninstall": []
       }
     }

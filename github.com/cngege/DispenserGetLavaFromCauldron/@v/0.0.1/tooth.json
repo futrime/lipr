@@ -1,26 +1,45 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/cngege/DispenserGetLavaFromCauldron",
-    "version": "0.0.1",
-    "info": {
-        "name": "DispenserGetLavaFromCauldron",
-        "description": "发射器加桶从炼药锅中提取岩浆",
-        "author": "CNGEGE",
-        "tags": [
-            "levilamina",
-            "mod"
-        ]
-    },
-    "asset_url": "https://github.com/cngege/DispenserGetLavaFromCauldron/releases/download/v$(version)/DispenserGetLavaFromCauldron-windows-x64.zip",
-    "prerequisites": {
-        "github.com/LiteLDev/LeviLamina": "0.13.x"
-    },
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/cngege/DispenserGetLavaFromCauldron",
+  "version": "0.0.1",
+  "info": {
+    "name": "DispenserGetLavaFromCauldron",
+    "description": "\u53D1\u5C04\u5668\u52A0\u6876\u4ECE\u70BC\u836F\u9505\u4E2D\u63D0\u53D6\u5CA9\u6D46",
+    "tags": [
+      "levilamina",
+      "mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/cngege/DispenserGetLavaFromCauldron/releases/download/v{{version}}/DispenserGetLavaFromCauldron-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "DispenserGetLavaFromCauldron/*",
-                "dest": "plugins/DispenserGetLavaFromCauldron/"
+              "type": "dir",
+              "src": "DispenserGetLavaFromCauldron/",
+              "dest": "plugins/DispenserGetLavaFromCauldron/"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

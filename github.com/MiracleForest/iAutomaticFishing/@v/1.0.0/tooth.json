@@ -1,69 +1,93 @@
-
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/MiracleForest/iAutomaticFishing",
-    "version": "1.0.0",
-    "info": {
-        "name": "iAutomaticFishing",
-        "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/MiracleForest/iAutomaticFishing",
+  "version": "1.0.0",
+  "info": {
+    "name": "iAutomaticFishing",
+    "description": "A Minecraft Autofish mod for the LeviLamina mod loader.",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [
+          "echo Please specify whether to install the mod for the server or the client. \u0026 exit 1"
         ],
-        "avatar_url": "https://raw.githubusercontent.com/MiracleForest/iAutomaticFishing/refs/heads/release/icon.gif"
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     },
-    "variants": [
+    {
+      "label": "server",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "1.8.*"
+      },
+      "assets": [
         {
-            "scripts": {
-                "pre_install": [
-                    "echo Please specify whether to install the mod for the server or the client. & exit 1"
-                ]
+          "type": "zip",
+          "urls": [
+            "https://github.com/MiracleForest/iAutomaticFishing/releases/download/v1.0.0/iAutomaticFishing-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "iAutomaticFishing/",
+              "dest": "plugins/iAutomaticFishing/"
             }
-        },
-        {
-            "label": "server",
-            "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": "1.8.*"
-            },
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/iAutomaticFishing-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "dir",
-                            "src": "iAutomaticFishing/",
-                            "dest": "plugins/iAutomaticFishing/"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "label": "client",
-            "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": "1.8.*"
-            },
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/iAutomaticFishing-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "dir",
-                            "src": "iAutomaticFishing/",
-                            "dest": "mods/iAutomaticFishing/"
-                        }
-                    ]
-                }
-            ]
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "1.8.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/MiracleForest/iAutomaticFishing/releases/download/v1.0.0/iAutomaticFishing-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "iAutomaticFishing/",
+              "dest": "mods/iAutomaticFishing/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

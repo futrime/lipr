@@ -1,32 +1,60 @@
 {
-  "$schema": "https://raw.githubusercontent.com/lippkg/lip/main/schemas/tooth.v2.schema.json",
-  "format_version": 2,
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/lgc-LLDev/FormAPIEx",
   "version": "0.5.0",
   "info": {
     "name": "FormAPIEx",
     "description": "Work with LSE forms easily!",
-    "author": "student_2333",
-    "tags": ["library", "lse", "quickjs", "form"]
+    "tags": [
+      "library",
+      "lse",
+      "quickjs",
+      "form"
+    ],
+    "avatar_url": null
   },
-  "files": {
-    "place": [
-      {
-        "src": "lib/FormAPIEx.cjs",
-        "dest": "plugins/FormAPIEx/lib/FormAPIEx.cjs"
-      },
-      {
-        "src": "lib/FormAPIEx.mjs",
-        "dest": "plugins/FormAPIEx/lib/FormAPIEx.mjs"
-      },
-      {
-        "src": "lib/FormAPIEx.d.ts",
-        "dest": "plugins/FormAPIEx/lib/FormAPIEx.d.ts"
-      },
-      {
-        "src": "package.json",
-        "dest": "plugins/FormAPIEx/package.json"
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "file",
+              "src": "lib/FormAPIEx.cjs",
+              "dest": "plugins/FormAPIEx/lib/FormAPIEx.cjs"
+            },
+            {
+              "type": "file",
+              "src": "lib/FormAPIEx.mjs",
+              "dest": "plugins/FormAPIEx/lib/FormAPIEx.mjs"
+            },
+            {
+              "type": "file",
+              "src": "lib/FormAPIEx.d.ts",
+              "dest": "plugins/FormAPIEx/lib/FormAPIEx.d.ts"
+            },
+            {
+              "type": "file",
+              "src": "package.json",
+              "dest": "plugins/FormAPIEx/package.json"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
       }
-    ]
-  }
+    }
+  ]
 }

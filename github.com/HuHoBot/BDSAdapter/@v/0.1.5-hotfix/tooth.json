@@ -1,20 +1,33 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/HuoHuas001/HuHoBot-BDS",
-    "version": "0.1.3",
-    "info": {
-        "name": "HuHoBot",
-        "description": "HuHoBot BDS Adapter",
-        "author": "HuoHuas001",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
-        ]
-    },
-    "dependencies": {
-        "github.com/LiteLDev/LeviLamina": ">=0.12.x",
-        "gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs": ">=0.7.9"
-    },
-    "commands": {},
-    "files": {}
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/HuoHuas001/HuHoBot-BDS",
+  "version": "0.1.3",
+  "info": {
+    "name": "HuHoBot",
+    "description": "HuHoBot BDS Adapter",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {
+        "gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs": "\u003E=0.7.9"
+      },
+      "assets": [],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

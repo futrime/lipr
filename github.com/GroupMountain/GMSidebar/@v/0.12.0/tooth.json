@@ -1,28 +1,48 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/GroupMountain/GMSidebar",
-    "version": "0.12.0",
-    "info": {
-        "name": "GMSidebar",
-        "description": "High Performance Sidebar Plugin",
-        "author": "GroupMountain",
-        "source": "github.com/GroupMountain/GMSidebar",
-        "tags": [
-            "levilamina",
-            "whitelist",
-            "gmlib"
-        ]
-    },
-    "asset_url": "https://github.com/GroupMountain/GMSidebar/releases/download/v0.12.0/GMSidebar-windows-x64.zip",
-    "dependencies": {
-        "github.com/GroupMountain/GMLIB": ">=0.12.0"
-    },
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/GroupMountain/GMSidebar",
+  "version": "0.12.0",
+  "info": {
+    "name": "GMSidebar",
+    "description": "High Performance Sidebar Plugin",
+    "tags": [
+      "levilamina",
+      "whitelist",
+      "gmlib"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {
+        "github.com/GroupMountain/GMLIB": "\u003E=0.12.0"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/GroupMountain/GMSidebar/releases/download/v0.12.0/GMSidebar-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "GMSidebar/*",
-                "dest": "plugins/GMSidebar"
+              "type": "dir",
+              "src": "GMSidebar/",
+              "dest": "plugins/GMSidebar"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

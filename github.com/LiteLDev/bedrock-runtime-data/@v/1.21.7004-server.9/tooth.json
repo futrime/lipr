@@ -1,32 +1,42 @@
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/LiteLDev/bedrock-runtime-data",
-    "version": "1.21.7004-server.9",
-    "info": {
-        "name": "bedrock-runtime-data",
-        "description": "",
-        "tags": [],
-        "avatar_url": ""
-    },
-    "variants": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/bedrock-runtime-data",
+  "version": "1.21.7004-server.9",
+  "info": {
+    "name": "bedrock-runtime-data",
+    "description": "",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {},
+      "assets": [
         {
-            "platform": "win-x64",
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/bedrock-runtime-data-v{{version}}-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "file",
-                            "src": "bedrock_runtime_data",
-                            "dest": "bedrock_runtime_data"
-                        }
-                    ]
-                }
-            ]
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/bedrock-runtime-data/releases/download/v1.21.7004-server.9/bedrock-runtime-data-v1.21.7004-server.9-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "file",
+              "src": "bedrock_runtime_data",
+              "dest": "bedrock_runtime_data"
+            }
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

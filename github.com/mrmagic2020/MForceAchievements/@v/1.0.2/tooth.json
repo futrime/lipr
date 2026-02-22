@@ -1,30 +1,49 @@
 {
-    "format_version": 2,
-    "tooth": "github.com/mrmagic2020/MForceAchievements",
-    "version": "1.0.2",
-    "info": {
-        "name": "MForceAchievements",
-        "description": "A lightweight native mod to keep achievements on.",
-        "author": "mrmagic2020",
-        "tags": [
-            "levilamina",
-            "mod",
-            "native",
-            "m-series",
-            "achievement",
-            "force"
-        ]
-    },
-    "asset_url": "https://github.com/mrmagic2020/MForceAchievements/releases/download/v$(version)/MForceAchievements-windows-x64.zip",
-    "prerequisites": {
-        "github.com/LiteLDev/LeviLamina": ">=1.0.0"
-    },
-    "files": {
-        "place": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/mrmagic2020/MForceAchievements",
+  "version": "1.0.2",
+  "info": {
+    "name": "MForceAchievements",
+    "description": "A lightweight native mod to keep achievements on.",
+    "tags": [
+      "levilamina",
+      "mod",
+      "native",
+      "m-series",
+      "achievement",
+      "force"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/mrmagic2020/MForceAchievements/releases/download/v{{version}}/MForceAchievements-windows-x64.zip"
+          ],
+          "placements": [
             {
-                "src": "MForceAchievements/*",
-                "dest": "plugins/MForceAchievements/"
+              "type": "dir",
+              "src": "MForceAchievements/",
+              "dest": "plugins/MForceAchievements/"
             }
-        ]
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
+  ]
 }

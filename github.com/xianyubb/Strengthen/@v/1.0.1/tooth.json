@@ -1,24 +1,43 @@
 {
-  "format_version": 2,
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/xianyubb/Strengthen",
   "version": "0.1.0",
   "info": {
     "name": "Strengthen",
     "description": "Custom Monster",
-    "source": "github.com/xianyubb/Strengthen",
-    "author": "xianyubb",
-    "tags": ["plugin", "ll"]
+    "tags": [
+      "plugin",
+      "ll"
+    ],
+    "avatar_url": null
   },
-  "dependencies": {},
-  "prerequisites": {
-    "github.com/LiteLDev/LeviLamina": "0.7.2"
-  },
-  "files": {
-    "place": [
-      {
-        "src": "Strengthen/*",
-        "dest": "plugins/Strengthen"
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "Strengthen/",
+              "dest": "plugins/Strengthen"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
       }
-    ]
-  }
+    }
+  ]
 }

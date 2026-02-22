@@ -1,32 +1,42 @@
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/LiteLDev/PreLoader",
-    "version": "1.15.3",
-    "info": {
-        "name": "PreLoader",
-        "description": "A library preloader for loading LeviLamina",
-        "tags": [],
-        "avatar_url": ""
-    },
-    "variants": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/PreLoader",
+  "version": "1.15.3",
+  "info": {
+    "name": "PreLoader",
+    "description": "A library preloader for loading LeviLamina",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {},
+      "assets": [
         {
-            "platform": "win-x64",
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/preloader-v{{version}}-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "file",
-                            "src": "bin/PreLoader.dll",
-                            "dest": "PreLoader.dll"
-                        }
-                    ]
-                }
-            ]
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/PreLoader/releases/download/v1.15.3/preloader-v1.15.3-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "file",
+              "src": "bin/PreLoader.dll",
+              "dest": "PreLoader.dll"
+            }
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

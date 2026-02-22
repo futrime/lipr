@@ -10,19 +10,20 @@
       "platform:levilamina",
       "type:mod"
     ],
-    "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40&v=4"
+    "avatar_url": "https://avatars.githubusercontent.com/u/110138748?s=40\u0026v=4"
   },
   "variants": [
     {
+      "label": "",
       "platform": "win-x64",
       "dependencies": {
-        "github.com/LiteLDev/LeviLamina": ">=1.9.0"
+        "github.com/LiteLDev/LeviLamina": "\u003E=1.9.0"
       },
       "assets": [
         {
           "type": "zip",
           "urls": [
-            "https://{{tooth}}/releases/download/v{{version}}/EnchantX-windows-x64.zip"
+            "https://github.com/wed150/EnchantX/releases/download/v0.3.0/EnchantX-windows-x64.zip"
           ],
           "placements": [
             {
@@ -33,9 +34,16 @@
           ]
         }
       ],
+      "preserve_files": [],
       "remove_files": [
-          "plugins/EnchantX"
-      ]
+        "plugins/EnchantX"
+      ],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
   ]
 }

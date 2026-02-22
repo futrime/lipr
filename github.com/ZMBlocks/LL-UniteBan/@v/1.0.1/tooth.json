@@ -1,37 +1,47 @@
 {
-    "format_version": 3,
-    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "github.com/ZMBlocks/LL-UniteBan",
-    "version": "1.0.1",
-    "info": {
-        "name": "UniteBan",
-        "description": "跨服联合封禁黑名单",
-        "tags": [
-            "platform:levilamina",
-            "type:mod"
-        ]
-    },
-    "variants": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/ZMBlocks/LL-UniteBan",
+  "version": "1.0.1",
+  "info": {
+    "name": "UniteBan",
+    "description": "\u8DE8\u670D\u8054\u5408\u5C01\u7981\u9ED1\u540D\u5355",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "\u003E=1.3.0"
+      },
+      "assets": [
         {
-            "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": ">=1.3.0"
-            },
-            "assets": [
-                {
-                    "type": "zip",
-                    "urls": [
-                        "https://{{tooth}}/releases/download/v{{version}}/LL-UniteBan-windows-x64.zip"
-                    ],
-                    "placements": [
-                        {
-                            "type": "dir",
-                            "src": "UniteBan/",
-                            "dest": "plugins/UniteBan/"
-                        }
-                    ]
-                }
-            ]
+          "type": "zip",
+          "urls": [
+            "https://github.com/ZMBlocks/LL-UniteBan/releases/download/v1.0.1/LL-UniteBan-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "UniteBan/",
+              "dest": "plugins/UniteBan/"
+            }
+          ]
         }
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

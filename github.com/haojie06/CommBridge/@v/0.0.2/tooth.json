@@ -1,20 +1,40 @@
 {
-  "format_version": 2,
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/haojie06/CommBridge",
   "version": "0.0.2",
   "info": {
     "name": "CommBridge",
     "description": "Communicate with external systems through HTTP",
-    "author": "haojie06",
-    "tags": []
+    "tags": [],
+    "avatar_url": null
   },
-  "commands": {},
-  "files": {
-    "place": [
-      {
-        "src": "CommBridge/*",
-        "dest": "plugins/CommBridge/"
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "CommBridge/",
+              "dest": "plugins/CommBridge/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
       }
-    ]
-  }
+    }
+  ]
 }

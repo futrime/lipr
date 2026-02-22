@@ -1,32 +1,47 @@
 {
-    "format_version": 1,
-    "tooth": "github.com/quizhizhe/Tooth-LLCheckBag",
-    "version": "1.2.2",
-    "dependencies": {
-        "github.com/Tooth-Hub/LiteLoaderBDS": [
-            [
-                "2.2.0"
-            ]
-        ]
-    },
-    "information": {
-        "name": "LLCheckBag",
-        "description": "Player Data Management",
-        "author": "xiaoqch, Qiuzhizhe",
-        "license": "",
-        "homepage": ""
-    },
-    "placement": [
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/quizhizhe/Tooth-LLCheckBag",
+  "version": "1.2.2",
+  "info": {
+    "name": "LLCheckBag",
+    "description": "Player Data Management",
+    "tags": [],
+    "avatar_url": null
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {
+        "github.com/Tooth-Hub/LiteLoaderBDS": "2.2.0"
+      },
+      "assets": [
         {
-            "source": "LLCheckBag",
-            "destination": "plugins/LLCheckBag"
-        },
-        {
-            "source": "LLCheckBag.dll",
-            "destination": "plugins/LLCheckBag.dll"
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "file",
+              "src": "LLCheckBag",
+              "dest": "plugins/LLCheckBag"
+            },
+            {
+              "type": "file",
+              "src": "LLCheckBag.dll",
+              "dest": "plugins/LLCheckBag.dll"
+            }
+          ]
         }
-    ],
-    "possession": [
-        "plugins/LLCheckBag/"
-    ]
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
 }

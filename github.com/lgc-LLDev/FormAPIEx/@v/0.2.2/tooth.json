@@ -1,24 +1,45 @@
 {
-  "format_version": 1,
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
   "tooth": "github.com/lgc-LLSEDev/FormAPIEx",
   "version": "0.2.2",
-  "dependencies": {},
-  "information": {
+  "info": {
     "name": "FormAPIEx",
-    "description": "让处理表单返回值变得更容易！",
-    "author": "lgc2333",
-    "license": "Apache-2.0",
-    "homepage": "https://github.com/lgc-LLSEDev/FormAPIEx"
+    "description": "\u8BA9\u5904\u7406\u8868\u5355\u8FD4\u56DE\u503C\u53D8\u5F97\u66F4\u5BB9\u6613\uFF01",
+    "tags": [],
+    "avatar_url": null
   },
-  "placement": [
+  "variants": [
     {
-      "source": "lib/FormAPIEx.js",
-      "destination": "plugins/lib/FormAPIEx.js"
-    },
-    {
-      "source": "lib/FormAPIEx.d.ts",
-      "destination": "plugins/lib/FormAPIEx.d.ts"
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "file",
+              "src": "lib/FormAPIEx.js",
+              "dest": "plugins/lib/FormAPIEx.js"
+            },
+            {
+              "type": "file",
+              "src": "lib/FormAPIEx.d.ts",
+              "dest": "plugins/lib/FormAPIEx.d.ts"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
     }
-  ],
-  "possession": []
+  ]
 }
