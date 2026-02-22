@@ -4,6 +4,8 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, StringConstraints
 from pydantic_extra_types.semantic_version import SemanticVersion
 
+type FormatUUID = Literal["289f771f-2c9a-4d73-9f3f-8492495a924d"]
+type FormatVersion = Literal[3]
 type PackageManifestVariantLabel = Annotated[
     str, StringConstraints(pattern=r"^([a-z0-9-]+(/[a-z0-9-]+)?)?$")
 ]
@@ -24,6 +26,8 @@ class PackageManifestVariant(BaseModel):
 
 
 class PackageManifest(BaseModel):
+    format_version: FormatVersion
+    format_uuid: FormatUUID
     tooth: str
     version: SemanticVersion
     info: PackageManifestInfo = PackageManifestInfo()
@@ -38,8 +42,6 @@ class PackageIndexPackage(BaseModel):
 
 
 class PackageIndex(BaseModel):
-    format_version: Literal[3] = 3
-    format_uuid: Literal["289f771f-2c9a-4d73-9f3f-8492495a924d"] = (
-        "289f771f-2c9a-4d73-9f3f-8492495a924d"
-    )
+    format_version: FormatVersion = 3
+    format_uuid: FormatUUID = "289f771f-2c9a-4d73-9f3f-8492495a924d"
     packages: dict[str, PackageIndexPackage]

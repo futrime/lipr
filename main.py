@@ -15,6 +15,7 @@ from github.Auth import Token
 from github.GithubException import GithubException
 from github.Repository import Repository
 from httpx import URL, Client
+from pydantic import ValidationError
 from pydantic_extra_types.semantic_version import SemanticVersion
 
 from entities import (
@@ -38,18 +39,28 @@ def download_manifest(
     response = client.get(url)
     response.raise_for_status()
 
-    # Migrate manifest.
-    with TemporaryDirectory() as tmp_dir:
-        tmp_path_1 = Path(tmp_dir) / "old"
-        tmp_path_1.write_bytes(response.content)
+    content = response.content
 
-        tmp_path_2 = Path(tmp_dir) / "new"
+    try:
+        manifest = PackageManifest.model_validate_json(content)
 
-        subprocess.run(["lip", "migrate", str(tmp_path_1), str(tmp_path_2)], check=True)
+    except ValidationError:
+        logging.warning("Manifest validation failed. Attempting migration...")
 
-        content = tmp_path_2.read_bytes()
+        # Migrate manifest.
+        with TemporaryDirectory() as tmp_dir:
+            tmp_path_1 = Path(tmp_dir) / "old"
+            tmp_path_1.write_bytes(content)
 
-    manifest = PackageManifest.model_validate_json(content)
+            tmp_path_2 = Path(tmp_dir) / "new"
+
+            subprocess.run(
+                ["lip", "migrate", str(tmp_path_1), str(tmp_path_2)], check=True
+            )
+
+            content = tmp_path_2.read_bytes()
+
+        manifest = PackageManifest.model_validate_json(content)
 
     logging.info(
         f"Fetched manifest for github.com/{repo}" + (f"@{version}" if version else "")
