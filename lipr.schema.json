@@ -33,18 +33,9 @@
                 }
               },
               "avatar_url": {
-                "oneOf": [
-                  {
-                    "type": "null"
-                  },
-                  {
-                    "type": "string",
-                    "format": "uri"
-                  }
-                ]
+                "type": "string"
               }
-            },
-            "additionalProperties": false
+            }
           },
           "updated_at": {
             "type": "string",
@@ -60,7 +51,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "pattern": "^([a-z0-9-]+(/[a-z0-9-]+)?)?$"
+                "pattern": "^([a-z0-9_]+(/[a-z0-9_]+)?)?$"
               }
             }
           }

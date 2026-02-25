@@ -7,7 +7,7 @@ from pydantic_extra_types.semantic_version import SemanticVersion
 type FormatUUID = Literal["289f771f-2c9a-4d73-9f3f-8492495a924d"]
 type FormatVersion = Literal[3]
 type PackageManifestVariantLabel = Annotated[
-    str, StringConstraints(pattern=r"^([a-z0-9-]+(/[a-z0-9-]+)?)?$")
+    str, StringConstraints(pattern=r"^([a-z0-9_]+(/[a-z0-9_]+)?)?$")
 ]
 type PackageManifestInfoTag = Annotated[
     str, StringConstraints(pattern=r"^[a-z0-9-]+(:[a-z0-9-]+)?$")
@@ -18,7 +18,7 @@ class PackageManifestInfo(BaseModel):
     name: str = ""
     description: str = ""
     tags: list[PackageManifestInfoTag] = []
-    avatar_url: str | None = None
+    avatar_url: str = ""
 
 
 class PackageManifestVariant(BaseModel):

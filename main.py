@@ -109,7 +109,7 @@ def save_index_file(index: PackageIndex) -> None:
     path = Path("./workspace/lipr/index.json")
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    content = index.model_dump_json(ensure_ascii=False, indent=2)
+    content = index.model_dump_json(ensure_ascii=False, exclude_unset=True, indent=2)
 
     path.write_text(content, encoding="utf-8")
 
@@ -168,7 +168,7 @@ def main() -> None:
     with Client() as client:
         for repo in search_repositories():
             try:
-                head_mft = download_manifest(
+                head_manifest = download_manifest(
                     repo.full_name, version=None, client=client
                 )
             except Exception as ex:
@@ -223,7 +223,7 @@ def main() -> None:
                 continue
 
             index.packages[f"github.com/{repo.full_name}"] = PackageIndexPackage(
-                info=head_mft.info,
+                info=head_manifest.info,
                 updated_at=updated,
                 stars=repo.stargazers_count,
                 versions=index_pkg_versions,
