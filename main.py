@@ -4,6 +4,7 @@ import shutil
 import subprocess
 from datetime import datetime
 from pathlib import Path
+from subprocess import CalledProcessError
 from tempfile import TemporaryDirectory
 from typing import Any, Final, NamedTuple
 
@@ -70,22 +71,27 @@ def download_manifest(
 
 
 def fetch_repos() -> list[str]:
-    stdout = subprocess.run(
-        [
-            "gh",
-            "search",
-            "code",
-            "format_version",
-            "path:/",
-            "filename:tooth.json",
-            "--limit=1000",
-            "--json",
-            "repository",
-        ],
-        capture_output=True,
-        check=True,
-        text=True,
-    ).stdout
+    try:
+        stdout = subprocess.run(
+            [
+                "gh",
+                "search",
+                "code",
+                "format_version",
+                "path:/",
+                "filename:tooth.json",
+                "--limit=1000",
+                "--json",
+                "repository",
+            ],
+            capture_output=True,
+            check=True,
+            text=True,
+        ).stdout
+
+    except CalledProcessError as ex:
+        logging.error(ex.stderr)
+        raise
 
     results: list[dict[str, dict[str, str]]] = json.loads(stdout)
 
@@ -100,18 +106,23 @@ class RepoDetails(NamedTuple):
 
 
 def fetch_repo_details(repo: str) -> RepoDetails:
-    stdout = subprocess.run(
-        [
-            "gh",
-            "repo",
-            "view",
-            repo,
-            "--json=stargazerCount,updatedAt",
-        ],
-        capture_output=True,
-        check=True,
-        text=True,
-    ).stdout
+    try:
+        stdout = subprocess.run(
+            [
+                "gh",
+                "repo",
+                "view",
+                repo,
+                "--json=stargazerCount,updatedAt",
+            ],
+            capture_output=True,
+            check=True,
+            text=True,
+        ).stdout
+
+    except CalledProcessError as ex:
+        logging.error(ex.stderr)
+        raise
 
     result: dict[str, Any] = json.loads(stdout)
 
@@ -179,13 +190,9 @@ def main() -> None:
     with Client() as client:
         for repo in fetch_repos():
             try:
-                head_manifest = download_manifest(
-                    repo, version=None, client=client
-                )
+                head_manifest = download_manifest(repo, version=None, client=client)
             except Exception as ex:
-                logging.error(
-                    f"Failed to fetch manifest for github.com/{repo}: {ex}"
-                )
+                logging.error(f"Failed to fetch manifest for github.com/{repo}: {ex}")
                 continue
 
             try:
@@ -206,9 +213,7 @@ def main() -> None:
             try:
                 versions = fetch_versions(repo)
             except Exception as ex:
-                logging.error(
-                    f"Failed to fetch versions for github.com/{repo}: {ex}"
-                )
+                logging.error(f"Failed to fetch versions for github.com/{repo}: {ex}")
                 continue
 
             for ver in versions:
