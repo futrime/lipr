@@ -1,0 +1,45 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/lwenk/Stats",
+  "version": "0.2.3",
+  "info": {
+    "name": "Stats",
+    "description": "BDS\u7EDF\u8BA1\u4FE1\u606F\u63D2\u4EF6",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://github.com/lwenk/Stats/raw/main/logo.png"
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/lwenk/Stats/releases/download/v{{version}}/Stats-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LK-Stats/",
+              "dest": "plugins/LK-Stats/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
