@@ -36,8 +36,8 @@ class PackageManifest(BaseModel):
 
 class PackageIndexPackage(BaseModel):
     info: PackageManifestInfo = PackageManifestInfo()
-    updated_at: datetime
     stars: int
+    updated_at: datetime
     versions: dict[SemanticVersion, list[PackageManifestVariantLabel]]
 
 

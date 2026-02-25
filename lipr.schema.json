@@ -37,13 +37,13 @@
               }
             }
           },
-          "updated_at": {
-            "type": "string",
-            "format": "date-time"
-          },
           "stars": {
             "type": "integer",
             "minimum": 0
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "versions": {
             "type": "object",
@@ -58,8 +58,8 @@
         },
         "required": [
           "info",
-          "updated_at",
           "stars",
+          "updated_at",
           "versions"
         ],
         "additionalProperties": false

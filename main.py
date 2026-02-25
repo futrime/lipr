@@ -1,19 +1,12 @@
+import json
 import logging
-import os
 import shutil
 import subprocess
-import time
-from collections.abc import Iterator
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import Final
+from typing import Any, Final, NamedTuple
 
-from git.cmd import Git
-from github import Github
-from github.Auth import Token
-from github.GithubException import GithubException
-from github.Repository import Repository
 from httpx import URL, Client
 from pydantic import ValidationError
 from pydantic_extra_types.semantic_version import SemanticVersion
@@ -22,7 +15,6 @@ from entities import (
     PackageIndex,
     PackageIndexPackage,
     PackageManifest,
-    PackageManifestVariantLabel,
 )
 
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
@@ -77,15 +69,73 @@ def download_manifest(
     return manifest
 
 
-def fetch_versions(repo: str, *, git: Git) -> list[SemanticVersion]:
-    url = URL(f"https://github.com/{repo}.git")
+def fetch_repos() -> list[str]:
+    stdout = subprocess.run(
+        [
+            "gh",
+            "search",
+            "code",
+            "format_version",
+            "path:/",
+            "filename:tooth.json",
+            "--limit=1000",
+            "--json",
+            "repository",
+        ],
+        capture_output=True,
+        check=True,
+        text=True,
+    ).stdout
 
-    result: str = git.ls_remote("-t", "--refs", url)
+    results: list[dict[str, dict[str, str]]] = json.loads(stdout)
+
+    logging.info(f"Found {len(results)} repositories")
+
+    return [r["repository"]["nameWithOwner"] for r in results]
+
+
+class RepoDetails(NamedTuple):
+    stars: int
+    updated_at: datetime
+
+
+def fetch_repo_details(repo: str) -> RepoDetails:
+    stdout = subprocess.run(
+        [
+            "gh",
+            "repo",
+            "view",
+            repo,
+            "--json=stargazerCount,updatedAt",
+        ],
+        capture_output=True,
+        check=True,
+        text=True,
+    ).stdout
+
+    result: dict[str, Any] = json.loads(stdout)
+
+    return RepoDetails(
+        stars=result["stargazerCount"],
+        updated_at=datetime.fromisoformat(result["updatedAt"]),
+    )
+
+
+def fetch_versions(repo: str) -> list[SemanticVersion]:
+    url = f"https://github.com/{repo}.git"
+
+    stdout = subprocess.run(
+        ["git", "ls-remote", "-t", "--refs", url],
+        capture_output=True,
+        check=True,
+        text=True,
+    ).stdout
 
     versions = []
-    for line in result.splitlines():
+    for line in stdout.splitlines():
         ref = line.split()[1]
 
+        # Skip refs that is not a version tag.
         if not ref.startswith("refs/tags/v"):
             continue
 
@@ -116,43 +166,6 @@ def save_index_file(index: PackageIndex) -> None:
     logging.info(f"Saved index file at {path}")
 
 
-def search_repositories() -> Iterator[Repository]:
-    if (token := os.getenv("GITHUB_TOKEN")) is None:
-        raise RuntimeError("GITHUB_TOKEN environment variable is not set")
-
-    with Github(auth=Token(token), per_page=100) as github:
-        pagination = github.search_code("", filename="tooth.json", path="/")
-
-        page_idx = 0
-        while True:
-            try:
-                page = pagination.get_page(page_idx)
-
-                if not page:
-                    break
-
-                yield from (item.repository for item in page)
-
-                page_idx += 1
-
-            except GithubException as ex:
-                if ex.status != 429:
-                    raise
-
-                sleep_time = (
-                    github.get_rate_limit().resources.search.reset
-                    - datetime.now(timezone.utc)
-                ).total_seconds() + 1
-
-                logging.warning(
-                    f"Exceeded GitHub API rate limit. Waiting {sleep_time} seconds for reset..."
-                )
-
-                time.sleep(sleep_time)
-
-    logging.info(f"Found {pagination.totalCount} repositories")
-
-
 def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
@@ -161,73 +174,67 @@ def main() -> None:
         shutil.rmtree(BASE_DIR)
     BASE_DIR.mkdir(parents=True, exist_ok=True)
 
-    git = Git()
-
     index = PackageIndex(packages={})
 
     with Client() as client:
-        for repo in search_repositories():
+        for repo in fetch_repos():
             try:
                 head_manifest = download_manifest(
-                    repo.full_name, version=None, client=client
+                    repo, version=None, client=client
                 )
             except Exception as ex:
                 logging.error(
-                    f"Failed to fetch manifest for github.com/{repo.full_name}: {ex}"
+                    f"Failed to fetch manifest for github.com/{repo}: {ex}"
                 )
                 continue
 
             try:
-                updated = repo.get_latest_release().published_at
+                repo_details = fetch_repo_details(repo)
             except Exception as ex:
                 logging.error(
-                    f"Failed to fetch latest release for github.com/{repo.full_name}: {ex}"
+                    f"Failed to fetch repo details for github.com/{repo}: {ex}"
                 )
                 continue
+
+            package = PackageIndexPackage(
+                info=head_manifest.info,
+                stars=repo_details.stars,
+                updated_at=repo_details.updated_at,
+                versions={},
+            )
 
             try:
-                versions = fetch_versions(repo.full_name, git=git)
+                versions = fetch_versions(repo)
             except Exception as ex:
                 logging.error(
-                    f"Failed to fetch versions for github.com/{repo.full_name}: {ex}"
+                    f"Failed to fetch versions for github.com/{repo}: {ex}"
                 )
                 continue
-
-            index_pkg_versions: dict[
-                SemanticVersion, list[PackageManifestVariantLabel]
-            ] = {}
 
             for ver in versions:
                 try:
-                    manifest = download_manifest(repo.full_name, ver, client=client)
+                    manifest = download_manifest(repo, ver, client=client)
                 except Exception as ex:
                     logging.error(
-                        f"Failed to fetch manifest for github.com/{repo.full_name}@{ver}: {ex}"
+                        f"Failed to fetch manifest for github.com/{repo}@{ver}: {ex}"
                     )
                     continue
 
                 if len(manifest.variants) == 0:
                     logging.warning(
-                        f"No variants found in manifest for github.com/{repo.full_name}@{ver}. Skipping..."
+                        f"No variants found in manifest for github.com/{repo}@{ver}. Skipping..."
                     )
                     continue
 
-                index_pkg_versions[ver] = [
-                    variant.label for variant in manifest.variants
-                ]
+                package.versions[ver] = [variant.label for variant in manifest.variants]
 
-            if len(index_pkg_versions) == 0:
+            if len(package.versions) == 0:
                 logging.warning(
-                    f"No valid versions found for github.com/{repo.full_name}. Skipping..."
+                    f"No valid versions found for github.com/{repo}. Skipping..."
                 )
                 continue
 
-            index.packages[f"github.com/{repo.full_name}"] = PackageIndexPackage(
-                info=head_manifest.info,
-                updated_at=updated,
-                stars=repo.stargazers_count,
-                versions=index_pkg_versions,
-            )
+            index.packages[f"github.com/{repo}"] = package
 
     save_index_file(index)
 

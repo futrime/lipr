@@ -3,10 +3,7 @@ name = "lipr"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
-    "gitpython>=3.1.46",
     "httpx>=0.28.1",
     "pydantic>=2.12.5",
     "pydantic-extra-types>=2.11.0",
-    "pygithub>=2.8.1",
-    "semver>=3.0.4",
 ]
