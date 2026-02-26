@@ -11,6 +11,7 @@ from typing import Any, Final, NamedTuple
 from httpx import URL, Client
 from pydantic import ValidationError
 from pydantic_extra_types.semantic_version import SemanticVersion
+from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
 
 from entities import (
     PackageIndex,
@@ -19,6 +20,11 @@ from entities import (
 )
 
 BASE_DIR: Final = Path("./workspace/lipr/github.com")
+
+
+def _is_gh_rate_limited(ex: BaseException) -> bool:
+    """Return True if the exception is a CalledProcessError caused by a 429 rate limit."""
+    return isinstance(ex, CalledProcessError) and "429" in (ex.stderr or "")
 
 
 def download_manifest(
@@ -70,6 +76,12 @@ def download_manifest(
     return manifest
 
 
+@retry(
+    retry=retry_if_exception(_is_gh_rate_limited),
+    wait=wait_exponential(multiplier=10, max=320),
+    stop=stop_after_attempt(10),
+    reraise=True,
+)
 def fetch_repos() -> list[str]:
     try:
         stdout = subprocess.run(
@@ -105,6 +117,12 @@ class RepoDetails(NamedTuple):
     updated_at: datetime
 
 
+@retry(
+    retry=retry_if_exception(_is_gh_rate_limited),
+    wait=wait_exponential(multiplier=10, max=320),
+    stop=stop_after_attempt(10),
+    reraise=True,
+)
 def fetch_repo_details(repo: str) -> RepoDetails:
     try:
         stdout = subprocess.run(

@@ -7,4 +7,5 @@ dependencies = [
     "pydantic>=2.12.5",
     "pydantic-extra-types>=2.11.0",
     "semver>=3.0.4",
+    "tenacity>=9.1.4",
 ]
