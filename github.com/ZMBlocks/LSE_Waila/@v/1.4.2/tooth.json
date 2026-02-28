@@ -1,0 +1,48 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/ZMBlocks/LSE_Waila",
+  "version": "1.4.2",
+  "info": {
+    "name": "LSE_Waila",
+    "description": "\u666E\u666E\u901A\u901A\u7684\u9AD8\u4EAE\u663E\u793A~",
+    "tags": [
+      "levilamina",
+      "quickjs",
+      "waila",
+      "lse",
+      "legacyscriptengine"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/ZMBlocks/LSE_Waila/releases/download/v1.4.2/LSE_Waila-1.4.2.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "Waila/",
+              "dest": "plugins/Waila"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

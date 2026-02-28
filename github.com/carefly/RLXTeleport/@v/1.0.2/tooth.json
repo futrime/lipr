@@ -1,0 +1,45 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/carefly/RLXWarp",
+  "version": "1.0.2",
+  "info": {
+    "name": "RLXWarp",
+    "description": "A mod that allows you to warp to a specific location.",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/carefly/RLXWarp/releases/download/v1.0.2/RLXWarp-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "RLXWarp/",
+              "dest": "plugins/RLXWarp"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

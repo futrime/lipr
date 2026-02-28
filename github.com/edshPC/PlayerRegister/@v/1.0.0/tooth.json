@@ -1,0 +1,46 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/edshPC/PlayerRegister",
+  "version": "1.0.0",
+  "info": {
+    "name": "PlayerRegister",
+    "description": "Mod adds account system on LeviLamina",
+    "tags": [
+      "levilamina",
+      "mod",
+      "login"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/edshPC/PlayerRegister/releases/download/v1.0.0/PlayerRegister-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "PlayerRegister/",
+              "dest": "plugins/PlayerRegister/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

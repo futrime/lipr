@@ -1,0 +1,59 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/LeviLamina",
+  "version": "0.12.1",
+  "info": {
+    "name": "LeviLamina",
+    "description": "A lightweight, modular and versatile plugin loader for Minecraft Bedrock Server BDS, formerly known as LiteLoaderBDS",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/bds": "\u003E=1.20.80 \u003C1.20.90",
+        "github.com/LiteLDev/CrashLogger": "1.1.*",
+        "github.com/LiteLDev/levilamina-loc": "1.1.*",
+        "github.com/LiteLDev/PeEditor": "3.7.*",
+        "github.com/LiteLDev/PreLoader": "1.6.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/LeviLamina/releases/download/v0.12.1/levilamina-release-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "file",
+              "src": "LeviLamina.dll",
+              "dest": "LeviLamina.dll"
+            },
+            {
+              "type": "file",
+              "src": "LeviLamina.pdb",
+              "dest": "LeviLamina.pdb"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [
+        "bedrock_server_mod.exe"
+      ],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [
+          ".\\PeEditor.exe -mb"
+        ],
+        "pre_uninstall": [],
+        "post_uninstall": [
+          "IF EXIST bedrock_server.exe (DEL bedrock_server.exe.bak) ELSE (REN bedrock_server.exe.bak bedrock_server.exe)"
+        ]
+      }
+    }
+  ]
+}

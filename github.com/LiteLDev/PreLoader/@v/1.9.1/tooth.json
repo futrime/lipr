@@ -1,0 +1,47 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/PreLoader",
+  "version": "1.9.1",
+  "info": {
+    "name": "PreLoader",
+    "description": "A library preloader for loading LeviLamina",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/PreLoader/releases/download/v1.9.1/preloader-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "file",
+              "src": "bin/PreLoader.dll",
+              "dest": "PreLoader.dll"
+            },
+            {
+              "type": "file",
+              "src": "bin/PreLoader.pdb",
+              "dest": "PreLoader.pdb"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

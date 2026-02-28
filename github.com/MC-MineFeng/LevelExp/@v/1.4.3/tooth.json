@@ -1,0 +1,46 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/MC-MineFeng/LevelExp",
+  "version": "1.4.3",
+  "info": {
+    "name": "LevelExp",
+    "description": "\u81EA\u5B9A\u4E49\u7B49\u7EA7\u7CFB\u7EDF!",
+    "tags": [
+      "levilamina",
+      "library",
+      "plugin"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/MC-MineFeng/LevelExp/releases/download/1.4.3/LevelExp-v3-.v1.4.3.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LevelExp/",
+              "dest": "plugins/LevelExp/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

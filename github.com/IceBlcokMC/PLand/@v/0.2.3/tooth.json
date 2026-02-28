@@ -1,0 +1,48 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/engsr6982/PLand",
+  "version": "0.2.3",
+  "info": {
+    "name": "PLand - \u9886\u5730\u7CFB\u7EDF",
+    "description": "\u57FA\u4E8E LeviLamina \u7684\u9886\u5730\u7CFB\u7EDF",
+    "tags": [
+      "levilamina",
+      "plugin",
+      "mod",
+      "land",
+      "pland"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/engsr6982/PLand/releases/download/v0.2.3/PLand-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "PLand/",
+              "dest": "plugins/PLand/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

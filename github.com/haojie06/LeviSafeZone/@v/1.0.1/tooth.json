@@ -1,0 +1,40 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/haojie06/LeviSafeZone",
+  "version": "1.0.1",
+  "info": {
+    "name": "SafeZone",
+    "description": "Create safe zones, prevent mob spawn",
+    "tags": [],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "SafeZone/",
+              "dest": "plugins/SafeZone/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

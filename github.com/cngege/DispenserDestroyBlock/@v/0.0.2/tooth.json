@@ -1,0 +1,45 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/cngege/DispenserDestroyBlock",
+  "version": "0.0.2",
+  "info": {
+    "name": "DispenserDestroyBlock",
+    "description": "\u53D1\u5C04\u5668\u6FC0\u6D3B\u65F6\u53EF\u4F7F\u7528\u5DE5\u5177\u7834\u574F\u65B9\u5757",
+    "tags": [
+      "levilamina",
+      "mod"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/cngege/DispenserDestroyBlock/releases/download/v{{version}}/DispenserDestroyBlock-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "DispenserDestroyBlock/",
+              "dest": "plugins/DispenserDestroyBlock/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/ZMBlocks/LL-NatPortFixer",
+  "version": "1.0.1",
+  "info": {
+    "name": "NatPortFixer",
+    "description": "\u5185\u7F51\u7A7F\u900Fmotd\u663E\u793A\u4FEE\u590D",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/ZMBlocks/LL-NatPortFixer/releases/download/v{{version}}/LL-NatPortFixer-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "NatPortFixer/",
+              "dest": "plugins/NatPortFixer/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

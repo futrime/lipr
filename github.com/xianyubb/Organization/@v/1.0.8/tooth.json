@@ -1,0 +1,43 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/xianyubb/org_out",
+  "version": "1.0.8",
+  "info": {
+    "name": "Organization",
+    "description": "Organization plugins for LeviLamina",
+    "tags": [
+      "levilamina",
+      "nodejs"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "./",
+              "dest": "plugins/Organization/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

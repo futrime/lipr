@@ -1,0 +1,32 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/dmbkstudio/HitokotoWelcome",
+  "version": "0.1.2",
+  "info": {
+    "name": "\u8FDB\u670D\u4E00\u8A00",
+    "description": "\u4E00\u4E2A\u7B80\u5355\u7684\u8FDB\u670D\u6B22\u8FCE\u63D2\u4EF6",
+    "tags": [
+      "plugin",
+      "lse",
+      "welcome"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}

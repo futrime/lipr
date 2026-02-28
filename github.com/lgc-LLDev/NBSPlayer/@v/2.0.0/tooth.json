@@ -1,0 +1,52 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/lgc-LLDev/NbsPlayer",
+  "version": "2.0.0",
+  "info": {
+    "name": "NBSPlayer",
+    "description": "Play NBS files in Minecraft",
+    "tags": [
+      "plugin",
+      "lse",
+      "quickjs",
+      "nbs",
+      "noteblock",
+      "music"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "self",
+          "urls": [],
+          "placements": [
+            {
+              "type": "file",
+              "src": "nbs-player/dist/NBSPlayer.js",
+              "dest": "plugins/NBSPlayer/NBSPlayer.js"
+            },
+            {
+              "type": "file",
+              "src": "nbs-player/manifest.json",
+              "dest": "plugins/NBSPlayer/manifest.json"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
