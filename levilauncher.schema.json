@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "format_version": {
+      "type": "integer",
+      "const": 3
+    },
+    "format_uuid": {
+      "type": "string",
+      "format": "uuid",
+      "const": "289f771f-2c9a-4d73-9f3f-8492495a924d"
+    },
+    "packages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "info": {
+            "$ref": "https://raw.githubusercontent.com/futrime/lip/HEAD/schemas/manifest.schema.json#/properties/info"
+          },
+          "stargazer_count": {
+            "type": "integer"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "variants": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "versions": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                      "dependencies": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "dependencies"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "versions"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "info",
+          "stargazer_count",
+          "updated_at",
+          "variants"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "packages"
+  ],
+  "additionalProperties": false
+}

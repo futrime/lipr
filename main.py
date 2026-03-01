@@ -2,264 +2,270 @@ import json
 import logging
 import shutil
 import subprocess
-from datetime import datetime
+from dataclasses import dataclass
 from pathlib import Path
-from subprocess import CalledProcessError
 from tempfile import TemporaryDirectory
-from typing import Any, Final, NamedTuple
+from typing import Any, Final
 
+import semver
 from httpx import URL, Client
-from pydantic import ValidationError
-from pydantic_extra_types.semantic_version import SemanticVersion
-from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from entities import (
-    PackageIndex,
-    PackageIndexPackage,
-    PackageManifest,
+    Index,
+    IndexForLeviLauncher,
+    IndexPackage,
+    IndexPackageForLeviLauncher,
+    IndexVariant,
+    IndexVariantForLeviLauncher,
+    IndexVersionForLeviLauncher,
+    Manifest,
 )
 
-BASE_DIR: Final = Path("./workspace/lipr/github.com")
+logger = logging.getLogger(__name__)
+
+_BASE_DIR: Final = Path("./workspace/lipr/github.com")
 
 
-def _is_gh_rate_limited(ex: BaseException) -> bool:
-    """Return True if the exception is a CalledProcessError caused by a 429 rate limit."""
-    return isinstance(ex, CalledProcessError) and "429" in (ex.stderr or "")
-
-
-def download_manifest(
-    repo: str, version: SemanticVersion | None, *, client: Client
-) -> PackageManifest:
-    if version is None:
-        url = URL(f"https://raw.githubusercontent.com/{repo}/HEAD/tooth.json")
-    else:
-        url = URL(f"https://raw.githubusercontent.com/{repo}/v{version}/tooth.json")
-
-    response = client.get(url)
-    response.raise_for_status()
-
-    content = response.content
-
-    try:
-        manifest = PackageManifest.model_validate_json(content)
-
-    except ValidationError:
-        logging.warning("Manifest validation failed. Attempting migration...")
-
-        # Migrate manifest.
-        with TemporaryDirectory() as tmp_dir:
-            tmp_path_1 = Path(tmp_dir) / "old"
-            tmp_path_1.write_bytes(content)
-
-            tmp_path_2 = Path(tmp_dir) / "new"
-
-            subprocess.run(
-                ["lip", "migrate", str(tmp_path_1), str(tmp_path_2)], check=True
-            )
-
-            content = tmp_path_2.read_bytes()
-
-        manifest = PackageManifest.model_validate_json(content)
-
-    logging.info(
-        f"Fetched manifest for github.com/{repo}" + (f"@{version}" if version else "")
-    )
-
-    if version is not None:
-        path = BASE_DIR / repo / "@v" / str(version) / "tooth.json"
-        path.parent.mkdir(parents=True, exist_ok=True)
-
-        path.write_bytes(content)
-
-        logging.info(f"Saved manifest file at {path}")
-
-    return manifest
-
-
-@retry(
-    retry=retry_if_exception(_is_gh_rate_limited),
-    wait=wait_exponential(multiplier=10, max=320),
-    stop=stop_after_attempt(10),
-    reraise=True,
-)
-def fetch_repos() -> list[str]:
-    try:
-        stdout = subprocess.run(
-            [
-                "gh",
-                "search",
-                "code",
-                "format_version",
-                "path:/",
-                "filename:tooth.json",
-                "--limit=1000",
-                "--json",
-                "repository",
-            ],
-            capture_output=True,
-            check=True,
-            text=True,
-        ).stdout
-
-    except CalledProcessError as ex:
-        logging.error(ex.stderr)
-        raise
-
-    results: list[dict[str, dict[str, str]]] = json.loads(stdout)
-
-    logging.info(f"Found {len(results)} repositories")
-
-    return [r["repository"]["nameWithOwner"] for r in results]
-
-
-class RepoDetails(NamedTuple):
-    stars: int
-    updated_at: datetime
-
-
-@retry(
-    retry=retry_if_exception(_is_gh_rate_limited),
-    wait=wait_exponential(multiplier=10, max=320),
-    stop=stop_after_attempt(10),
-    reraise=True,
-)
-def fetch_repo_details(repo: str) -> RepoDetails:
-    try:
-        stdout = subprocess.run(
-            [
-                "gh",
-                "repo",
-                "view",
-                repo,
-                "--json=stargazerCount,updatedAt",
-            ],
-            capture_output=True,
-            check=True,
-            text=True,
-        ).stdout
-
-    except CalledProcessError as ex:
-        logging.error(ex.stderr)
-        raise
-
-    result: dict[str, Any] = json.loads(stdout)
-
-    return RepoDetails(
-        stars=result["stargazerCount"],
-        updated_at=datetime.fromisoformat(result["updatedAt"]),
-    )
-
-
-def fetch_versions(repo: str) -> list[SemanticVersion]:
-    url = f"https://github.com/{repo}.git"
-
-    stdout = subprocess.run(
-        ["git", "ls-remote", "-t", "--refs", url],
-        capture_output=True,
-        check=True,
-        text=True,
-    ).stdout
-
-    versions = []
-    for line in stdout.splitlines():
-        ref = line.split()[1]
-
-        # Skip refs that is not a version tag.
-        if not ref.startswith("refs/tags/v"):
-            continue
-
-        ver_str = ref.removeprefix("refs/tags/v")
-
-        try:
-            ver = SemanticVersion.parse(ver_str)
-        except ValueError:
-            continue
-
-        versions.append(ver)
-
-    versions.sort()
-
-    logging.info(f"Fetched {len(versions)} versions for github.com/{repo}")
-
-    return versions
-
-
-def save_index_file(index: PackageIndex) -> None:
-    path = Path("./workspace/lipr/index.json")
-    path.parent.mkdir(parents=True, exist_ok=True)
-
-    content = index.model_dump_json(ensure_ascii=False, exclude_unset=True, indent=2)
-
-    path.write_text(content, encoding="utf-8")
-
-    logging.info(f"Saved index file at {path}")
+@dataclass(frozen=True)
+class _RepoInfo:
+    stargazer_count: int
+    updated_at: str
 
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
-    # Clean up workspace.
-    if BASE_DIR.exists():
-        shutil.rmtree(BASE_DIR)
-    BASE_DIR.mkdir(parents=True, exist_ok=True)
-
-    index = PackageIndex(packages={})
+    _cleanup()
 
     with Client() as client:
-        for repo in fetch_repos():
-            try:
-                head_manifest = download_manifest(repo, version=None, client=client)
-            except Exception as ex:
-                logging.error(f"Failed to fetch manifest for github.com/{repo}: {ex}")
-                continue
+        packages: dict[str, IndexPackage] = {}
+        packages_for_levilauncher: dict[str, IndexPackageForLeviLauncher] = {}
 
+        for repo in _discover_repos():
             try:
-                repo_details = fetch_repo_details(repo)
-            except Exception as ex:
-                logging.error(
-                    f"Failed to fetch repo details for github.com/{repo}: {ex}"
+                repo_info = _fetch_repo_info(repo)
+                head_manifest = _fetch_manifest(repo, "HEAD", client=client)
+                versions = _fetch_versions(repo)
+
+                manifests: list[Manifest] = []
+                for ver in versions:
+                    try:
+                        manifest = _download_and_save_version_manifest(
+                            repo, ver, client=client
+                        )
+
+                        manifests.append(manifest)
+
+                    except Exception as e:
+                        logger.exception(
+                            f"Failed to process version '{ver}' of repository 'github.com/{repo}'",
+                            exc_info=e,
+                        )
+
+                variants = set(v.label for m in manifests for v in m.variants)
+                packages[repo] = IndexPackage(
+                    info=head_manifest.info,
+                    stargazer_count=repo_info.stargazer_count,
+                    updated_at=repo_info.updated_at,
+                    variants={
+                        var: IndexVariant(
+                            versions=[
+                                m.version
+                                for m in manifests
+                                if any(v.label == var for v in m.variants)
+                            ]
+                        )
+                        for var in variants
+                    },
                 )
-                continue
-
-            package = PackageIndexPackage(
-                info=head_manifest.info,
-                stars=repo_details.stars,
-                updated_at=repo_details.updated_at,
-                versions={},
-            )
-
-            try:
-                versions = fetch_versions(repo)
-            except Exception as ex:
-                logging.error(f"Failed to fetch versions for github.com/{repo}: {ex}")
-                continue
-
-            for ver in versions:
-                try:
-                    manifest = download_manifest(repo, ver, client=client)
-                except Exception as ex:
-                    logging.error(
-                        f"Failed to fetch manifest for github.com/{repo}@{ver}: {ex}"
-                    )
-                    continue
-
-                if len(manifest.variants) == 0:
-                    logging.warning(
-                        f"No variants found in manifest for github.com/{repo}@{ver}. Skipping..."
-                    )
-                    continue
-
-                package.versions[ver] = [variant.label for variant in manifest.variants]
-
-            if len(package.versions) == 0:
-                logging.warning(
-                    f"No valid versions found for github.com/{repo}. Skipping..."
+                packages_for_levilauncher[repo] = IndexPackageForLeviLauncher(
+                    info=head_manifest.info,
+                    stargazer_count=repo_info.stargazer_count,
+                    updated_at=repo_info.updated_at,
+                    variants={
+                        var: IndexVariantForLeviLauncher(
+                            versions={
+                                m.version: IndexVersionForLeviLauncher(
+                                    dependencies={
+                                        k: v
+                                        for variant in m.variants
+                                        if variant.label == var
+                                        for k, v in variant.dependencies.items()
+                                    },
+                                )
+                                for m in manifests
+                                if any(v.label == var for v in m.variants)
+                            }
+                        )
+                        for var in variants
+                    },
                 )
-                continue
 
-            index.packages[f"github.com/{repo}"] = package
+            except Exception as e:
+                logger.exception(
+                    f"Failed to process repository 'github.com/{repo}'", exc_info=e
+                )
 
-    save_index_file(index)
+    index = Index(packages=packages)
+
+    _save_index(index)
+
+    index_for_levilauncher = IndexForLeviLauncher(packages=packages_for_levilauncher)
+
+    _save_index_for_levilauncher(index_for_levilauncher)
+
+
+def _cleanup() -> None:
+    if _BASE_DIR.exists():
+        shutil.rmtree(_BASE_DIR)
+
+    _BASE_DIR.mkdir(parents=True, exist_ok=True)
+
+    logger.info(f"Cleaned up base directory '{_BASE_DIR}'")
+
+
+@retry(
+    reraise=True,
+    stop=stop_after_attempt(10),
+    wait=wait_exponential(max=60),
+)
+def _discover_repos() -> list[str]:
+    completed_process = subprocess.run(
+        [
+            "gh",
+            "search",
+            "code",
+            "format_version",
+            "path:/",
+            "filename:tooth.json",
+            "--limit=1000",
+            "--json",
+            "repository",
+        ],
+        capture_output=True,
+        check=True,
+        text=True,
+    )
+
+    results: list[dict[str, dict[str, str]]] = json.loads(completed_process.stdout)
+
+    logger.info(f"Discovered {len(results)} repositories")
+
+    return [r["repository"]["nameWithOwner"] for r in results]
+
+
+@retry(
+    reraise=True,
+    stop=stop_after_attempt(10),
+    wait=wait_exponential(max=60),
+)
+def _fetch_repo_info(repo: str) -> _RepoInfo:
+    completed_process = subprocess.run(
+        [
+            "gh",
+            "repo",
+            "view",
+            repo,
+            "--json=stargazerCount,updatedAt",
+        ],
+        capture_output=True,
+        check=True,
+        text=True,
+    )
+
+    result: dict[str, Any] = json.loads(completed_process.stdout)
+
+    logger.info(f"Fetched repository info for 'github.com/{repo}'")
+
+    return _RepoInfo(
+        stargazer_count=result["stargazerCount"],
+        updated_at=result["updatedAt"],
+    )
+
+
+def _fetch_versions(repo: str) -> list[str]:
+    url = f"https://github.com/{repo}.git"
+
+    completed_process = subprocess.run(
+        ["git", "ls-remote", "-t", "--refs", url],
+        capture_output=True,
+        check=True,
+        text=True,
+    )
+
+    versions = []
+    for line in completed_process.stdout.splitlines():
+        ref = line.split()[1]
+
+        if not ref.startswith("refs/tags/v"):
+            continue
+
+        ver = ref.removeprefix("refs/tags/v")
+
+        if not semver.Version.is_valid(ver):
+            continue
+
+        versions.append(ver)
+
+    logger.info(f"Found {len(versions)} versions for 'github.com/{repo}'")
+
+    return versions
+
+
+def _download_and_save_version_manifest(
+    repo: str, version: str, *, client: Client
+) -> Manifest:
+    manifest = _fetch_manifest(repo, f"v{version}", client=client)
+
+    path = _BASE_DIR / f"{repo}@{version}" / "tooth.json"
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(manifest.model_dump_json().encode("utf-8"))
+
+    logger.info(f"Downloaded and saved manifest for 'github.com/{repo}@{version}'")
+
+    return manifest
+
+
+def _fetch_manifest(repo: str, ref: str, *, client: Client) -> Manifest:
+    url = URL(f"https://raw.githubusercontent.com/{repo}/{ref}/tooth.json")
+
+    response = client.get(url)
+    response.raise_for_status()
+
+    # Always migrate manifest to ensure it's in correct format.
+    with TemporaryDirectory() as temp_dir:
+        legacy_path = Path(temp_dir) / "legacy"
+        legacy_path.write_bytes(response.content)
+
+        current_path = Path(temp_dir) / "current"
+
+        subprocess.run(
+            ["lip", "migrate", str(legacy_path), str(current_path)], check=True
+        )
+
+        content = current_path.read_bytes()
+
+    manifest = Manifest.model_validate_json(content)
+
+    logger.info(f"Fetched manifest for 'github.com/{repo}@{ref}'")
+
+    return manifest
+
+
+def _save_index(index: Index) -> None:
+    path = _BASE_DIR / "index.json"
+    path.write_bytes(index.model_dump_json().encode("utf-8"))
+
+    logger.info(f"Saved index to '{path}'")
+
+
+def _save_index_for_levilauncher(index: IndexForLeviLauncher) -> None:
+    path = _BASE_DIR / "levilauncher.json"
+    path.write_bytes(index.model_dump_json().encode("utf-8"))
+
+    logger.info(f"Saved index for LeviLauncher to '{path}'")
 
 
 if __name__ == "__main__":
