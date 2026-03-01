@@ -25,6 +25,8 @@ from entities import (
 logger = logging.getLogger(__name__)
 
 _BASE_DIR: Final = Path("./workspace/lipr/github.com")
+_INDEX_PATH: Final = Path("./workspace/lipr/index.json")
+_INDEX_FOR_LEVILAUNCHER_PATH: Final = Path("./workspace/lipr/levilauncher.json")
 
 
 @dataclass(frozen=True)
@@ -122,7 +124,10 @@ def _cleanup() -> None:
 
     _BASE_DIR.mkdir(parents=True, exist_ok=True)
 
-    logger.info(f"Cleaned up base directory '{_BASE_DIR}'")
+    _INDEX_PATH.unlink(missing_ok=True)
+    _INDEX_FOR_LEVILAUNCHER_PATH.unlink(missing_ok=True)
+
+    logger.info("Cleaned up workspace")
 
 
 @retry(
@@ -255,17 +260,15 @@ def _fetch_manifest(repo: str, ref: str, *, client: Client) -> Manifest:
 
 
 def _save_index(index: Index) -> None:
-    path = _BASE_DIR / "index.json"
-    path.write_bytes(index.model_dump_json().encode("utf-8"))
+    _INDEX_PATH.write_bytes(index.model_dump_json().encode("utf-8"))
 
-    logger.info(f"Saved index to '{path}'")
+    logger.info(f"Saved index to '{_INDEX_PATH}'")
 
 
 def _save_index_for_levilauncher(index: IndexForLeviLauncher) -> None:
-    path = _BASE_DIR / "levilauncher.json"
-    path.write_bytes(index.model_dump_json().encode("utf-8"))
+    _INDEX_FOR_LEVILAUNCHER_PATH.write_bytes(index.model_dump_json().encode("utf-8"))
 
-    logger.info(f"Saved index for LeviLauncher to '{path}'")
+    logger.info(f"Saved index for LeviLauncher to '{_INDEX_FOR_LEVILAUNCHER_PATH}'")
 
 
 if __name__ == "__main__":
