@@ -31,9 +31,7 @@ jobs:
       - run: |
           uv sync
 
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+      - run: |
           uv run python main.py
 
       - working-directory: workspace/lipr

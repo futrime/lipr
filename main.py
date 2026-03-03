@@ -134,7 +134,7 @@ def _cleanup() -> None:
 
 @retry(
     reraise=True,
-    stop=stop_after_attempt(10),
+    stop=stop_after_attempt(16),
     wait=wait_exponential(max=60),
 )
 def _discover_repos() -> list[str]:
@@ -162,11 +162,6 @@ def _discover_repos() -> list[str]:
     return [r["repository"]["nameWithOwner"] for r in results]
 
 
-@retry(
-    reraise=True,
-    stop=stop_after_attempt(10),
-    wait=wait_exponential(max=60, min=5),
-)
 def _fetch_repo_info(repo: str) -> _RepoInfo:
     completed_process = subprocess.run(
         [
