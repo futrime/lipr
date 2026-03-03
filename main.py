@@ -47,7 +47,7 @@ def main() -> None:
         for repo in _discover_repos():
             try:
                 repo_info = _fetch_repo_info(repo)
-                head_manifest = _fetch_manifest(repo, "HEAD", client=client)
+                head_manifest, _ = _fetch_manifest(repo, "HEAD", client=client)
                 versions = _fetch_versions(repo)
 
                 manifests: list[Manifest] = []
@@ -221,19 +221,19 @@ def _fetch_versions(repo: str) -> list[str]:
 def _download_and_save_version_manifest(
     repo: str, version: str, *, client: Client
 ) -> Manifest:
-    manifest = _fetch_manifest(repo, f"v{version}", client=client)
+    manifest, manifest_bytes = _fetch_manifest(repo, f"v{version}", client=client)
 
     path = _BASE_DIR / f"{repo}@{version}" / "tooth.json"
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(manifest.model_dump_json().encode("utf-8"))
+    path.write_bytes(manifest_bytes)
 
     logger.info(f"Downloaded and saved manifest for 'github.com/{repo}@{version}'")
 
     return manifest
 
 
-def _fetch_manifest(repo: str, ref: str, *, client: Client) -> Manifest:
+def _fetch_manifest(repo: str, ref: str, *, client: Client) -> tuple[Manifest, bytes]:
     url = URL(f"https://raw.githubusercontent.com/{repo}/{ref}/tooth.json")
 
     response = client.get(url)
@@ -250,13 +250,13 @@ def _fetch_manifest(repo: str, ref: str, *, client: Client) -> Manifest:
             ["lip", "migrate", str(legacy_path), str(current_path)], check=True
         )
 
-        content = current_path.read_bytes()
+        manifest_bytes = current_path.read_bytes()
 
-    manifest = Manifest.model_validate_json(content, extra="allow")
+    manifest = Manifest.model_validate_json(manifest_bytes)
 
     logger.info(f"Fetched manifest for 'github.com/{repo}@{ref}'")
 
-    return manifest
+    return manifest, manifest_bytes
 
 
 def _save_index(index: Index) -> None:
