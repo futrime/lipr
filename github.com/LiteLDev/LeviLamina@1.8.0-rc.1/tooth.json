@@ -42,10 +42,12 @@
       ],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           ".\\PeEditor.exe -mb"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": [
           "IF EXIST bedrock_server.exe (DEL bedrock_server.exe.bak) ELSE (REN bedrock_server.exe.bak bedrock_server.exe)"
         ]
@@ -80,10 +82,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           ".\\PeEditor.exe -mb --exe Minecraft.Windows.exe --inplace"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": [
           "IF EXIST Minecraft.Windows.exe.bak (DEL Minecraft.Windows.exe \u0026\u0026 REN Minecraft.Windows.exe.bak Minecraft.Windows.exe)"
         ]

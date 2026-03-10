@@ -19,8 +19,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -51,11 +53,13 @@
       ],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           "chmod \u002Bx ./bdsdown",
           "./bdsdown --yes --source version://linux/1.13.1.5"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -86,10 +90,12 @@
       ],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           ".\\bdsdown.exe -y --source version://windows/1.13.1.5"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     }

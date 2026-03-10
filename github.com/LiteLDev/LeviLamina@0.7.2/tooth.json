@@ -44,10 +44,12 @@
       ],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           ".\\PeEditor.exe -mb"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": [
           "move bedrock_server.exe.bak bedrock_server.exe"
         ]

@@ -35,8 +35,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -63,8 +65,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -91,8 +95,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -119,8 +125,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -147,8 +155,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -175,8 +185,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -189,8 +201,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [
+          "chmod \u002Bx ./bdsdown"
+        ],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -203,8 +219,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [
+          "chmod \u002Bx ./bdsdown"
+        ],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     }

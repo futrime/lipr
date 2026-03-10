@@ -46,10 +46,12 @@
       ],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           ".\\PeEditor.exe -mb"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": [
           "IF EXIST \u0022bedrock_server.exe\u0022 (DEL \u0022bedrock_server.exe.bak\u0022) ELSE (REN \u0022bedrock_server.exe.bak\u0022 \u0022bedrock_server.exe\u0022)"
         ]

@@ -24,8 +24,10 @@
         "pre_install": [
           "echo Please specify whether to install the mod for the server or the client. \u0026 exit 1"
         ],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -54,8 +56,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -84,8 +88,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     }

@@ -37,10 +37,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           "chmod \u002Bx ./bdsdown"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -69,10 +71,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           "chmod \u002Bx ./bdsdown"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -101,10 +105,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           "chmod \u002Bx ./bdsdown"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -133,10 +139,12 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [
           "chmod \u002Bx ./bdsdown"
         ],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -165,8 +173,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     },
@@ -195,8 +205,10 @@
       "remove_files": [],
       "scripts": {
         "pre_install": [],
+        "install": [],
         "post_install": [],
         "pre_uninstall": [],
+        "uninstall": [],
         "post_uninstall": []
       }
     }
