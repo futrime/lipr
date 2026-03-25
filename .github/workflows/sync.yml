@@ -22,11 +22,13 @@ jobs:
         with:
           path: workspace/lipr
           ref: pages
-
+          
       - uses: astral-sh/setup-uv@v7
 
+      - uses: actions/setup-node@v6
+
       - run: |
-          curl -fsSL https://raw.githubusercontent.com/futrime/lip/HEAD/scripts/install.sh | sh
+          npm install -g @futrime/lip
 
       - run: |
           uv sync
