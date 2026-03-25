@@ -1,0 +1,190 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/LiteLDev/LegacyScriptEngine",
+  "version": "0.11.3",
+  "info": {
+    "name": "LegacyScriptEngine",
+    "description": "A plugin engine for running LLSE plugins on LeviLamina",
+    "tags": [
+      "platform:levilamina",
+      "type:mod",
+      "plugin-engine"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LegacyScriptEngine#quickjs": "0.11.3",
+        "github.com/LiteLDev/LegacyScriptEngine#lua": "0.11.3"
+      },
+      "assets": [],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "nodejs",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LegacyRemoteCall": "0.11.*",
+        "github.com/LiteLDev/LegacyParticleAPI": "0.11.*",
+        "github.com/LiteLDev/LegacyMoney": "0.11.*",
+        "gitea.litebds.com/ShrBox/7-zip": "24.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/LegacyScriptEngine/releases/download/v0.11.3/legacy-script-engine-nodejs-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "legacy-script-engine-nodejs/",
+              "dest": "plugins/legacy-script-engine-nodejs/"
+            }
+          ]
+        },
+        {
+          "type": "uncompressed",
+          "urls": [
+            "https://github.com/LiteLDev/node/releases/download/v22.12.0/node-prebuilt.zip"
+          ],
+          "placements": [
+            {
+              "type": "file",
+              "src": "",
+              "dest": "plugins/legacy-script-engine-nodejs/node.zip"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [
+          "7za.exe x -y plugins/legacy-script-engine-nodejs/node.zip -o./plugins/legacy-script-engine-nodejs/",
+          "del plugins\\legacy-script-engine-nodejs\\node.zip"
+        ],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "quickjs",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LegacyRemoteCall": "0.11.*",
+        "github.com/LiteLDev/LegacyParticleAPI": "0.11.*",
+        "github.com/LiteLDev/LegacyMoney": "0.11.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/LegacyScriptEngine/releases/download/v0.11.3/legacy-script-engine-quickjs-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "legacy-script-engine-quickjs/",
+              "dest": "plugins/legacy-script-engine-quickjs/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "lua",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LegacyRemoteCall": "0.11.*",
+        "github.com/LiteLDev/LegacyParticleAPI": "0.11.*",
+        "github.com/LiteLDev/LegacyMoney": "0.11.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/LegacyScriptEngine/releases/download/v0.11.3/legacy-script-engine-lua-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "legacy-script-engine-lua/",
+              "dest": "plugins/legacy-script-engine-lua/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "python",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LegacyRemoteCall": "0.11.*",
+        "github.com/LiteLDev/LegacyParticleAPI": "0.11.*",
+        "github.com/LiteLDev/LegacyMoney": "0.11.*"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/LiteLDev/LegacyScriptEngine/releases/download/v0.11.3/legacy-script-engine-python-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "legacy-script-engine-python/",
+              "dest": "plugins/legacy-script-engine-python/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
