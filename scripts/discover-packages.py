@@ -592,7 +592,7 @@ def commit_and_push(
         shutil.rmtree(worktree_dir, ignore_errors=True)
 
 
-def sync_package(candidate: PackageCandidate, *, repo: str, dry_run: bool) -> str:
+def discover_package(candidate: PackageCandidate, *, repo: str, dry_run: bool) -> str:
     branch = f"package/{candidate.tooth}"
     prs = list_pull_requests(repo, branch)
 
@@ -657,7 +657,7 @@ def main() -> int:
             break
 
         try:
-            outcome = sync_package(candidate, repo=target_repo, dry_run=args.dry_run)
+            outcome = discover_package(candidate, repo=target_repo, dry_run=args.dry_run)
         except Exception as exc:  # noqa: BLE001
             summary.failed_packages += 1
             logger.exception("Failed to sync %s: %s", candidate.tooth, exc)
