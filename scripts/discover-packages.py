@@ -19,7 +19,7 @@ from typing import Any, Callable
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 PACKAGES_DIR = ROOT_DIR / "packages"
-DEFAULT_MAX_PACKAGES = 10
+DEFAULT_MAX_PACKAGES = 256
 SEARCH_QUERY = "format_version path:/ filename:tooth.json"
 SEMVER_RE = re.compile(
     r"^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)"
