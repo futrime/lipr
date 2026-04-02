@@ -143,6 +143,13 @@ def retry_call(
     raise last_error
 
 
+def is_github_search_rate_limited(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return "search/code" in message and (
+        "429" in message or "rate limit" in message or "secondary rate limit" in message
+    )
+
+
 def package_manifest_path(root: Path, tooth: str, version: str) -> Path:
     return root / "packages" / f"{tooth}@{version}" / "tooth.json"
 
@@ -198,6 +205,20 @@ def gh_api_json(path: str, *, params: dict[str, str] | None = None) -> Any:
     return json.loads(completed.stdout)
 
 
+def gh_search_code_json(*, params: dict[str, str]) -> Any:
+    while True:
+        try:
+            return gh_api_json("search/code", params=params)
+        except Exception as exc:  # noqa: BLE001
+            if not is_github_search_rate_limited(exc):
+                raise
+            logger.warning(
+                "GitHub search is rate limited for query %s; retrying in 60 seconds",
+                params.get("q", ""),
+            )
+            time.sleep(60)
+
+
 def discover_repositories() -> list[str]:
     repos: set[str] = set()
     page = 1
@@ -207,9 +228,8 @@ def discover_repositories() -> list[str]:
     while True:
         data = retry_call(
             f"search page {page}",
-            lambda: gh_api_json(
-                "search/code",
-                params={"q": SEARCH_QUERY, "per_page": "100", "page": str(page)},
+            lambda: gh_search_code_json(
+                params={"q": SEARCH_QUERY, "per_page": "100", "page": str(page)}
             ),
         )
         if total_count is None:
