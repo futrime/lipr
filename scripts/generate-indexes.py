@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 from __future__ import annotations
 
@@ -76,7 +76,9 @@ def package_meta(
 ) -> dict[str, Any]:
     index_packages = existing_index.get("packages")
     levi_packages = existing_levilauncher.get("packages")
-    index_meta = index_packages.get(name, {}) if isinstance(index_packages, dict) else {}
+    index_meta = (
+        index_packages.get(name, {}) if isinstance(index_packages, dict) else {}
+    )
     levi_meta = levi_packages.get(name, {}) if isinstance(levi_packages, dict) else {}
     return {
         "stargazer_count": index_meta.get(
@@ -192,7 +194,9 @@ def build_outputs(
 
 
 def main() -> int:
-    tooth_paths = sorted(PACKAGES_DIR.rglob("tooth.json"), key=lambda path: path.as_posix())
+    tooth_paths = sorted(
+        PACKAGES_DIR.rglob("tooth.json"), key=lambda path: path.as_posix()
+    )
     if not tooth_paths:
         print(f"No tooth.json files found under {PACKAGES_DIR}", file=sys.stderr)
         return 1
