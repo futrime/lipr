@@ -3,8 +3,7 @@ on:
     paths:
       - .github/workflows/update-indexes.yml
       - packages/**
-      - scripts/generate-indexes.sh
-      - scripts/generate-indexes.jq
+      - scripts/generate-indexes.py
 
 jobs:
   update-indexes:
@@ -15,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - run: bash scripts/generate-indexes.sh
+      - run: python scripts/generate-indexes.py
 
       - run: |
           if git diff --quiet -- index.json levilauncher.json; then
