@@ -47,28 +47,24 @@ class ManifestRecord:
 
 
 @dataclass(frozen=True)
-class PackageCandidate:
-    tooth: str
-    manifests: tuple[ManifestRecord, ...]
-    already_present: bool
+class RepoVersionCandidate:
+    repo: str
+    version: str
 
 
 @dataclass(frozen=True)
-class PullRequestInfo:
-    number: int
-    state: str
-    merged_at: str | None
-    url: str
+class ManifestCandidate:
+    branch: str
+    manifest: ManifestRecord
 
 
 @dataclass
 class Summary:
     repos_discovered: int = 0
-    missing_packages_found: int = 0
+    missing_versions_found: int = 0
     created: int = 0
-    updated: int = 0
-    skipped_closed: int = 0
-    skipped_no_change: int = 0
+    skipped_existing_local: int = 0
+    skipped_existing_pr: int = 0
     failed_packages: int = 0
 
 
@@ -175,14 +171,23 @@ def semver_key(version: str) -> tuple[Any, ...]:
     )
 
 
-def list_existing_tooths() -> set[str]:
-    tooths: set[str] = set()
+def list_existing_package_keys() -> set[tuple[str, str]]:
+    keys: set[tuple[str, str]] = set()
     for path in PACKAGES_DIR.rglob("tooth.json"):
         rel_parent = path.relative_to(PACKAGES_DIR).parent.as_posix()
         if "@" not in rel_parent:
             continue
-        tooths.add(rel_parent.rsplit("@", 1)[0])
-    return tooths
+        package_id, version = rel_parent.rsplit("@", 1)
+        keys.add((package_id, version))
+    return keys
+
+
+def package_id_from_repo(repo: str) -> str:
+    return f"github.com/{repo}"
+
+
+def branch_name_for_package(package_id: str, version: str) -> str:
+    return f"package/{package_id}@{version}"
 
 
 def gh_api_json(path: str, *, params: dict[str, str] | None = None) -> Any:
@@ -321,73 +326,6 @@ def fetch_manifest(repo: str, version: str) -> ManifestRecord:
     )
 
 
-def collect_missing_packages(
-    existing_tooths: set[str],
-) -> tuple[list[PackageCandidate], int]:
-    repositories = discover_repositories()
-    manifests_by_tooth: dict[str, dict[str, ManifestRecord]] = {}
-
-    for repo in repositories:
-        try:
-            versions = list_repo_versions(repo)
-        except Exception as exc:  # noqa: BLE001
-            logger.warning("Failed to list versions for github.com/%s: %s", repo, exc)
-            continue
-
-        for version in versions:
-            try:
-                manifest = fetch_manifest(repo, version)
-            except Exception as exc:  # noqa: BLE001
-                logger.warning(
-                    "Skipping github.com/%s@%s: %s",
-                    repo,
-                    version,
-                    exc,
-                )
-                continue
-
-            destination = package_manifest_path(
-                ROOT_DIR, manifest.tooth, manifest.version
-            )
-            if destination.exists():
-                continue
-
-            versions_for_tooth = manifests_by_tooth.setdefault(manifest.tooth, {})
-            existing_manifest = versions_for_tooth.get(manifest.version)
-            if existing_manifest is None:
-                versions_for_tooth[manifest.version] = manifest
-                continue
-
-            if existing_manifest.content != manifest.content:
-                logger.warning(
-                    "Conflicting manifests for %s@%s from github.com/%s and github.com/%s; keeping the first copy",
-                    manifest.tooth,
-                    manifest.version,
-                    existing_manifest.repo,
-                    manifest.repo,
-                )
-
-    candidates: list[PackageCandidate] = []
-    for tooth, manifests in manifests_by_tooth.items():
-        ordered_manifests = tuple(
-            sorted(
-                manifests.values(), key=lambda manifest: semver_key(manifest.version)
-            )
-        )
-        candidates.append(
-            PackageCandidate(
-                tooth=tooth,
-                manifests=ordered_manifests,
-                already_present=tooth in existing_tooths,
-            )
-        )
-
-    candidates.sort(
-        key=lambda candidate: (0 if candidate.already_present else 1, candidate.tooth)
-    )
-    return candidates, len(repositories)
-
-
 def infer_repository_name() -> str:
     env_repo = os.environ.get("GITHUB_REPOSITORY")
     if env_repo:
@@ -408,7 +346,7 @@ def infer_repository_name() -> str:
     )
 
 
-def list_pull_requests(repo: str, branch: str) -> list[PullRequestInfo]:
+def list_pr_history_branches(repo: str) -> set[str]:
     completed = run_command(
         [
             "gh",
@@ -418,91 +356,64 @@ def list_pull_requests(repo: str, branch: str) -> list[PullRequestInfo]:
             repo,
             "--state",
             "all",
-            "--head",
-            branch,
+            "--limit",
+            "1000",
             "--json",
-            "number,state,mergedAt,url",
+            "headRefName",
         ],
         cwd=ROOT_DIR,
     )
     items = json.loads(completed.stdout)
-    return [
-        PullRequestInfo(
-            number=int(item["number"]),
-            state=item["state"],
-            merged_at=item.get("mergedAt"),
-            url=item.get("url", ""),
-        )
+    return {
+        head_ref
         for item in items
-    ]
+        if isinstance((head_ref := item.get("headRefName")), str) and head_ref
+    }
 
 
-def remote_branch_exists(branch: str) -> bool:
-    completed = run_command(
-        ["git", "ls-remote", "--heads", "origin", f"refs/heads/{branch}"],
-        cwd=ROOT_DIR,
-    )
-    return bool(completed.stdout.strip())
-
-
-def build_pr_body(candidate: PackageCandidate) -> str:
-    versions = "\n".join(f"- `{manifest.version}`" for manifest in candidate.manifests)
-    repos = "\n".join(
-        f"- `github.com/{manifest.repo}`"
-        for manifest in {
-            manifest.repo: manifest for manifest in candidate.manifests
-        }.values()
-    )
+def build_pr_body(candidate: ManifestCandidate) -> str:
+    manifest = candidate.manifest
     return (
         f"## Summary\n"
-        f"Add missing manifests for `{candidate.tooth}`.\n\n"
-        f"## Versions\n"
-        f"{versions}\n\n"
-        f"## Source Repositories\n"
-        f"{repos}\n"
+        f"Add missing manifest for `{manifest.tooth}@{manifest.version}`.\n\n"
+        f"## Source Repository\n"
+        f"- `github.com/{manifest.repo}`\n"
     )
 
 
-def stage_package_manifests(
-    worktree_dir: Path, candidate: PackageCandidate
-) -> list[Path]:
-    changed_paths: list[Path] = []
-    for manifest in candidate.manifests:
-        destination = package_manifest_path(
-            worktree_dir, manifest.tooth, manifest.version
-        )
-        existing_bytes = destination.read_bytes() if destination.exists() else None
-        if existing_bytes == manifest.content:
-            continue
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_bytes(manifest.content)
-        changed_paths.append(destination.relative_to(worktree_dir))
-    return changed_paths
+def stage_package_manifest(
+    worktree_dir: Path, candidate: ManifestCandidate
+) -> Path | None:
+    manifest = candidate.manifest
+    destination = package_manifest_path(worktree_dir, manifest.tooth, manifest.version)
+    existing_bytes = destination.read_bytes() if destination.exists() else None
+    if existing_bytes == manifest.content:
+        return None
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_bytes(manifest.content)
+    return destination.relative_to(worktree_dir)
 
 
 def commit_and_push(
-    branch: str,
-    candidate: PackageCandidate,
+    candidate: ManifestCandidate,
     *,
     base_ref: str,
-    push_branch: bool,
     repo: str,
-    open_pr: PullRequestInfo | None,
     dry_run: bool,
 ) -> str:
-    title = f"feat: add {candidate.tooth} package"
+    manifest = candidate.manifest
+    branch = candidate.branch
+    title = f"feat: add {manifest.tooth}@{manifest.version} package"
     body = build_pr_body(candidate)
 
     if dry_run:
-        action = "update" if open_pr is not None else "create"
         logger.info(
-            "[dry-run] Would %s PR for %s on branch %s with versions: %s",
-            action,
-            candidate.tooth,
+            "[dry-run] Would create PR for %s@%s on branch %s",
+            manifest.tooth,
+            manifest.version,
             branch,
-            ", ".join(manifest.version for manifest in candidate.manifests),
         )
-        return action
+        return "create"
 
     worktree_dir = Path(tempfile.mkdtemp(prefix="lipr-worktree-"))
     try:
@@ -512,13 +423,15 @@ def commit_and_push(
         )
         run_command(["git", "switch", "-C", branch], cwd=worktree_dir)
 
-        changed_paths = stage_package_manifests(worktree_dir, candidate)
-        if not changed_paths:
-            logger.info("No new manifest changes for %s", candidate.tooth)
+        changed_path = stage_package_manifest(worktree_dir, candidate)
+        if changed_path is None:
+            logger.info(
+                "No new manifest changes for %s@%s", manifest.tooth, manifest.version
+            )
             return "noop"
 
         run_command(
-            ["git", "add", "--", *[path.as_posix() for path in changed_paths]],
+            ["git", "add", "--", changed_path.as_posix()],
             cwd=worktree_dir,
         )
         commit_env = os.environ.copy()
@@ -532,48 +445,28 @@ def commit_and_push(
         )
         run_command(["git", "commit", "-m", title], cwd=worktree_dir, env=commit_env)
 
-        if push_branch:
-            run_command(
-                [
-                    "git",
-                    "push",
-                    "--force-with-lease",
-                    "origin",
-                    f"HEAD:refs/heads/{branch}",
-                ],
-                cwd=worktree_dir,
-            )
-
-        if open_pr is None:
-            run_command(
-                [
-                    "gh",
-                    "pr",
-                    "create",
-                    "--repo",
-                    repo,
-                    "--base",
-                    "main",
-                    "--head",
-                    branch,
-                    "--title",
-                    title,
-                    "--body",
-                    body,
-                ],
-                cwd=worktree_dir,
-            )
-            logger.info("Created PR for %s", candidate.tooth)
-            return "create"
+        run_command(
+            [
+                "git",
+                "push",
+                "--force-with-lease",
+                "origin",
+                f"HEAD:refs/heads/{branch}",
+            ],
+            cwd=worktree_dir,
+        )
 
         run_command(
             [
                 "gh",
                 "pr",
-                "edit",
-                str(open_pr.number),
+                "create",
                 "--repo",
                 repo,
+                "--base",
+                "main",
+                "--head",
+                branch,
                 "--title",
                 title,
                 "--body",
@@ -581,8 +474,8 @@ def commit_and_push(
             ],
             cwd=worktree_dir,
         )
-        logger.info("Updated PR #%s for %s", open_pr.number, candidate.tooth)
-        return "update"
+        logger.info("Created PR for %s@%s", manifest.tooth, manifest.version)
+        return "create"
     finally:
         run_command(
             ["git", "worktree", "remove", "--force", str(worktree_dir)],
@@ -592,44 +485,13 @@ def commit_and_push(
         shutil.rmtree(worktree_dir, ignore_errors=True)
 
 
-def discover_package(candidate: PackageCandidate, *, repo: str, dry_run: bool) -> str:
-    branch = f"package/{candidate.tooth}"
-    prs = list_pull_requests(repo, branch)
-
-    closed_unmerged = next(
-        (pr for pr in prs if pr.state == "CLOSED" and pr.merged_at is None),
-        None,
-    )
-    if closed_unmerged is not None:
-        logger.info(
-            "Skipping %s because closed PR #%s already exists for branch %s",
-            candidate.tooth,
-            closed_unmerged.number,
-            branch,
-        )
-        return "skip_closed"
-
-    open_pr = next((pr for pr in prs if pr.state == "OPEN"), None)
-    branch_exists = remote_branch_exists(branch) if not dry_run else open_pr is not None
-
+def discover_package(candidate: ManifestCandidate, *, repo: str, dry_run: bool) -> str:
     run_command(["git", "fetch", "origin", "main"], cwd=ROOT_DIR)
-    base_ref = "origin/main"
-    push_branch = True
-
-    if open_pr is not None and branch_exists:
-        run_command(["git", "fetch", "origin", branch], cwd=ROOT_DIR)
-        base_ref = f"origin/{branch}"
-
-    if open_pr is None and branch_exists:
-        base_ref = "origin/main"
 
     return commit_and_push(
-        branch,
         candidate,
-        base_ref=base_ref,
-        push_branch=push_branch,
+        base_ref="origin/main",
         repo=repo,
-        open_pr=open_pr,
         dry_run=dry_run,
     )
 
@@ -643,51 +505,101 @@ def main() -> int:
     require_command("npx")
 
     target_repo = infer_repository_name()
-    existing_tooths = list_existing_tooths()
-    candidates, repo_count = collect_missing_packages(existing_tooths)
+    existing_package_keys = list_existing_package_keys()
+    repositories = discover_repositories()
+    pr_history_branches = list_pr_history_branches(target_repo)
 
-    summary = Summary(
-        repos_discovered=repo_count, missing_packages_found=len(candidates)
-    )
-    logger.info("Found %s packages with missing versions", len(candidates))
+    summary = Summary(repos_discovered=len(repositories))
 
     acted = 0
-    for candidate in candidates:
+    for repo in repositories:
         if acted >= args.max_packages:
             break
-
         try:
-            outcome = discover_package(candidate, repo=target_repo, dry_run=args.dry_run)
+            versions = list_repo_versions(repo)
         except Exception as exc:  # noqa: BLE001
-            summary.failed_packages += 1
-            logger.exception("Failed to sync %s: %s", candidate.tooth, exc)
+            logger.warning("Failed to list versions for github.com/%s: %s", repo, exc)
             continue
 
-        if outcome == "skip_closed":
-            summary.skipped_closed += 1
-            continue
-        if outcome == "noop":
-            summary.skipped_no_change += 1
-            continue
-        if outcome == "create":
-            summary.created += 1
-            acted += 1
-            continue
-        if outcome == "update":
-            summary.updated += 1
-            acted += 1
-            continue
+        for version in versions:
+            if acted >= args.max_packages:
+                break
 
-        logger.warning("Unhandled sync outcome for %s: %s", candidate.tooth, outcome)
+            candidate = RepoVersionCandidate(repo=repo, version=version)
+            package_id = package_id_from_repo(candidate.repo)
+            package_key = (package_id, candidate.version)
+            branch = branch_name_for_package(package_id, candidate.version)
+
+            if package_key in existing_package_keys:
+                summary.skipped_existing_local += 1
+                continue
+
+            if branch in pr_history_branches:
+                summary.skipped_existing_pr += 1
+                continue
+
+            try:
+                manifest = fetch_manifest(candidate.repo, candidate.version)
+            except Exception as exc:  # noqa: BLE001
+                logger.warning(
+                    "Skipping github.com/%s@%s: %s",
+                    candidate.repo,
+                    candidate.version,
+                    exc,
+                )
+                continue
+
+            manifest_key = (manifest.tooth, manifest.version)
+            if manifest_key in existing_package_keys:
+                summary.skipped_existing_local += 1
+                continue
+
+            manifest_branch = branch_name_for_package(manifest.tooth, manifest.version)
+            if manifest_branch in pr_history_branches:
+                summary.skipped_existing_pr += 1
+                continue
+
+            summary.missing_versions_found += 1
+            prepared_candidate = ManifestCandidate(branch=branch, manifest=manifest)
+
+            try:
+                outcome = discover_package(
+                    prepared_candidate,
+                    repo=target_repo,
+                    dry_run=args.dry_run,
+                )
+            except Exception as exc:  # noqa: BLE001
+                summary.failed_packages += 1
+                logger.exception(
+                    "Failed to sync %s@%s: %s", manifest.tooth, manifest.version, exc
+                )
+                continue
+
+            if outcome == "noop":
+                continue
+            if outcome == "create":
+                summary.created += 1
+                acted += 1
+                existing_package_keys.add(package_key)
+                existing_package_keys.add(manifest_key)
+                pr_history_branches.add(branch)
+                pr_history_branches.add(manifest_branch)
+                continue
+
+            logger.warning(
+                "Unhandled sync outcome for %s@%s: %s",
+                manifest.tooth,
+                manifest.version,
+                outcome,
+            )
 
     logger.info(
-        "Summary: repos=%s missing_packages=%s created=%s updated=%s skipped_closed=%s skipped_no_change=%s failed=%s",
+        "Summary: repos=%s missing_versions=%s created=%s skipped_existing_local=%s skipped_existing_pr=%s failed=%s",
         summary.repos_discovered,
-        summary.missing_packages_found,
+        summary.missing_versions_found,
         summary.created,
-        summary.updated,
-        summary.skipped_closed,
-        summary.skipped_no_change,
+        summary.skipped_existing_local,
+        summary.skipped_existing_pr,
         summary.failed_packages,
     )
     return 0
