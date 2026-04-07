@@ -1,0 +1,47 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/cngege/AutoFishing",
+  "version": "0.0.5",
+  "info": {
+    "name": "AutoFishing",
+    "description": "LL3\u81EA\u52A8\u9493\u9C7CMod",
+    "tags": [
+      "levilamina",
+      "mod"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/cngege/AutoFishing/releases/download/v{{version}}/AutoFishing-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "AutoFishing/",
+              "dest": "plugins/AutoFishing/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
