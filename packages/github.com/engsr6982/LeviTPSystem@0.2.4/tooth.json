@@ -1,0 +1,49 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/engsr6982/LeviTPSystem",
+  "version": "0.2.4",
+  "info": {
+    "name": "LeviTPSystem",
+    "description": "| \u5BB6\u56ED\u4F20\u9001 | \u516C\u5171\u4F20\u9001 | \u73A9\u5BB6\u4F20\u9001 | \u968F\u673A\u4F20\u9001 | \u7CBE\u7F8EUI | \u6B7B\u4EA1\u4F20\u9001 | \u6B7B\u4EA1\u67E5\u8BE2 | \u73A9\u5BB6\u81EA\u5B9A\u4E49\u89C4\u5219 |",
+    "tags": [
+      "levilamina",
+      "plugin",
+      "levitpsystem",
+      "tp"
+    ],
+    "avatar_url": ""
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "",
+      "dependencies": {},
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/engsr6982/LeviTPSystem/releases/download/v0.2.4/LeviTPSystem-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "LeviTPSystem/",
+              "dest": "plugins/LeviTPSystem/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
