@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -15,6 +18,10 @@ INDEX_FILE = ROOT_DIR / "index.json"
 LEVILAUNCHER_FILE = ROOT_DIR / "levilauncher.json"
 VERSION_PART_RE = re.compile(r"[0-9]+|[A-Za-z]+")
 VERSION_RE = re.compile(r"^(?P<core>[^-]+)(?:-(?P<pre>.*))?$")
+GITHUB_API_BASE = "https://api.github.com"
+GITHUB_API_VERSION = "2022-11-28"
+GITHUB_API_USER_AGENT = "lipr-index-generator"
+PACKAGE_GITHUB_PREFIX = "github.com/"
 
 
 def load_json(path: Path) -> Any:
@@ -29,6 +36,59 @@ def write_json(path: Path, data: Any) -> None:
 
 def default_if_none(value: Any, default: Any) -> Any:
     return default if value is None else value
+
+
+def github_repo_path(package_name: str) -> str | None:
+    if not package_name.startswith(PACKAGE_GITHUB_PREFIX):
+        return None
+    repo_path = package_name[len(PACKAGE_GITHUB_PREFIX) :].strip("/")
+    parts = repo_path.split("/")
+    if len(parts) != 2 or not parts[0] or not parts[1]:
+        return None
+    return f"/repos/{parts[0]}/{parts[1]}"
+
+
+def github_api_json(path: str) -> dict[str, Any]:
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": GITHUB_API_USER_AGENT,
+        "X-GitHub-Api-Version": GITHUB_API_VERSION,
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    request = Request(f"{GITHUB_API_BASE}{path}", headers=headers, method="GET")
+    try:
+        with urlopen(request, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(
+            f"GitHub API request failed for {path}: {exc.code} {detail}"
+        ) from exc
+    except URLError as exc:
+        raise RuntimeError(
+            f"GitHub API request failed for {path}: {exc.reason}"
+        ) from exc
+
+
+def github_package_meta(package_name: str) -> dict[str, Any] | None:
+    repo_path = github_repo_path(package_name)
+    if repo_path is None:
+        return None
+
+    data = github_api_json(repo_path)
+    stargazer_count = data.get("stargazers_count")
+    updated_at = data.get("updated_at")
+    if not isinstance(stargazer_count, int):
+        stargazer_count = 0
+    if not isinstance(updated_at, str):
+        updated_at = ""
+    return {
+        "stargazer_count": stargazer_count,
+        "updated_at": updated_at,
+    }
 
 
 def normalize_info(info: Any) -> dict[str, Any]:
@@ -123,8 +183,6 @@ def ordered_variants(
 
 def aggregate_packages(
     tooths: list[dict[str, Any]],
-    existing_index: dict[str, Any],
-    existing_levilauncher: dict[str, Any],
 ) -> dict[str, dict[str, Any]]:
     packages: dict[str, dict[str, Any]] = {}
 
@@ -134,7 +192,8 @@ def aggregate_packages(
         package = packages.setdefault(
             name,
             {
-                **package_meta(existing_index, existing_levilauncher, name),
+                "stargazer_count": 0,
+                "updated_at": "",
                 "info": normalize_info(tooth.get("info", {})),
                 "variants": {},
             },
@@ -157,12 +216,31 @@ def aggregate_packages(
     return packages
 
 
+def resolved_package_meta(
+    package_name: str,
+    existing_index: dict[str, Any],
+    existing_levilauncher: dict[str, Any],
+) -> dict[str, Any]:
+    try:
+        github_meta = github_package_meta(package_name)
+    except RuntimeError as exc:
+        print(f"Warning: {exc}; falling back to existing metadata.", file=sys.stderr)
+    else:
+        if github_meta is not None:
+            return github_meta
+    return package_meta(existing_index, existing_levilauncher, package_name)
+
+
 def build_outputs(
     tooths: list[dict[str, Any]],
     existing_index: dict[str, Any],
     existing_levilauncher: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    packages = aggregate_packages(tooths, existing_index, existing_levilauncher)
+    packages = aggregate_packages(tooths)
+    for package_name in packages:
+        packages[package_name].update(
+            resolved_package_meta(package_name, existing_index, existing_levilauncher)
+        )
     sorted_package_names = sorted(packages)
 
     index_root = root_template(existing_index or existing_levilauncher)

@@ -19,6 +19,8 @@ jobs:
           fetch-depth: 0
 
       - run: python scripts/generate-indexes.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - run: |
           if git diff --quiet -- index.json levilauncher.json; then
