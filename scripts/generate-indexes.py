@@ -24,6 +24,10 @@ GITHUB_API_USER_AGENT = "lipr-index-generator"
 PACKAGE_GITHUB_PREFIX = "github.com/"
 
 
+class GitHubNotFound(RuntimeError):
+    pass
+
+
 def load_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as fh:
         return json.load(fh)
@@ -63,6 +67,8 @@ def github_api_json(path: str) -> dict[str, Any]:
         with urlopen(request, timeout=30) as response:
             return json.loads(response.read().decode("utf-8"))
     except HTTPError as exc:
+        if exc.code == 404:
+            raise GitHubNotFound(f"GitHub resource not found for {path}") from exc
         detail = exc.read().decode("utf-8", errors="replace")
         raise RuntimeError(
             f"GitHub API request failed for {path}: {exc.code} {detail}"
@@ -223,6 +229,8 @@ def resolved_package_meta(
 ) -> dict[str, Any]:
     try:
         github_meta = github_package_meta(package_name)
+    except GitHubNotFound:
+        raise
     except RuntimeError as exc:
         print(f"Warning: {exc}; falling back to existing metadata.", file=sys.stderr)
     else:
@@ -237,10 +245,15 @@ def build_outputs(
     existing_levilauncher: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     packages = aggregate_packages(tooths)
-    for package_name in packages:
-        packages[package_name].update(
-            resolved_package_meta(package_name, existing_index, existing_levilauncher)
-        )
+    for package_name in list(packages):
+        try:
+            packages[package_name].update(
+                resolved_package_meta(
+                    package_name, existing_index, existing_levilauncher
+                )
+            )
+        except GitHubNotFound:
+            del packages[package_name]
     sorted_package_names = sorted(packages)
 
     index_root = root_template(existing_index or existing_levilauncher)
