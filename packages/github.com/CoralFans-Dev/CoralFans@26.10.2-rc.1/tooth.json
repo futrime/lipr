@@ -1,0 +1,83 @@
+{
+  "format_version": 3,
+  "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+  "tooth": "github.com/CoralFans-Dev/CoralFans",
+  "version": "26.10.2-rc.1",
+  "info": {
+    "name": "CoralFans",
+    "description": "A tech-survival assistant mod for Bedrock Version.",
+    "tags": [
+      "platform:levilamina",
+      "type:mod"
+    ],
+    "avatar_url": "https://raw.githubusercontent.com/CoralFans-Dev/CoralFans-doc/refs/heads/main/docs/icon.png"
+  },
+  "variants": [
+    {
+      "label": "",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina": "\u003E=26.10.8 \u003C26.20.0",
+        "github.com/OEOTYAN/BedrockServerClientInterface": "0.3.1"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/CoralFans-Dev/CoralFans/releases/download/v$26.10.2-rc.1/CoralFans-server-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "CoralFans/",
+              "dest": "plugins/CoralFans/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    },
+    {
+      "label": "client",
+      "platform": "win-x64",
+      "dependencies": {
+        "github.com/LiteLDev/LeviLamina#client": "\u003E=26.10.8 \u003C26.20.0",
+        "github.com/OEOTYAN/BedrockServerClientInterface#client": "0.3.1"
+      },
+      "assets": [
+        {
+          "type": "zip",
+          "urls": [
+            "https://github.com/CoralFans-Dev/CoralFans/releases/download/v$26.10.2-rc.1/CoralFans-client-windows-x64.zip"
+          ],
+          "placements": [
+            {
+              "type": "dir",
+              "src": "CoralFans/",
+              "dest": "mods/CoralFans/"
+            }
+          ]
+        }
+      ],
+      "preserve_files": [],
+      "remove_files": [],
+      "scripts": {
+        "pre_install": [],
+        "install": [],
+        "post_install": [],
+        "pre_uninstall": [],
+        "uninstall": [],
+        "post_uninstall": []
+      }
+    }
+  ]
+}
